@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Register Bonus</title>
 </head>
 <body>
+    <form method="post" action="https://request-inspector.glitch.me/" >
+        <fieldset>
+        <legend>Login</legend>
+        <div>
+            <label for="username">Username: </label>
+            <input id="username" name="uEmail" type="text" placeholder="Enter your username" required autofocus>
+        </div>
+        <br>
+        <div>
+            <label for="uEmail">Email Address: </label>
+            <input id="uEmail" name="uEmail" type="text" placeholder="Enter your email" required>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password: </label>
+            <input id="password" name="password" type="password" placeholder="Enter your password" required>
+        </div>
+        <br>
+        <input type="checkbox" id="loggedTime" name="loggedTime" value="loggedTime" checked>
+            <label for="loggedTime"> Keep me logged in for 2 weeks.</label>
+        <br>
+        <br>
+        <div>
+            <button type="login">Login</button>
+        </div>
+        </fieldset>
+        <br>
 
+    </form>
 </body>
 </html>
