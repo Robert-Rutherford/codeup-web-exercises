@@ -7,9 +7,46 @@
 
 <body>
     <form method="post" action="https://request-inspector.glitch.me/">
-        <label for="username">Username</label>
-        <input id="username" name="username" type="text">
-        <br>
+        <div>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" placeholder="Enter your username">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="Enter your password">
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+        <h3>User Bio</h3>
+        <div>
+            <textarea id="bbody" name="bbody" rows="5" cols="40"></textarea>
+        </div>
+        <div>
+            <button type="submit">Send</button>
+        </div>
+        <h4>How did you hear about us?</h4>
+        <label>
+            <input type="radio" name="q1a1" value="billboard">Billboard
+        </label>
+        <label>
+            <input type="radio" name="q1a2" value="radioAd">Radio Advertisement
+        </label>
+        <label>
+            <input type="radio" name="q1a3" value="internetAd">Internet Advertisement
+        </label>
+        <label>
+            <input type="radio" name="q1a4" value="other">Other
+        </label>
+
+        <label>What browser are you using?</label>
+        <select id="dropBrowser">
+            <option value="safari">Safari</option>
+            <option value="explorer">Internet explorer</option>
+            <option value="chrome">Chrome</option>
+            <option value="firefox">Firefox</option>
+            <option value="other">other</option>
+        </select>
 
 
     </form>
