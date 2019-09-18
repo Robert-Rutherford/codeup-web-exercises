@@ -6,6 +6,69 @@
 </head>
 <body>
 <form>
+    <fieldset>
+        <legend><h4>Billing Address</h4></legend>
+        <div>
+            <label for="billName">Name</label>
+            <br>
+            <input id="billName" name="billName" type="text">
+        </div>
+        <div>
+            <label for="billAddress">Address</label>
+            <br>
+            <input id="billAddress" name="billAddress" type="text">
+        </div>
+        <div>
+            <label for="billCountry">Country</label>
+            <br>
+            <input id="billCountry" name="billCountry" type="text">
+        </div>
+        <div>
+            <label for="billZip">Zip</label>
+            <br>
+            <input id="billZip" name="billZip" type="number">
+        </div>
+        <div>
+            <label for="billCity">Address</label>
+            <br>
+            <input id="billCity" name="billCity" type="text">
+        </div>
+        <div>
+            <label for="billState">State</label>
+            <br>
+            <input id="billState" name="billState" type="text">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend><h4>Credit Information</h4></legend>
+        <div>
+            <label for="cardName">Name on Card</label>
+            <br>
+            <input id="cardName" name="cardName" type="text" autofocus required>
+        </div>
+        <div>
+            <label for="cardNumb">Card Number</label>
+            <br>
+            <input id="cardNumb" name="cardNumb" type="number" required>
+        </div>
+            <label for="cardExpire">Expiry Date</label>
+            <br>
+            <input id="cardExpire" name="cardExpire" type="month" required>
+        <div>
+            <label for="cardCVV">CVV</label>
+            <br>
+            <input id="cardCVV" name="cardCVV" type="number" required>
+        </div>
+        <div>
+            <input id="keepCard" name="keepCard" type="checkbox" checked>
+            <label for="keepCard">Keep this credit card on file for future transactions</label>
+        </div>
+    </fieldset>
+    <br>
+    <div>
+        <button type="submit"><h4>Buy Now!</h4></button>
+    </div>
 
 </form>
 
