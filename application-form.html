@@ -6,6 +6,7 @@
 </head>
 <body>
 
+
 <form>
     <div>
         <p> Received on <input id="receivedDate" name="receivedDate" type="date"> (date) at
@@ -13,16 +14,16 @@
     </div>
 
 <!-- Loggo and info goes here-->
-    <div>
-        <img>
+    <center><div>
+        <img src="img/tardiamond.png">
         <h2>TEXAS ASSOCIATION OF REALTORS</h2>
         <h1>RESIDENT LEASE APPLICATION</h1>
         <p>USE OF THIS FORM BY PERSONS WHO ARE NOT MEMBERS OF THE TEXAS ASSOCIATION OF REALTORS &reg; IS NOT AUTHORIZED</p>
         <h6>&copy;Texas Association of REALTORS&reg;, Inc. 2007</h6>
         <h3>Each occupant and co-applicant 18 years or older must submit a separate application.</h3>
-    </div>
+    </div></center>
 <!-- Thick line goes here-->
-
+    <hr>
     <div>
         <label for="propAddress">Property Address: </label>
         <input id="propAddress" name="Property">
@@ -36,6 +37,7 @@
             <input id="secDep" name="secDep" type="number">
         </p>
     </div>
+
     <div>
         <p>Applicant was referred to Landlord by:</p>
         <input id="agentCheck" type="checkbox">
@@ -53,7 +55,7 @@
         <label for="otherCheck"> Other </label>
         <input name="otherText" type="text">
     </div>
-
+    <br>
     <div>
         <label for="applName">Applicant's name (first, middle, last)</label>
         <input id="applName" name="applName" type="text">
@@ -115,24 +117,76 @@
     </div>
     <div>
         Name all other persons who will occupy the Property: <br>
-        Name: <input id="otherApp" name="otherApp1" type="text">
-        Relationship: <input id="otherRelate" name="otherRelate1" type="text">
-        Age: <input id="otherAge" name="otherAge1" type="text">
+        Name: <input id="otherApp1" name="otherApp1" type="text">
+        Relationship: <input id="otherRelate1" name="otherRelate1" type="text">
+        Age: <input id="otherAge1" name="otherAge1" type="text">
         <br>
-        Name: <input id="otherApp" name="otherApp2" type="text">
-        Relationship: <input id="otherRelate" name="otherRelate2" type="text">
-        Age: <input id="otherAge" name="otherAge2" type="text">
+        Name: <input id="otherApp2" name="otherApp2" type="text">
+        Relationship: <input id="otherRelate2" name="otherRelate2" type="text">
+        Age: <input id="otherAge2" name="otherAge2" type="text">
         <br>
-        Name: <input id="otherApp" name="otherApp3" type="text">
-        Relationship: <input id="otherRelate" name="otherRelate3" type="text">
-        Age: <input id="otherAge" name="otherAge3" type="text">
+        Name: <input id="otherApp3" name="otherApp3" type="text">
+        Relationship: <input id="otherRelate3" name="otherRelate3" type="text">
+        Age: <input id="otherAge3" name="otherAge3" type="text">
         <br>
-        Name: <input id="otherApp" name="otherApp4" type="text">
-        Relationship: <input id="otherRelate" name="otherRelate4" type="text">
-        Age: <input id="otherAge" name="otherAge4" type="text">
+        Name: <input id="otherApp4" name="otherApp4" type="text">
+        Relationship: <input id="otherRelate4" name="otherRelate4" type="text">
+        Age: <input id="otherAge4" name="otherAge4" type="text">
     </div>
 
     <div>
+        Applicant's Current Address: <input id="applCurrentAdd" name="applCurrentAdd" type="text">
+        Apt. No. <input id="applCurrentNo" name="applCurrentNo" type="number"><br>
+        <input id="applCurrentCSZ" name="applCurrentCSZ"> (City, State, Zip) <br>
+        Landlord's name: <input id="currentLL" name="CurrentLL" type="text">
+        Email: <input id="currentLLEmail" name="currentLLEmail" type="text">
+        <br>
+        Phone:<em>Day: </em><input id="cLLPhoneDay" name="cLLPhoneDay" type="text">
+        <em>Nt: </em><input id="cLLPhoneNt" name="cLLPhonenNt" type="text">
+        <em>Mb: </em><input id="cLLPhoneMb" name="cLLPhoneMb" type="text">
+        <em>Fax: </em><input id="cLLPhoneFax" name="cLLPhoneFax" type="text">
+        <br>
+        Date Moved-In: <input id="cMoveIn" name="cMoveIn" type="date">
+        Moved-Out Date: <input id="cMoveOut" name="cMoveOut" type="date">
+        Rent: $ <input id="cRent" name="cRent" type="number">
+        <br>
+        Reason for move: <input id="cReason" name="cReason" type="text">
+    </div>
+    <br>
+
+    <div>
+        Applicant's Current Address: <input id="applPrevAdd" name="applPrevAdd" type="text">
+        Apt. No. <input id="applPrevtNo" name="applPrevNo" type="number"><br>
+        <input id="applPrevCSZ" name="applPrevCSZ"> (City, State, Zip) <br>
+        Landlord's name: <input id="prevLL" name="prevtLL" type="text">
+        Email: <input id="prevLLEmail" name="prevLLEmail" type="text">
+        <br>
+        Phone:<em>Day: </em><input id="pLLPhoneDay" name="pLLPhoneDay" type="text">
+        <em>Nt: </em><input id="pLLPhoneNt" name="pLLPhoneNt" type="text">
+        <em>Mb: </em><input id="pLLPhoneMb" name="pLLPhoneMb" type="text">
+        <em>Fax: </em><input id="pLLPhoneFax" name="pLLPhoneFax" type="text">
+        <br>
+        Date Moved-In: <input id="pMoveIn" name="pMoveIn" type="date">
+        Moved-Out Date: <input id="pMoveOut" name="pMoveOut" type="date">
+        Rent: $ <input id="pRent" name="pRent" type="number">
+        <br>
+        Reason for move: <input id="pReason" name="pReason" type="text">
+    </div>
+
+    <div>
+        Applicant's Current Employer: <input id="applEmp" name="applEmp" type="text">
+        <br>
+        Address: <input id="empAdd" name="empAdd" type="text"> (street, city, state, zip)
+        <br>
+        Supervisor's Name: <input id="supName" name="supName" type="text">
+        Phone: <input id="supPhone" name="supPhone" type="text">
+        Fax: <input id="supFax" name="supFax" type="text">
+        <br>
+        Email: <input id="supEmail" name="supEmail">
+        <br>
+        Start Date: <input id="startDate" name="startDate" type="date">
+        Gross Monthly Income: $ <input id="applIncome" name="applIncome" type="number">
+        Position: <input id="applPos" name="applPos" type="text">
 
     </div>
 </form>
