@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Form Bonus</title>
+</head>
+<body>
+
+<form>
+    <div>
+        <p> Received on <input id="receivedDate" name="receivedDate" type="date"> (date) at
+        <input id="receivedTime" name="receivedTime" type="time"> (time)</p>
+    </div>
+
+<!-- Loggo and info goes here-->
+    <div>
+        <img>
+        <h2>TEXAS ASSOCIATION OF REALTORS</h2>
+        <h1>RESIDENT LEASE APPLICATION</h1>
+        <p>USE OF THIS FORM BY PERSONS WHO ARE NOT MEMBERS OF THE TEXAS ASSOCIATION OF REALTORS &reg; IS NOT AUTHORIZED</p>
+        <h6>&copy;Texas Association of REALTORS&reg;, Inc. 2007</h6>
+        <h3>Each occupant and co-applicant 18 years or older must submit a separate application.</h3>
+    </div>
+<!-- Thick line goes here-->
+
+    <div>
+        <label for="propAddress">Property Address: </label>
+        <input id="propAddress" name="Property">
+        <br>
+        <p>Anticipated:
+            <label for="moveInD">Move-in Date: </label>
+            <input id="moveInD" name="movInD" type="date">
+            <label for="monthRent"> Monthly Rent: $ </label>
+            <input id="monthRent" name="monthRent" type="number">
+            <label for="secDep"> Security Deposit: $ </label>
+            <input id="secDep" name="secDep" type="number">
+        </p>
+    </div>
+    <div>
+        <p>Applicant was referred to Landlord by:</p>
+        <input id="agentCheck" type="checkbox">
+        <label for="agentName"> Real estate agent </label>
+        <input id="agentName" name="agentName" type="text"> (Name)
+        <input id="agentPhone" type="text"> (Phone)
+        <br>
+        <input id="newsCheck" type="checkbox">
+        <label for="newsCheck"> Newspaper </label>
+        <input id="signCheck" type="checkbox">
+        <label for="signCheck"> Sign </label>
+        <input id="internetCheck" type="checkbox">
+        <label for="internetCheck"> Internet </label>
+        <input id="otherCheck" type="checkbox">
+        <label for="otherCheck"> Other </label>
+        <input name="otherText" type="text">
+    </div>
+
+    <div>
+        <label for="applName">Applicant's name (first, middle, last)</label>
+        <input id="applName" name="applName" type="text">
+        <br>
+        Is there a co-applicant?
+        <input type="radio" name="coAppCheck" value="yes"> Yes
+        <input type="radio" name="coAppCheck" value="no"> No
+        <strong><em>If yes, co-applicant must submit a separate application</em></strong>
+        <br>
+        Applicant's former last name (maiden or married)
+        <input id="maidenName" name="maidenName" type="text">
+        <br>
+        <label for="applEmail">E-mail </label>
+        <input id="applEmail" name="applEmail" type="text">
+        <label for="applHomePhone"> Home Phone </label>
+        <input id="applHomePhone" name="applHomePhone" type="text">
+        <br>
+        <label for="applWorkPhone"> Work Phone </label>
+        <input id="applWorkPhone" name="applWorkPhone" type="text">
+        <label for="applMobilePage"> Mobile/Pager </label>
+        <input id="applMobilePage" name="applMobilePage" type="text">
+        <br>
+        Soc. Sec. No. <input id="applSocSecNo" name="applSocSecNo" type="text">
+
+    </div>
+
+</form>
+
+</body>
+</html>
