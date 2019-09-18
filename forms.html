@@ -10,11 +10,12 @@
         <fieldset>
             <legend>Login</legend>
             <div>
-                <label for="username">Username</label>
+                <label for="username">Username: </label>
                 <input id="username" name="username" type="text" placeholder="Enter your username">
             </div>
+            <br>
             <div>
-                <label for="password">Password</label>
+                <label for="password">Password: </label>
                 <input id="password" name="password" type="password" placeholder="Enter your password">
             </div>
             <div>
@@ -23,9 +24,9 @@
         </fieldset>
         <br>
         <fieldset>
-            <h3>User Bio</h3>
+            <h3><label for="bioBody">User Bio</label></h3>
             <div>
-                <textarea id="bbody" name="bbody" rows="5" cols="40"></textarea>
+                <textarea id="bioBody" name="bioBody" rows="5" cols="40"></textarea>
             </div>
             <div>
                 <button type="submit">Send</button>
@@ -33,7 +34,7 @@
         </fieldset>
         <br>
         <fieldset>
-        <h4>How did you hear about us?</h4>
+            <h4><label>How did you hear about us?</label></h4>
             <label>
                 <input type="radio" name="q1a1" value="billboard">Billboard
             </label>
@@ -49,8 +50,8 @@
         <div>
             <br>
             <br>
-            <label>What browser are you using?</label>
-                <select id="dropBrowser">
+            <label for="dropBrowser">What browser are you using?</label>
+                <select id="dropBrowser" name="dropBrowser">
                     <option value="safari">Safari</option>
                     <option value="explorer">Internet explorer</option>
                     <option value="chrome">Chrome</option>
@@ -58,6 +59,10 @@
                     <option value="other">other</option>
                 </select>
         </div>
+            <br>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
         </fieldset>
     </form>
 
