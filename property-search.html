@@ -8,33 +8,44 @@
 <form method="post" action="https://request-inspector.glitch.me/" >
     <fieldset>
         <legend>Search for Property</legend>
-        <label for="propType">Property Type:</label>
-        <input id="propType" name="propertyType" type="text" autofocus>
+        <div>
+            <label for="propType">Property Type:</label>
+            <input id="propType" name="propertyType" type="text" autofocus>
+        </div>
         <br>
+        <div>
+            <label for="sqreFt">Square Footage:</label>
+            <input id="sqreFt" name="squareFoot" type="number">
+        </div>
         <br>
-        <label for="sqreFt">Square Footage:</label>
-        <input id="sqreFt" name="squareFoot" type="number">
+        <div>
+            <label for="minPrice">Minimum Price:</label>
+            <input id="minPrice" name="min_price" type="number">
+        </div>
         <br>
+        <div>
+            <label for="maxPrice">Maximum Price:</label>
+            <input id="maxPrice" name="max_price" type="number">
+        </div>
         <br>
-        <label for="minPrice">Minimum Price:</label>
-        <input id="minPrice" name="min_price" type="number">
+        <div>
+            <label for="zipCode">Zip code:</label>
+            <input id="zipCode" name="zipCode" type="number">
+        </div>
         <br>
+        <div>
+            <label for="numBed">Number of beds:</label>
+            <input id="numBed" name="numOfBeds" type="number">
+        </div>
         <br>
-        <label for="maxPrice">Maximum Price:</label>
-        <input id="maxPrice" name="max_price" type="number">
+        <div>
+            <label for="numBaths">Number of Bathrooms:</label>
+            <input id="numBaths" name="numOfBaths" type="number">
+        </div>
         <br>
-        <br>
-        <label for="zipCode">Zip code:</label>
-        <input id="zipCode" name="zipCode" type="number">
-        <br>
-        <br>
-        <label for="numBed">Number of beds:</label>
-        <input id="numBed" name="numOfBeds" type="number">
-        <br>
-        <br>
-        <label for="numBaths">Number of Bathrooms:</label>
-        <input id="numBaths" name="numOfBaths" type="number">
-        <br>
+        <div>
+            <button type="submit">Search</button>
+        </div>
 
     </fieldset>
 </form>
