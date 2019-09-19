@@ -1,0 +1,6 @@
+/* style sheet*/
+
+.fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+}
