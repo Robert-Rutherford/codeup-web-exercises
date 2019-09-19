@@ -14,8 +14,9 @@ h2 {
 body {
     /*background: aqua;*/
     background-image: url("../img/backgroundImg.jpeg");
-    background-repeat: repeat;
-    background-size: 1000px 1000px;
+    /*background-repeat: repeat;*/
+    background-size: 2000px;*
+    background-position: center;
 }
 
 ol {
