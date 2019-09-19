@@ -1,4 +1,13 @@
 /* style sheet*/
+
+:root{
+    --image-1: url("../img/exercise-img-1.jpeg");
+    --image-2: url("../img/exercise-img-2.jpeg");
+    --image-3: url("../img/exercise-img-3.jpeg");
+    --image-4: url("../img/exercise-img-4.jpeg");
+
+}
+
 body{
     font-size: 2em;
 }
@@ -10,7 +19,7 @@ body{
 }
 
 h2 {
-    color: red;
+    color: darkblue;
     text-decoration: underline;
 }
 
@@ -35,25 +44,33 @@ ul{
 }
 
 .table-messer{
-    /*border-style: groove;*/
+    border-style: groove;
+}
+
+.no-border{
+    border-style: none;
 }
 
 td{
     border-style: dashed;
     font-size: 1em;
     padding: .5em;
+    text-align: center;
 }
 
 th{
     font-size: 1.5em;
     padding: .5em;
+    text-align: center;
+    background-color: goldenrod;
+
 }
 
 a:link {
     color: darkblue;
 }
 a:visited {
-    color: coral;
+    color: darkgreen;
 }
 a:hover{
     color: darkblue;
@@ -73,4 +90,17 @@ hr{
     height: 150px;
     border: .5em solid white;
     border-radius: 10px;
+
+}
+
+.btn{
+    size: 1em;
+    border-radius: 10px;
+    font-size: .5em;
+}
+
+.change_img{
+
+
+
 }
