@@ -9,6 +9,7 @@
         <p>This is my morning warm-up</p>
 
         <script>
+            // September 18
             var num1 = 5;
             var num2 = 8;
 
@@ -19,6 +20,20 @@
             var numSum = returnSum(num1,num2);
             console.log(numSum);
 
+            // September 19
+            var tA= 5;
+            var tB= 6;
+            var tC= 7;
+
+            function triangleArea(side1,side2,side3) {
+               var perimeter = (side1+side2+side3)/2;
+                var area = Math.sqrt(perimeter*(perimeter-side1)*(perimeter-side2)*(perimeter-side3));
+                return area;
+            }
+            var triArea = triangleArea(tA,tB,tC);
+            console.log(triArea);
+
+            //
         </script>
     </body>
 </html>
