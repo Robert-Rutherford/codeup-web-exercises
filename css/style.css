@@ -1,4 +1,7 @@
 /* style sheet*/
+body{
+    font-size: 2em;
+}
 
 .fancy-header {
     color: purple; /* single line comment */
@@ -11,11 +14,15 @@ h2 {
     text-decoration: underline;
 }
 
+.sub-header{
+    text-align: center;
+}
+
 body {
     /*background: aqua;*/
-    background-image: url("../img/backgroundImg.jpeg");
-    /*background-repeat: repeat;*/
-    background-size: 2000px;*
+    background-image: url("../img/bg_img4_pattern.jpg");
+    background-repeat: repeat;
+    background-size: 1800px;
     background-position: center;
     font-family: 'Turret Road', cursive;
 }
@@ -27,13 +34,19 @@ ul{
     list-style: square;
 }
 
-td{
-    font-size: 15px;
-    padding: 15px;
+.table-messer{
+    /*border-style: groove;*/
 }
-tr{
-    font-size: 12px;
-    padding: 12px;
+
+td{
+    border-style: dashed;
+    font-size: 1em;
+    padding: .5em;
+}
+
+th{
+    font-size: 1.5em;
+    padding: .5em;
 }
 
 a:link {
@@ -53,4 +66,11 @@ hr{
     color: black;
     background-color: black;
     height: 5px;
+}
+
+.img-fixer{
+    width: 150px;
+    height: 150px;
+    border: .5em solid white;
+    border-radius: 10px;
 }
