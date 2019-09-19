@@ -3,4 +3,24 @@
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+}
+
+h2 {
+    color: red;
+    text-decoration: underline;
+}
+
+body {
+    /*background: aqua;*/
+    background-image: url("../img/backgroundImg.jpeg");
+    background-repeat: repeat;
+    background-size: 1000px 1000px;
+}
+
+ol {
+    list-style: square;
+}
+ul{
+    list-style: inside;
 }
