@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+/*font-family: 'Montserrat', sans-serif;*/
+/*font-family: 'Work Sans', sans-serif;*/
+.nav-bar{
+    background-color: #C1C1C1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-link-left{
+    /*flex-grow: 0;*/
+    /*margin-left: auto;*/
+}
+
+.nav-link-right{
+    /*flex-grow: 0;*/
+    /*margin-right: auto;*/
+}
+
+.logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    flex-grow: 1;
+    /*flex-basis: 300px;*/
+    /*margin: 0 auto;*/
+}
+
+a{
+
+}
