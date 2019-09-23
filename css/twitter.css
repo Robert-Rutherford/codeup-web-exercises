@@ -27,6 +27,9 @@ a {
 }
 .top-nav {
     background: var(--light-bg);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 .nav {
     list-style-type: none;
@@ -35,15 +38,82 @@ a {
 }
 .nav-link {
     color: var(--main-link-color);
+    padding: 1.5em;
     font-weight: bold;
     text-decoration: none;
 }
 .nav-link:hover {
     color: var(--link-color);
 }
+
+.nav-item{
+    display: inline-block;
+    padding: 1.5em;
+}
+
 .profile {
     background: var(--light-bg);
+    height: 80px;
 }
+
+.profile-image{
+    /*height: 80px;*/
+    position: absolute;
+    top: 235px;
+}
+
+.profile-form{
+    float: right;
+    line-height: 85px;
+}
+
+.profile-details{
+    float: left;
+    width: calc(25% - .5em);
+    margin: .5em 0;
+}
+
+.profile-items{
+    padding: 0;
+    list-style-type: none;
+}
+.profile-entry{
+    margin: .5em;
+}
+
+.timeline{
+    float: left;
+    width: calc(50% - .5em);
+    margin: .5em 0;
+}
+
+.who-to-follow{
+    float: right;
+    width: calc(25% - .5em);
+    margin: .5em 0;
+}
+.container{
+    padding: 2em;
+}
+.media{
+    width: 100%;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid;
+    border-bottom-color: var(--separator-color);
+    padding: .5em;
+    overflow: auto;
+}
+.media-image{
+    width: 50px;
+    float: left;
+    margin-top: 1.33em;
+}
+.media-body{
+    width: calc(100% - 50px);
+    float: right;
+
+}
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
