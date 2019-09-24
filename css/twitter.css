@@ -83,13 +83,13 @@ a {
 
 .timeline{
     float: left;
-    width: calc(50% - .5em);
+    width: calc(50% - 1em);
     margin: .5em 0;
 }
 
 .who-to-follow{
     float: right;
-    width: calc(25% - .5em);
+    width: calc(25% - 1em);
     margin: .5em 0;
 }
 .container{
@@ -98,8 +98,8 @@ a {
 .media{
     width: 100%;
     background-color: var(--light-bg);
-    border-bottom: 1px solid;
-    border-bottom-color: var(--separator-color);
+    border-bottom: 1px solid var(--separator-color);
+    /*border-bottom-color: ;*/
     padding: .5em;
     overflow: auto;
 }
