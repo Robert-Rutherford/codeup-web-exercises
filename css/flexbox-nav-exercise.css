@@ -40,10 +40,24 @@
     /*margin: 0 auto;*/
 }
 
-a{
+ul{
+    list-style: none;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+
 
 }
 
+.alignR{
+    align-items: flex-end;
+}
+
+
+
 .button-logos{
     /*image-resolution: 5dppx;*/
+
 }

@@ -67,5 +67,9 @@ body {
     /*align-self: flex-start;*/
     display: flex;
     flex-basis: 3em;
+    /*flex-grow: 1;*/
+    /*width: 15em;*/
+    /*margin-right: 3em;*/
+
 
 }
