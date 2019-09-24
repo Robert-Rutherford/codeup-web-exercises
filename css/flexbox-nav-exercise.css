@@ -10,16 +10,19 @@
     align-items: center;
     /*justify-content: center;*/
     justify-content: space-between;
+    /*flex-wrap: wrap;*/
+    flex-grow: 1;
     width: 100%;
 }
 
 .nav-link-left{
-    /*flex-grow: 0;*/
+    flex-grow: 1;
     /*margin-left: auto;*/
 }
 
 .nav-link-right{
-    /*flex-grow: 0;*/
+    flex-grow: 1;
+    text-align: right;
     /*margin-right: auto;*/
 }
 
@@ -29,6 +32,7 @@
     font-size: 2em;
     padding-top: .2em;
     padding-bottom: .2em;
+    text-align: center;
     /*flex-grow: 1;*/
     /*justify-content: center;*/
     /*align-self: center;*/
