@@ -8,9 +8,9 @@ body {
 main {
     /* add margin to make the top of our grid more visible */
     margin-top: 2em;
-    background: lightgreen;
+    /*background: lightgreen;*/
     display: inline-grid;
-
+    border: 2px solid black;
     grid-template-columns: 62px 62px 62px 62px 62px 62px 62px 62px;
     grid-template-rows: 62px 62px 62px 62px 62px 62px 62px 62px;
 }
@@ -38,25 +38,25 @@ main {
 .box5{
     background-color: #DC1C21;
     border: 2px solid black;
-
+    grid-area: 1/3/4/9;
 }
 .box6{
     background-color: #FFFFFF;
     border: 2px solid black;
-
+    grid-area: 4/3/8/5;
 }
 .box7{
     background-color: #FFFFFF;
     border: 2px solid black;
-
+    grid-area: 4/5/6/9;
 }
 .box8{
     background-color: #FCCC0A;
     border: 2px solid black;
-
+    grid-area: 6/5/8/9;
 }
 .box9{
     background-color: #30447B;
     border: 2px solid black;
-
+    grid-area: 8/3/9/9;
 }
