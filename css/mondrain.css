@@ -11,8 +11,10 @@ main {
     /*background: lightgreen;*/
     display: inline-grid;
     border: 2px solid black;
-    grid-template-columns: 62px 62px 62px 62px 62px 62px 62px 62px;
-    grid-template-rows: 62px 62px 62px 62px 62px 62px 62px 62px;
+    /*grid-template-columns: 62px 62px 62px 62px 62px 62px 62px 62px;*/
+    grid-template-columns: repeat(8, 62px);
+    /*grid-template-rows: 62px 62px 62px 62px 62px 62px 62px 62px;*/
+    grid-template-rows: repeat(8, 62px);
 }
 
 .box1{
