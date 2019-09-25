@@ -11,6 +11,7 @@
     /*justify-content: center;*/
     justify-content: space-between;
     /*flex-wrap: wrap;*/
+    position: fixed;
     flex-grow: 1;
     width: 100%;
 }
@@ -33,6 +34,9 @@
     padding-top: .2em;
     padding-bottom: .2em;
     text-align: center;
+
+    position: absolute;
+    transform: translate(-50%,-50%);
 
     /*flex-grow: 1;*/
     /*justify-content: center;*/
