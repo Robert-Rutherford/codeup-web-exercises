@@ -74,4 +74,5 @@ a {
 
 .card {
     /* This is a flex item */
+    /*flex-grow: .3;*/
 }

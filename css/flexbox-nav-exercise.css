@@ -42,6 +42,9 @@
 
 ul{
     list-style: none;
+    display: flex;
+    flex-direction: row;
+
 }
 
 .nav-links{
@@ -52,10 +55,21 @@ ul{
 }
 
 .alignR{
-    align-items: flex-end;
+    justify-content: flex-end;
 }
 
+ul .alignL{
 
+}
+
+li{
+    margin-right: 2em;
+}
+
+a:hover{
+    color: white;
+    background-color: black;
+}
 
 .button-logos{
     /*image-resolution: 5dppx;*/
