@@ -44,6 +44,8 @@ ul{
     list-style: none;
     display: flex;
     flex-direction: row;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -63,12 +65,30 @@ ul .alignL{
 }
 
 li{
-    margin-right: 2em;
+    display: block;
+    /*padding: 1em;*/
+    text-decoration: none;
+    /*margin-right: 2em;*/
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    /*color: blue;*/
 }
 
 a:hover{
-    color: white;
-    background-color: black;
+    color: blue;
+}
+
+li a{
+    padding: 1em;
+}
+
+li a:hover{
+    /*background-clip: padding-box;*/
+    /*color: blue;*/
+    background-color: white;
 }
 
 .button-logos{
