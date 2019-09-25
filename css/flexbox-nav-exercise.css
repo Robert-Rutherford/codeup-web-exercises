@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
+    /*font-family: 'Work Sans', sans-serif;*/
 }
 /*font-family: 'Montserrat', sans-serif;*/
 /*font-family: 'Work Sans', sans-serif;*/
@@ -29,15 +29,20 @@
 .logo{
     /*display: flex;*/
     font-family: 'Montserrat', sans-serif;
-    font-size: 2em;
+    font-size: 3em;
     padding-top: .2em;
     padding-bottom: .2em;
     text-align: center;
+
     /*flex-grow: 1;*/
     /*justify-content: center;*/
     /*align-self: center;*/
     /*flex-basis: 300px;*/
     /*margin: 0 auto;*/
+}
+
+.pos-abs{
+    /*position: center;*/
 }
 
 ul{
@@ -46,13 +51,13 @@ ul{
     flex-direction: row;
     margin: 0;
     padding: 0;
+    font-family: 'Work Sans', sans-serif;
 
 }
 
 .nav-links{
     display: flex;
     align-items: center;
-
 
 }
 
