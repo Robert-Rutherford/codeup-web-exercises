@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    text-align: center;
+    display: inline-grid;
+    margin: 2px;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: 15% 1fr 10% 10%;
+    grid-template-columns: 20% 1fr;
+    gap: .5em;
+}
+
+main{
+    background-color: cyan;
+    border: black solid 2px;
+    grid-area: 2/2/span 1/span 1;
+}
+
+header{
+    background-color: lightgreen;
+    border: black solid 2px;
+    grid-area: 1/1/span 1/span 2;
+}
+
+footer{
+    background-color: lightpink;
+    border: black solid 2px;
+    grid-area: 4/1/span 1/span 2;
+}
+
+.nav-bar{
+    background-color: orange;
+    border: black solid 2px;
+    grid-area: 2/1/span 2/span 1;
+}
+
+.ads-bar{
+    background-color: aliceblue;
+    border: black solid 2px;
+    grid-area: 3/2/span 1/span 1;
+}
