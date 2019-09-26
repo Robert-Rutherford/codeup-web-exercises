@@ -62,8 +62,32 @@ header a:hover{
 
 }
 
-.body-text{
+.nav-bar ul{
+    display: flex;
+    /*width: 100%;*/
+    flex-direction: column;
+    /*padding-left: 2em;*/
+}
 
+.nav-bar li {
+    padding: 1em 2em;
+}
+
+.nav-bar li:hover {
+    background-color: #848487;
+}
+
+.nav-bar h2{
+    padding-left: 2em;
+    text-decoration: none;
+}
+
+.body-text{
+    padding-left: 2em;
+}
+
+.body-text h1{
+    color: #409388;
 }
 
 .body-text:nth-of-type(1){
@@ -77,7 +101,7 @@ header a:hover{
 }
 
 .ads-bar{
-
+ padding-top: 1em;
 }
 .ads-bar:nth-of-type(1){
     grid-area: 2/3/ span 1/span 1;
@@ -91,6 +115,7 @@ header a:hover{
 
 .page-number-bar{
     grid-area: 5/2/ span 1/ span 2;
+    text-align: center;
 
 }
 
@@ -103,11 +128,41 @@ footer{
 }
 
 footer h2{
-
+  padding-top: 40px;
+    padding-left: 1em;
 }
 
 .power-bar{
     grid-area: -2/ 2/ span 1/ span 2;
     background-color: #333333;
     color: white;
+    padding: 1em;
+}
+
+.power-bar a{
+    text-decoration: underline;
+}
+
+.page-number-bar ul{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    font-size: 1.5em;
+}
+
+.page-number-bar li{
+    padding: .5em;
+    margin: .5em;
+
+}
+
+.page-number-bar li:nth-of-type(1){
+    color: white;
+    background-color: black;
+
+}
+
+.page-number-bar li:hover{
+    color: white;
+    background-color: black;
 }
