@@ -50,20 +50,73 @@
     <h1>Welcome to Pizza World!</h1>
 </div>
 <h2>Build your own Pizza!</h2>
-<ul class="nav nav-tabs">
-    <li class="nav-item">
-        <a class="nav-link active" href="#"><span class="badge badge-secondary">1</span> Size and Crust</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#"><span class="badge badge-secondary">2</span> Cheese and Sauce</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#"><span class="badge badge-secondary">3</span> Toppings</a>
-    </li>
-</ul>
-    <div class="card">
+<nav>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#SizeCrust" data-toggle="tab" role="tab" aria-controls="nav-size-crust" aria-selected="true">
+                <span class="badge badge-secondary">1</span> Size and Crust</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#CheeseSauce" data-toggle="tab" role="tab" aria-controls="nav-cheese-sauce" aria-selected="false">
+                <span class="badge badge-secondary">2</span> Cheese and Sauce</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><span class="badge badge-secondary">3</span> Toppings</a>
+        </li>
+    </ul>
+</nav>
+    <div class="card fade show active" id="SizeCrust" role="tabpanel" aria-labelledby="nav-size-crust">
         <div class="card-header text-white bg-primary">
             Choose Size and Crust
+        </div>
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header">
+                    Hand Tossed
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                    <li class="list-group-item">
+                        &nbsp
+                        <input class="form-check-input" type="radio" name="PizzaSizeRadios" id="PizzaSizeRadiosSmall" value="small">
+                        <label class="form-check-label" for="PizzaSizeRadiosSmall">
+                            Small (10")
+                        </label></li>
+                    <li class="list-group-item">
+                        &nbsp
+                        <input class="form-check-input" type="radio" name="PizzaSizeRadios" id="PizzaSizeRadiosMedium1" value="mediumTossed">
+                        <label class="form-check-label" for="PizzaSizeRadiosMedium1">
+                            Medium (12")
+                        </label></li>
+                </ul>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    Crispy Thin
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
+                    <li class="list-group-item">&nbsp
+                        <input class="form-check-input" type="radio" name="PizzaSizeRadios" id="PizzaSizeRadiosMedium2" value="mediumThin">
+                        <label class="form-check-label" for="PizzaSizeRadiosMedium2">
+                            Medium (12")
+                        </label></li>
+                    <li class="list-group-item">&nbsp
+                        <input class="form-check-input" type="radio" name="PizzaSizeRadios" id="PizzaSizeRadiosLarge" value="large">
+                        <label class="form-check-label" for="PizzaSizeRadiosLarge">
+                            Large (14")
+                        </label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-footer text-right">
+            <a href="#" class="btn btn-primary ">Go somewhere ></a>
+        </div>
+    </div>
+    <div class="card fade" id="CheeseSauce" role="tabpanel" aria-labelledby="nav-cheese-sauce">
+        <div class="card-header text-white bg-primary">
+            Choose Cheese and Sauce
         </div>
         <div class="card-body">
             <div class="card">
