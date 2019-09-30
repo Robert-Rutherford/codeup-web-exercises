@@ -1,0 +1,112 @@
+/*Constants*/
+*{
+    background-color: #E6E6E6;
+}
+body{
+    font-family: 'Abel', sans-serif;
+}
+
+h1{
+    font-family: 'Anton', sans-serif;
+    font-size: 64px;
+}
+h2{
+    font-family: 'Anton', sans-serif;
+    font-size: 48px;
+}
+h3{
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+}
+h4{
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+}
+h5{
+    font-family: 'Anton', sans-serif;
+    font-size: 28px;
+}
+
+.design-button{
+    background-color: #E6563B;
+}
+
+.develop-button{
+    background-color: #E89E17;
+}
+
+.support-button{
+    background-color: #7DB06D;
+}
+
+.host-button{
+    background-color: #04AAAA;
+}
+
+.logo{
+    max-width: 105px;
+    max-height: 105px;
+    border-radius: 75px;
+    overflow: visible;
+}
+
+.nav-bar{
+    /*background-color: #F0F0F0;*/
+    background-color: white;
+}
+
+.design-icon{
+    max-width: 18px;
+    max-height: 18px;
+    background-color: #E6563B;;
+}
+
+.develop-icon{
+    max-width: 18px;
+    max-height: 18px;
+    background-color: #E89E17;
+}
+
+.support-icon{
+    max-width: 18px;
+    max-height: 18px;
+    background-color: #7DB06D;
+}
+
+.host-icon{
+    max-width: 18px;
+    max-height: 18px;
+    background-color: #04AAAA;
+}
+
+
+
+/*extra small*/
+@media screen and (max-width: 414px) {
+    .nav-bar{
+        text-align: center;
+        height: 55px;
+        /*padding-top: 25px;*/
+        /*padding-bottom: 25px;*/
+    }
+
+    .project-img{
+        max-width: 80%;
+    }
+
+}
+
+/*small*/
+@media screen and (min-width: 415px) and (max-width: 767px){
+
+}
+
+/*medium*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+}
+
+/*large and extra Large*/
+@media screen and (min-width: 1024px){
+
+}
