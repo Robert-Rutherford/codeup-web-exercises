@@ -11,7 +11,7 @@
     <title>Order Pizza Bootstrap</title>
 </head>
 <body>
-<!--Nav bar-->
+<!-- Main Nav bar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Pizza World</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,14 +42,19 @@
         </form>
     </div>
 </nav>
+
+<!--Body content-->
 <div class="container">
     <!-- Content here -->
 <div class="jumbotron">
     <h1>Welcome to Pizza World!</h1>
 </div>
 <h2>Build your own Pizza!</h2>
-<nav>
 
+<!-- Nav list for the three cards-->
+<!-- badges are used for the numbers-->
+<!-- Part 1 of tab list nightmare-->
+<nav>
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#sizecrust" role="tab"  aria-controls="sizecrust" aria-selected="true" >
@@ -65,11 +70,20 @@
         </li>
     </ul>
 </nav>
+
+<!-- Cards of content where most of the things happen-->
+<!-- These cards are primarily made by using a card and place a card within that card for the subsections-->
+
     <div class="tab-content" id="orderMenu">
+<!--  first card is for fist page that uses radio buttons to find size of the crust-->
+        <!--    -->
     <div class="card tab-pane fade show active" id="sizecrust" role="tabpanel" aria-labelledby="sizecrust">
+<!--        Card header for crust size-->
         <div class="card-header text-white bg-primary">
             Choose Size and Crust
         </div>
+<!--        Sub-card 1: this card is for the hand tossed options-->
+<!--        -->
         <div class="card-body">
             <div class="card">
                 <div class="card-header">
@@ -77,6 +91,9 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+<!--                    Radio buttons used here-->
+<!--                    The '&nbsp' is a " " (space) placed in front of the content so that the radio button does not-->
+<!--                        sit on top of the edge of the card.-->
                     <li class="list-group-item">
                         &nbsp
                         <input class="form-check-input" type="radio" name="PizzaSizeRadios" id="PizzaSizeRadiosSmall" value="small">
@@ -92,6 +109,8 @@
                 </ul>
             </div>
             <br>
+<!--        Sub-card 2: this card is for the thin crust options-->
+<!--            this is done the same way as the first sub-card-->
             <div class="card">
                 <div class="card-header">
                     Crispy Thin
@@ -111,15 +130,21 @@
                 </ul>
             </div>
         </div>
+<!--        This line is for the button for the bottom right corner of the main card-->
         <div class="card-footer text-right">
             <button type="button" class="btn btn-primary">Next Step ></button>
+<!--            junk code:-->
 <!--            <a href="#" class="btn btn-primary "></a>-->
         </div>
     </div>
+
+<!--  The second card is used for the cheese and sauce options for the pizza-->
+<!--        This card primarily uses form controls to have multiple scroll down options-->
     <div class="card tab-pane fade" id="cheesesauce" role="tabpanel" aria-labelledby="cheesesauce">
         <div class="card-header text-white bg-primary">
             Choose Cheese and Sauce
         </div>
+<!--        Sub-card 1: cheeses-->
         <div class="card-body">
             <div class="card">
                 <div class="card-header">
