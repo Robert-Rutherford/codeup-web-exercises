@@ -72,9 +72,9 @@ li{
     .header-img{
         min-height: 230px;
         /*align-content: center;*/
-        /*margin: auto;*/
-        margin-left: .5em;
-        margin-right: .5em;
+        margin: auto;
+        /*margin-left: .5em;*/
+        /*margin-right: .5em;*/
     }
 
 
@@ -88,7 +88,7 @@ li{
 }
 
 /*desktop 934x1210*/
-@media screen and (min-width:934px) {
+@media screen and (min-width:901px) {
     title{
         visibility: hidden;
     }
