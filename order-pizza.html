@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <title>Order Pizza Bootstrap</title>
 </head>
@@ -51,21 +54,24 @@
 </div>
 <h2>Build your own Pizza!</h2>
 <nav>
-    <ul class="nav nav-tabs">
+
+    <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" href="#SizeCrust" data-toggle="tab" role="tab" aria-controls="nav-size-crust" aria-selected="true">
+            <a class="nav-link active" data-toggle="tab" href="#sizecrust" role="tab"  aria-controls="sizecrust" aria-selected="true" >
                 <span class="badge badge-secondary">1</span> Size and Crust</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#CheeseSauce" data-toggle="tab" role="tab" aria-controls="nav-cheese-sauce" aria-selected="false">
+            <a class="nav-link" data-toggle="tab" href="#cheesesauce" role="tab"  aria-controls="cheesesauce" aria-selected="false">
                 <span class="badge badge-secondary">2</span> Cheese and Sauce</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#Toppings"><span class="badge badge-secondary">3</span> Toppings</a>
+            <a class="nav-link" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false" >
+                <span class="badge badge-secondary">3</span> Toppings</a>
         </li>
     </ul>
 </nav>
-    <div class="card fade show active" id="SizeCrust" role="tabpanel" aria-labelledby="nav-size-crust">
+    <div class="tab-content" id="orderMenu">
+    <div class="card tab-pane fade show active" id="sizecrust" role="tabpanel" aria-labelledby="sizecrust">
         <div class="card-header text-white bg-primary">
             Choose Size and Crust
         </div>
@@ -111,10 +117,11 @@
             </div>
         </div>
         <div class="card-footer text-right">
-            <a href="#" class="btn btn-primary ">Next Step ></a>
+            <button type="button" class="btn btn-primary">Next Step ></button>
+<!--            <a href="#" class="btn btn-primary "></a>-->
         </div>
     </div>
-    <div class="card" id="CheeseSauce" role="tabpanel" aria-labelledby="nav-cheese-sauce">
+    <div class="card tab-pane fade" id="cheesesauce" role="tabpanel" aria-labelledby="cheesesauce">
         <div class="card-header text-white bg-primary">
             Choose Cheese and Sauce
         </div>
@@ -164,7 +171,7 @@
             </div>
         </div>
     </div>
-    <div class="card fade show active" id="Toppings" role="tabpanel" aria-labelledby="nav-size-crust">
+    <div class="card tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings" >
         <div class="card-header text-white bg-primary">
             Choose Toppings
         </div>
@@ -204,30 +211,31 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                         &nbsp
-                        <input class="form-check-input" type="checkbox" id="beefOption" value="beef">
-                        <label class="form-check-label" for="beefOption">Beef</label>
+                        <input class="form-check-input" type="checkbox" id="gPepsOption" value="greenPeppers">
+                        <label class="form-check-label" for="gPepsOption">Green Peppers</label>
                     </li>
                     <li class="list-group-item">
                         &nbsp
-                        <input class="form-check-input" type="checkbox" id="hamOption" value="ham">
-                        <label class="form-check-label" for="hamOption">Ham</label>
+                        <input class="form-check-input" type="checkbox" id="mushOption" value="mushrooms">
+                        <label class="form-check-label" for="mushOption">Mushrooms</label>
                     </li>
                     <li class="list-group-item">
                         &nbsp
-                        <input class="form-check-input" type="checkbox" id="phillyOption" value="philly">
-                        <label class="form-check-label" for="phillyOption">Philly Steak</label>
+                        <input class="form-check-input" type="checkbox" id="onionsOption" value="onions">
+                        <label class="form-check-label" for="onionsOption">Onions</label>
                     </li>
                     <li class="list-group-item">
                         &nbsp
-                        <input class="form-check-input" type="checkbox" id="baconOption" value="bacon">
-                        <label class="form-check-label" for="baconOption">Bacon</label>
+                        <input class="form-check-input" type="checkbox" id="jalaPepsOption" value="jalapenoPeps">
+                        <label class="form-check-label" for="jalaPepsOption">Jalapeno Peppers</label>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="card-footer text-right">
-            <a href="#" class="btn btn-primary ">Next Step ></a>
+            <a href="#" class="btn btn-primary ">Checkout <i class="fa fa-shopping-cart"></i></a>
         </div>
+    </div>
     </div>
 </div>
 
