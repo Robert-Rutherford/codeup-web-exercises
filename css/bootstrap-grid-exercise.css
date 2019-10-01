@@ -1,7 +1,7 @@
 /*Constants*/
 /**/
 *{
-    background-color: #E6E6E6;
+    background-color: #F0F0F0;
 }
 body{
     font-family: 'Abel', sans-serif;
@@ -32,7 +32,11 @@ ul{
     list-style: none;
 }
 
- .project-img img{
+ .project-img{
+     /*width: 200px;*/
+     border: #E6E6E6 solid 10px;
+     border-radius: 5px;
+     width: 90%;
     object-fit: contain;
 }
 
@@ -79,6 +83,9 @@ ul{
     background-color: #04AAAA;
 }
 
+.button-margin{
+    margin: 10px;
+}
 /*
 
     Logo and Nav Bar & xsmall setup
@@ -132,6 +139,7 @@ ul{
     text-align: center;
 }
 .center-sub-title{
+    margin-top: 1px;
     text-align: center;
 }
 
