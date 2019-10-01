@@ -139,12 +139,13 @@
     </div>
 
 <!--  The second card is used for the cheese and sauce options for the pizza-->
-<!--        This card primarily uses form controls to have multiple scroll down options-->
+<!--        This card primarily uses form controls to have multiple scroll down options (list groups)-->
     <div class="card tab-pane fade" id="cheesesauce" role="tabpanel" aria-labelledby="cheesesauce">
         <div class="card-header text-white bg-primary">
             Choose Cheese and Sauce
         </div>
 <!--        Sub-card 1: cheeses-->
+<!--        -->
         <div class="card-body">
             <div class="card">
                 <div class="card-header">
@@ -161,6 +162,7 @@
                 </ul>
             </div>
             <br>
+<!--            Sub-card 2: Sauces-->
             <div class="card">
                 <div class="card-header">
                     Sauce
@@ -184,6 +186,7 @@
                 </ul>
             </div>
         </div>
+<!--        button group for the bottom of the card-->
         <div class="card-footer text-right">
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-primary"> < Previous Step</button>
@@ -191,10 +194,13 @@
             </div>
         </div>
     </div>
+<!--        Card three: the toppings for the pizza-->
+<!--        This card uses a list of checkboxes-->
     <div class="card tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings" >
         <div class="card-header text-white bg-primary">
             Choose Toppings
         </div>
+<!--        Sub-card 1: choose Meats-->
         <div class="card-body">
             <div class="card">
                 <div class="card-header">
@@ -224,6 +230,7 @@
                 </ul>
             </div>
             <br>
+<!--            Sub-card 2: choose non-meats-->
             <div class="card">
                 <div class="card-header">
                     Choose Non-Meats
@@ -252,6 +259,9 @@
                 </ul>
             </div>
         </div>
+<!--        Checkout button-->
+<!--            The icon used is form font awesome Note that the icon won't work unless you change -->
+<!--                'fas' to 'fa'.-->
         <div class="card-footer text-right">
             <a href="#" class="btn btn-primary ">Checkout <i class="fa fa-shopping-cart"></i></a>
         </div>
