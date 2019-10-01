@@ -40,6 +40,13 @@ ul{
     object-fit: contain;
 }
 
+ .img-flex{
+     width: 90%;
+     padding: 0;
+     display: flex;
+     justify-content: space-between;
+ }
+
 /*
 
     Button design
