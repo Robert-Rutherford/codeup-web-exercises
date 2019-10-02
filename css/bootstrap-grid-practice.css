@@ -1,0 +1,32 @@
+.row{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.img-fit{
+    width: 80%;
+    object-fit: contain;
+}
+
+.hidden-at-first{
+    visibility: hidden;
+}
+
+.hidden-second{
+    visibility: visible;
+}
+
+.btn-color{
+    background-color: cyan;
+    padding: 10px;
+}
+
+@media screen  and (min-width: 720px){
+    .hidden-at-first{
+        visibility: visible;
+    }
+    .hidden-second{
+        visibility: hidden;
+    }
+}
+
