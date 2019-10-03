@@ -5,6 +5,7 @@
 }
 body{
     font-family: 'Abel', sans-serif;
+    background-color: #F0F0F0;
 }
 
 h1{
@@ -32,20 +33,48 @@ ul{
     list-style: none;
 }
 
- .project-img{
-     /*width: 200px;*/
-     border: #E6E6E6 solid 10px;
-     border-radius: 5px;
-     width: 90%;
+hr{
+    width: 75%;
+}
+
+.project-img{
+    /*width: 200px;*/
+    border: #E6E6E6 solid 10px;
+    border-radius: 5px;
+    width: 90%;
+    object-fit: cover;
+
+}
+
+.sidebar-img{
+    width: 100%;
     object-fit: contain;
 }
 
- .img-flex{
-     width: 90%;
-     padding: 0;
-     display: flex;
-     justify-content: space-between;
- }
+.img-container{
+    /*border: #E6E6E6 solid 10px;*/
+    /*border-radius: 5px;*/
+    /*width: 90%;*/
+    /*padding-top: 56.25%;*/
+    /*object-fit: contain;*/
+}
+
+.box-frame{
+    /*border: #E6E6E6 solid 10px;*/
+    /*border-radius: 5px;*/
+    /*width: 90%;*/
+    /*object-fit: contain;*/
+    /*max-height: 90%;*/
+}
+
+/*.row > div > img{ width: 100%; display: block;}*/
+
+.img-flex{
+    width: 90%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
 
 /*
 
@@ -93,6 +122,14 @@ ul{
 .button-margin{
     margin: 10px;
 }
+
+.button-margin-left{
+    /*margin: 10px 10px 10px 40px;*/
+}
+
+.button-margin-right{
+    /*margin: 10px 40px 10px 10px;*/
+}
 /*
 
     Logo and Nav Bar & xsmall setup
@@ -138,7 +175,11 @@ ul{
     font-size: 28px;
 }
 
-.not-xsmall-nav{
+.hidden-xs{
+    visibility: hidden;
+}
+
+.hidden-s{
     visibility: hidden;
 }
 
@@ -202,6 +243,16 @@ ul{
     background-color: #04AAAA;
 }
 
+.center-t{
+    text-align: center;
+}
+
+.img-max-man {
+    /*padding-bottom: 20px;*/
+    height: 216px;
+
+}
+
 /*
 
     media screens
@@ -214,20 +265,66 @@ ul{
 
 /*// Small devices (landscape phones, 576px and up)*/
 @media screen and (min-width: 576px) {
+    .button-margin-left{
+        margin: 0;
+    }
+
+    .button-margin-right{
+        margin: 0;
+    }
+    .hidden-xs{
+        visibility: visible;
+    }
+    .hidden-s{
+
+    }
+    .links-bar ul{
+        display: flex;
+        padding: 0;
+        padding-top: 18px;
+        margin: 0;
+        background-color: white;
+        justify-content: space-evenly;
+    }
+
+    .links-bar li{
+        background-color: white;
+    }
+
+    .logo{
+        top: 35px;
+    }
+
+    .companyName{
+        margin-bottom: 10px;
+    }
 
 }
 
 /*// Medium devices (tablets, 768px and up)*/
 @media screen and (min-width: 768px) {
+    hr{
+        width: 90%;
+    }
+
+    .hidden-s{
+        visibility: visible;
+    }
 
 }
 
 /*// Large devices (desktops, 992px and up)*/
 @media screen and (min-width: 992px) {
-
+    .center-t{
+        text-align: left;
+        padding-left: 30px;
+    }
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media screen and (min-width: 1200px) {
+    .img-max-man{
+        /*height: 216px;*/
 
+    }
 }

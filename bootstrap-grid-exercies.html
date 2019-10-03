@@ -12,12 +12,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/bootstrap-grid-exercise.css">
     <link href="https://fonts.googleapis.com/css?family=Abel|Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Codeup Design</title>
 </head>
 <body>
-<nav class="nav-bar">
-<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-<!--    <a class="navbar-brand" href="#"><img class="logo" src="img/assets/logo.jpg"></a>-->
+
+<nav class="nav-bar d-block d-sm-none">
     <div class="jumbotron">
         <img class="logo" src="img/assets/logo.jpg">
     </div>
@@ -31,97 +31,150 @@
         </ul>
     </div>
 </nav>
+
+<nav class="nav-bar d-none d-sm-block d-md-none">
+    <div class="jumbotron">
+        <div class="links-bar">
+            <ul>
+                <li><a>SERVICES</a></li>
+                <li><a>WORK</a></li>
+                <li><img class="logo" src="img/assets/logo.jpg"></li>
+                <li><a>BLOG</a></li>
+                <li><a>CONTACT</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="companyName">Codeup design</div>
+</nav>
+
+
 <div class="container">
-    <div class="center-title">
-        <h2>VISUAL DESIGN & WEB DEVELOPMENT</h2>
+    <div class="row">
+        <div class="center-title col">
+            <h2>VISUAL DESIGN & WEB DEVELOPMENT</h2>
+        </div>
     </div>
-    <div class="center-sub-title">
-        <h4>FROM PARK CITY, UTAH</h4>
+    <div class="row">
+        <div class="center-sub-title col">
+            <h4>FROM PARK CITY, UTAH</h4>
+        </div>
     </div>
-
-    <div align="center">
-        <button class="design-button button-margin">DESIGN</button>
-        <button class="develop-button button-margin">DEVELOP</button>
-        <button class="support-button button-margin">SUPPORT</button>
-        <button class="host-button button-margin">HOST</button>
+    <div class="row justify-content-center no-gutters" align="center">
+        <div class="col-5 col-sm-2 m-2"><button class="design-button button-margin-left">DESIGN</button></div>
+        <div class="col-5 col-sm-2 m-2"><button class="develop-button button-margin-right">DEVELOP</button></div>
+        <div class="col-5 col-sm-2 m-2"><button class="support-button button-margin-left">SUPPORT</button></div>
+        <div class="col-5 col-sm-2 m-2"><button class="host-button button-margin-right">HOST</button></div>
     </div>
-
-    <div align="center">SELECTED WORK</div>
+    <!--    solid line goes here-->
+    <hr class="hidden-xs">
     <br>
-    <div align="center">
-        <img class="project-img" src="img/assets/images/apple-ipad.jpg">
 
-        <ul class="img-flex">
-        <li><label>FEATURED PROJECT</label><li></li>
-        <li><ul class="icon-table">
-            <li><a class="design-icon">D</a></li>
-            <li><a class="develop-icon">D</a></li>
-            <li><a class="support-icon">S</a></li>
-            <li><a class="host-icon">H</a></li>
-        </ul></li>
-        </ul>
+    <div class="row ">
+        <div class="col col-md-8 center-t" >SELECTED WORK</div>
+        <div class="col-md-4 hidden-s">THE LAST</div>
     </div>
     <br>
-    <div align="center">
-        <img class="project-img" src="img/assets/images/macbook.jpg">
-
-        <ul class="img-flex">
-            <li><label>FEATURED PROJECT</label><li></li>
-            <li><ul class="icon-table">
-                <li><a class="design-icon">D</a></li>
-                <li><a class="develop-icon">D</a></li>
-                <li><a class="support-icon">S</a></li>
-                <li><a class="host-icon">H</a></li>
-            </ul></li>
-        </ul>
-    </div>
-    <br>
-    <div align="center">
-        <img class="project-img" src="img/assets/images/man.jpg">
-
-        <ul class="img-flex">
-            <li><label>FEATURED PROJECT</label><li></li>
-            <li><ul class="icon-table">
-                <li><a class="design-icon">D</a></li>
-                <li><a class="develop-icon">D</a></li>
-                <li><a class="support-icon">S</a></li>
-                <li><a class="host-icon">H</a></li>
-            </ul></li>
-        </ul>
-    </div>
-    <br>
-    <div align="center">
-        <img class="project-img" src="img/assets/images/security.jpg">
-
-        <ul class="img-flex">
-            <li><label>FEATURED PROJECT</label><li></li>
-            <li><ul class="icon-table">
-                <li><a class="design-icon">D</a></li>
-                <li><a class="develop-icon">D</a></li>
-                <li><a class="support-icon">S</a></li>
-                <li><a class="host-icon">H</a></li>
-            </ul></li>
-        </ul>
+    <div class="row">
+        <div class="col col-md-8">
+            <div class="row">
+                <div class="col col-sm" align="center">
+                    <div class="img-container">
+                        <img class="project-img" src="img/assets/images/apple-ipad.jpg">
+                    </div>
+                    <ul class="img-flex">
+                        <li><label>FEATURED PROJECT</label><li></li>
+                        <li><ul class="icon-table">
+                            <li><a class="design-icon">D</a></li>
+                            <li><a class="develop-icon">D</a></li>
+                            <li><a class="support-icon">S</a></li>
+                            <li><a class="host-icon">H</a></li>
+                        </ul></li>
+                    </ul>
+                </div>
+                <div class="col-sm d-none d-sm-block" align="center">
+                    <div class="img-container">
+                        <img class="project-img" src="img/assets/images/macbook.jpg">
+                    </div>
+                    <ul class="img-flex">
+                        <li><label>FEATURED PROJECT</label><li></li>
+                        <li><ul class="icon-table">
+                            <li><a class="design-icon">D</a></li>
+                            <li><a class="develop-icon">D</a></li>
+                            <li><a class="support-icon">S</a></li>
+                            <li><a class="host-icon">H</a></li>
+                        </ul></li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm d-none d-sm-block" align="center">
+                    <div class="img-container">
+                        <img class="project-img img-max-man" src="img/assets/images/man.jpg">
+                    </div>
+                    <ul class="img-flex">
+                        <li><label>FEATURED PROJECT</label><li></li>
+                        <li><ul class="icon-table">
+                            <li><a class="design-icon">D</a></li>
+                            <li><a class="develop-icon">D</a></li>
+                            <li><a class="support-icon">S</a></li>
+                            <li><a class="host-icon">H</a></li>
+                        </ul></li>
+                    </ul>
+                </div>
+                <div class="col-sm d-none d-sm-block" align="center">
+                    <div class="img-container ">
+                        <img class="project-img" src="img/assets/images/security.jpg">
+                    </div>
+                    <ul class="img-flex">
+                        <li><label>FEATURED PROJECT</label><li></li>
+                        <li><ul class="icon-table">
+                            <li><a class="design-icon">D</a></li>
+                            <li><a class="develop-icon">D</a></li>
+                            <li><a class="support-icon">S</a></li>
+                            <li><a class="host-icon">H</a></li>
+                        </ul></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--        side bar-->
+        <div class="col-md-4 d-none d-md-block">
+            <div class="row no-gutters ">
+                <div class="col-md-3  d-none d-sm-block">
+                    <!--                    img -->
+                    <img class="sidebar-img p-1" src="img/assets/images/mobile-phone.jpg">
+                </div>
+                <div class="col-md-9  d-none d-sm-block"><h5>THE ADMIN BAR AND ABSOLUTE POSITION</h5><br></div>
+            </div>
+            <div class="row no-gutters ">
+                <div class="col-md-3  d-none d-sm-block">
+                    <!--                    img -->
+                    <img class="sidebar-img p-1" src="img/assets/images/head.jpg">
+                </div>
+                <div class="col-md-9  d-none d-sm-block"><h5>NIBBLER AWESOME WEBSITE TESTING</h5><br></div>
+            </div>
+            <div class="row no-gutters ">
+                <div class="col-md-3  d-none d-sm-block">
+                    <!--                    img -->
+                    <img class="sidebar-img p-1" src="img/assets/images/ipad.jpg">
+                </div>
+                <div class="col-md-9  d-none d-sm-block"><h5>HOW TO GET GOOGLE TO LIKE YOU</h5><br></div>
+            </div>
+            <div class="row  d-none d-sm-block">
+                <div class="col  d-none d-sm-block">
+                    <div><i class="fa fa-twitter text-primary"></i> &emsp;<span>LAST TWEET</span></div>
+                    <p>Lorem ipsem dolor sit amet, consecteuter adipising elit, sed nonummy nibh euismod sorem
+                        ipsum dolor sit amet, consecteuter adipising.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 </div>
 
-<!--<figure class="figure">-->
-<!--    <img src="..." class="figure-img img-fluid rounded" alt="...">-->
-<!--    <figcaption class="figure-caption">A caption for the above image.</figcaption>-->
-<!--</figure>-->
-
-<!--<div align="center">-->
-<!--    <img class="project-img" src="img/assets/images/apple-ipad.jpg">-->
-<!--    <label>FEATURED PROJECT</label>-->
-<!--    <ul class="icon-table">-->
-<!--        <li><a class="design-icon">D</a></li>-->
-<!--        <li><a class="develop-icon">D</a></li>-->
-<!--        <li><a class="support-icon">S</a></li>-->
-<!--        <li><a class="host-icon">H</a></li>-->
-<!--    </ul>-->
-<!--</div>-->
 
 
 
