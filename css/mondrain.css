@@ -1,10 +1,12 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     text-align: center;
 }
+
 main {
     /* add margin to make the top of our grid more visible */
     margin-top: 2em;
@@ -17,47 +19,55 @@ main {
     grid-template-rows: repeat(8, 62px);
 }
 
-.box1{
+.box1 {
     background-color: #30447B;
     border: 2px solid black;
     grid-area: 1/1/3/3;
 }
-.box2{
+
+.box2 {
     background-color: #FCCC0A;
     border: 2px solid black;
     grid-area: 3/1/6/3;
 }
-.box3{
+
+.box3 {
     background-color: #FFFFFF;
     border: 2px solid black;
     grid-area: 6/1/8/3;
 }
-.box4{
+
+.box4 {
     background-color: #DD1B21;
     border: 2px solid black;
     grid-area: 8/1/9/3;
 }
-.box5{
+
+.box5 {
     background-color: #DC1C21;
     border: 2px solid black;
     grid-area: 1/3/4/9;
 }
-.box6{
+
+.box6 {
     background-color: #FFFFFF;
     border: 2px solid black;
     grid-area: 4/3/8/5;
 }
-.box7{
+
+.box7 {
     background-color: #FFFFFF;
     border: 2px solid black;
     grid-area: 4/5/6/9;
 }
-.box8{
+
+.box8 {
     background-color: #FCCC0A;
     border: 2px solid black;
     grid-area: 6/5/8/9;
 }
-.box9{
+
+.box9 {
     background-color: #30447B;
     border: 2px solid black;
     grid-area: 8/3/9/9;

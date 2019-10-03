@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     /*margin: 0;*/
     text-align: center;
@@ -13,31 +14,31 @@ body {
     gap: .5em;
 }
 
-main{
+main {
     background-color: cyan;
     border: black solid 2px;
     grid-area: 2/2/span 1/span 1;
 }
 
-header{
+header {
     background-color: lightgreen;
     border: black solid 2px;
     grid-area: 1/1/span 1/span 2;
 }
 
-footer{
+footer {
     background-color: lightpink;
     border: black solid 2px;
     grid-area: 4/1/span 1/span 2;
 }
 
-.nav-bar{
+.nav-bar {
     background-color: orange;
     border: black solid 2px;
     grid-area: 2/1/span 2/span 1;
 }
 
-.ads-bar{
+.ads-bar {
     background-color: aliceblue;
     border: black solid 2px;
     grid-area: 3/2/span 1/span 1;

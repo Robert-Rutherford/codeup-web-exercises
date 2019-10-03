@@ -1,17 +1,18 @@
-*{
+* {
     display: inline-block;
 }
-ul{
+
+ul {
     display: flex;
 }
 
-li{
+li {
     list-style: none;
 }
 
 /* mobile 365x1192*/
 @media screen and (max-width: 900px) {
-    body{
+    body {
         display: grid;
         grid-template-rows: repeat(7, 1fr);
         /*grid-template-rows: ;*/
@@ -21,11 +22,11 @@ li{
         /*height: 1192px;*/
     }
 
-    .hidden-on-desktop{
+    .hidden-on-desktop {
         visibility: visible;
     }
 
-    .alert-info{
+    .alert-info {
         /*margin: auto;*/
         /*padding: 4em;*/
         text-align: center;
@@ -35,7 +36,7 @@ li{
         margin: 5px;
     }
 
-    .alert-info a{
+    .alert-info a {
         padding: 1em;
         /*margin: auto;*/
         color: black;
@@ -44,32 +45,32 @@ li{
 
     }
 
-    h1{
+    h1 {
         text-align: center;
         padding: .5em 1em;
         font-size: 3em;
         margin: 0;
     }
 
-    .nav-links{
+    .nav-links {
         flex-direction: column;
         font-size: 2em;
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    .nav-links ul{
+    .nav-links ul {
         margin-top: 16px;
     }
 
-    .nav-links li{
+    .nav-links li {
         margin: .5em 0;
         background-color: #CCCCCC;
         padding: .5em;
         text-align: center;
     }
 
-    .header-img{
+    .header-img {
         min-height: 230px;
         /*align-content: center;*/
         margin: auto;
@@ -78,7 +79,7 @@ li{
     }
 
 
-    img{
+    img {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
@@ -88,18 +89,19 @@ li{
 }
 
 /*desktop 934x1210*/
-@media screen and (min-width:901px) {
-    title{
+@media screen and (min-width: 901px) {
+    title {
         visibility: hidden;
     }
-    body{
+
+    body {
         display: grid;
         grid-template-columns: 60% 40%;
         grid-template-rows: 10% 40% 1fr 15%;
         height: 100vh;
     }
 
-    .hidden-on-desktop{
+    .hidden-on-desktop {
         visibility: hidden;
     }
 
@@ -113,32 +115,33 @@ li{
         /*margin: auto;*/
     }
 
-    nav{
+    nav {
         grid-area: 1/2/2/3;
     }
 
-    .nav-links{
+    .nav-links {
         flex-direction: row;
     }
-    .nav-links li{
+
+    .nav-links li {
         justify-content: flex-end;
         padding: 1em;
     }
 
-    .header-img{
+    .header-img {
         grid-area: 2/1/2/3;
         margin: auto;
     }
 
-    #main{
+    #main {
         grid-area: 3/1/span 1/span 1;
     }
 
-    .sub-section{
+    .sub-section {
         grid-area: 3/2/span 1/span 1;
     }
 
-    footer{
+    footer {
         grid-area: 4/1/-1/-1;
     }
 

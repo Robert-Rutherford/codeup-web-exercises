@@ -1,6 +1,6 @@
 /* style sheet*/
 
-:root{
+:root {
     --image-1: url("../img/exercise-img-1.jpeg");
     --image-2: url("../img/exercise-img-2.jpeg");
     --image-3: url("../img/exercise-img-3.jpeg");
@@ -8,12 +8,12 @@
 
 }
 
-body{
+body {
     font-size: 2em;
 }
 
 .fancy-header {
-    color: firebrick ; /* single line comment */
+    color: firebrick; /* single line comment */
     text-decoration: underline;
     text-align: center;
     background-color: white;
@@ -21,9 +21,9 @@ body{
     margin: auto;
     width: fit-content;
 
-    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
 
 }
 
@@ -34,12 +34,12 @@ h2 {
     width: fit-content;
     border-radius: 10px;
 
-    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
 }
 
-.sub-header{
+.sub-header {
     text-align: center;
 
 }
@@ -53,14 +53,14 @@ body {
     font-family: 'Turret Road', cursive;
 }
 
-.backGround{
+.backGround {
     background-image: url("../img/bg_img4_pattern.jpg");
     background-repeat: repeat;
     background-size: 1800px;
     background-position: center;
 }
 
-.backGround2{
+.backGround2 {
     background-repeat: repeat;
     background-size: 1800px;
     background-position: center;
@@ -69,27 +69,28 @@ body {
 ol {
     list-style: upper-roman;
 }
-ul{
+
+ul {
     list-style: square;
 }
 
-.table-messer{
+.table-messer {
     border-style: groove;
 
 }
 
-.no-border{
+.no-border {
     border-style: none;
 }
 
-td{
+td {
     border-style: dashed;
     font-size: 1em;
     padding: .5em;
     text-align: center;
 }
 
-th{
+th {
     font-size: 1.5em;
     padding: .5em;
     text-align: center;
@@ -100,23 +101,26 @@ th{
 a:link {
     color: darkblue;
 }
+
 a:visited {
     color: darkgreen;
 }
-a:hover{
+
+a:hover {
     color: darkblue;
 }
-a:active{
+
+a:active {
     color: aqua;
 }
 
-hr{
+hr {
     color: black;
     background-color: black;
     height: 5px;
 }
 
-.img-fixer{
+.img-fixer {
     width: 300px;
     height: 300px;
     border: .5em solid white;
@@ -124,7 +128,7 @@ hr{
 
 }
 
-.btn{
+.btn {
     size: 1em;
     border-radius: 10px;
     font-size: .5em;
@@ -137,9 +141,9 @@ hr{
     width: fit-content;
     border-radius: 10px;
 
-    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
 
     /*background-color: #eee;*/
     /*color: #444;*/

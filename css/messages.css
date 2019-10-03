@@ -5,7 +5,8 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
-:root{
+
+:root {
     --text-info: #800080;
     --bg-info: #00ffff;
     --text-success: #006400;
@@ -17,7 +18,7 @@ body, html {
 
 }
 
-.message{
+.message {
     padding: 1em;
     border-radius: 10px;
     /*line-height: 8px;*/
@@ -26,22 +27,22 @@ body, html {
     border: 5px lightgray;
 }
 
-.message-info{
+.message-info {
     color: var(--text-info);
     background-color: var(--bg-info);
 }
 
-.message-success{
+.message-success {
     color: var(--text-success);
     background-color: var(--bg-success);
 }
 
-.message-warning{
+.message-warning {
     color: var(--text-warning);
     background-color: var(--bg-warning);
 }
 
-.message-error{
+.message-error {
     color: var(--text-error);
     background-color: var(--bg-error);
 }

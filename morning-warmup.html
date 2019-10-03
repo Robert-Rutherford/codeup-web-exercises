@@ -4,86 +4,94 @@
     <meta charset="UTF-8">
     <title>Deimos</title>
 </head>
-    <body>
-        <h1>Deimos</h1>
-        <p>This is my morning warm-up</p>
+<body>
+<h1>Deimos</h1>
+<p>This is my morning warm-up</p>
 
-        <script>
-            // September 18
-            var num1 = 5;
-            var num2 = 8;
+<script>
+    // September 18
+    var num1 = 5;
+    var num2 = 8;
 
-            function returnSum(numA,numB) {
-                var numsumf = numA + numB;
-                return numsumf;
-            }
-            var numSum = returnSum(num1,num2);
-            console.log(numSum);
+    function returnSum(numA, numB) {
+        var numsumf = numA + numB;
+        return numsumf;
+    }
 
-            // September 19
-            var tA= 5;
-            var tB= 6;
-            var tC= 7;
+    var numSum = returnSum(num1, num2);
+    console.log(numSum);
 
-            function triangleArea(side1,side2,side3) {
-               var perimeter = (side1+side2+side3)/2;
-                var area = Math.sqrt(perimeter*(perimeter-side1)*(perimeter-side2)*(perimeter-side3));
-                return area;
-            }
-            var triArea = triangleArea(tA,tB,tC);
-            console.log(triArea);
+    // September 19
+    var tA = 5;
+    var tB = 6;
+    var tC = 7;
 
-            // September 23
-            function returnHi(){
-                return "hi";
-            }
-            console.log(returnHi());
+    function triangleArea(side1, side2, side3) {
+        var perimeter = (side1 + side2 + side3) / 2;
+        var area = Math.sqrt(perimeter * (perimeter - side1) * (perimeter - side2) * (perimeter - side3));
+        return area;
+    }
 
-            // September 25
-            function helloName(name){
-                return "Hello, " + name +"!";
-            }
-            console.log(helloName("Robert"));
+    var triArea = triangleArea(tA, tB, tC);
+    console.log(triArea);
 
-            // September 26
-            function returnFirst(Array) {
-                return Array[0];
-            }
-            console.log(returnFirst([5,4,8,2,3]));
+    // September 23
+    function returnHi() {
+        return "hi";
+    }
 
-            //September 27
-            function equilateralTriangle(side) {
-                //return triangleArea(side,side,side);
-                return (Math.sqrt(3)/4)*Math.pow(side, 2);
-            }
-            console.log(equilateralTriangle(5));
+    console.log(returnHi());
 
-            //September 30
-            function concat3Strings(String1, String2, String3) {
-                return String1 + String2 + String3;
-            }
-            console.log(concat3Strings("This is ", "Three different ", "Strings!"));
+    // September 25
+    function helloName(name) {
+        return "Hello, " + name + "!";
+    }
 
-            //october 1
-            function uppercase(sting){
-                return sting.toUpperCase();
-            }
+    console.log(helloName("Robert"));
 
-            console.log(uppercase("Hello"));
+    // September 26
+    function returnFirst(Array) {
+        return Array[0];
+    }
 
-            //october 2
-            function areaOfCircle(diameter) {
-                return Math.PI*Math.pow((diameter/2), 2);
-            }
-            console.log(areaOfCircle(5));
+    console.log(returnFirst([5, 4, 8, 2, 3]));
 
-            //october 3
-            function quadPerimeter(side1, side2, side3, side4){
-                return side1+side2+side3+side4;
-            }
+    //September 27
+    function equilateralTriangle(side) {
+        //return triangleArea(side,side,side);
+        return (Math.sqrt(3) / 4) * Math.pow(side, 2);
+    }
 
-            console.log(quadPerimeter(5,3,8,2));
+    console.log(equilateralTriangle(5));
 
-        </script>
-    </body>
+    //September 30
+    function concat3Strings(String1, String2, String3) {
+        return String1 + String2 + String3;
+    }
+
+    console.log(concat3Strings("This is ", "Three different ", "Strings!"));
+
+    //october 1
+    function uppercase(sting) {
+        return sting.toUpperCase();
+    }
+
+    console.log(uppercase("Hello"));
+
+    //october 2
+    function areaOfCircle(diameter) {
+        return Math.PI * Math.pow((diameter / 2), 2);
+    }
+
+    console.log(areaOfCircle(5));
+
+    //october 3
+    function quadPerimeter(side1, side2, side3, side4) {
+        return side1 + side2 + side3 + side4;
+    }
+
+    console.log(quadPerimeter(5, 3, 8, 2));
+
+</script>
+</body>
 </html>

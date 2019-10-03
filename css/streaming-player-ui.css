@@ -65,7 +65,7 @@ header a {
 header ul li:nth-of-type(2) {
     /* TODO: uncomment the next line and add a value which causes Flexbox to automatically fill in extra space on it's left side */
     /*flex-grow: 1;*/
-    margin-left:  auto;
+    margin-left: auto;
     border-right: 1px solid white;
 }
 
@@ -122,7 +122,7 @@ nav a:hover {
     height: 200px;
     border-radius: 10px;
     position: relative;
-     /*TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
+    /*TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
     transition: 2s;
 
 }

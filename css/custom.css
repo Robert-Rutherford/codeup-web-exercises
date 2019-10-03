@@ -1,4 +1,4 @@
-.jumbotron{
+.jumbotron {
     background-image: url("https://java.codeup.com/examples/bootstrap/pizza.png");
     background-size: cover;
     text-align: center;
@@ -6,12 +6,12 @@
     padding-right: 0;
 }
 
-h1{
- background-color: white;
+h1 {
+    background-color: white;
     opacity: .7;
     font-size: 3em;
 }
 
-.container{
+.container {
 
 }

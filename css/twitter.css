@@ -5,9 +5,11 @@
     --light-bg: #FFF;
     --separator-color: #DDD;
 }
+
 * {
     box-sizing: border-box;
 }
+
 body, html {
     background-color: var(--main-bg);
     height: 100%;
@@ -16,37 +18,43 @@ body, html {
     padding: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
 header {
     background-image: url("https://loremflickr.com/1200/300");
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
 }
+
 a {
     color: var(--link-color);
 }
+
 .top-nav {
     background: var(--light-bg);
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
+
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
 .nav-link {
     color: var(--main-link-color);
     padding: 1.5em;
     font-weight: bold;
     text-decoration: none;
 }
+
 .nav-link:hover {
     color: var(--link-color);
 }
 
-.nav-item{
+.nav-item {
     display: inline-block;
     padding: 1.5em;
 }
@@ -56,46 +64,49 @@ a {
     height: 80px;
 }
 
-.profile-image{
+.profile-image {
     /*height: 80px;*/
     position: absolute;
     top: 235px;
 }
 
-.profile-form{
+.profile-form {
     float: right;
     line-height: 85px;
 }
 
-.profile-details{
+.profile-details {
     float: left;
     width: calc(25% - .5em);
     margin: .5em 0;
 }
 
-.profile-items{
+.profile-items {
     padding: 0;
     list-style-type: none;
 }
-.profile-entry{
+
+.profile-entry {
     margin: .5em;
 }
 
-.timeline{
+.timeline {
     float: left;
     width: calc(50% - 1em);
     margin: .5em 0;
 }
 
-.who-to-follow{
+.who-to-follow {
     float: right;
     width: calc(25% - 1em);
     margin: .5em 0;
 }
-.container{
+
+.container {
     padding: 2em;
 }
-.media{
+
+.media {
     width: 100%;
     background-color: var(--light-bg);
     border-bottom: 1px solid var(--separator-color);
@@ -103,12 +114,14 @@ a {
     padding: .5em;
     overflow: auto;
 }
-.media-image{
+
+.media-image {
     width: 50px;
     float: left;
     margin-top: 1.33em;
 }
-.media-body{
+
+.media-body {
     width: calc(100% - 50px);
     float: right;
 
@@ -122,17 +135,21 @@ a {
     padding: 8px;
     border-radius: 5px;
 }
+
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
 }
+
 .img-circle {
     border-radius: 100%;
     border: 4px solid var(--light-bg);
 }
+
 .text-right {
     text-align: right;
 }
+
 .text-muted {
     color: var(--main-link-color);
 }
