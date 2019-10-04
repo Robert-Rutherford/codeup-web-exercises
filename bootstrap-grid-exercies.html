@@ -105,17 +105,23 @@
     <!--     these buttons will dynamically change from one screen size to the other-->
     <!--     design note: the 'm*-' class is a bootstrap 4 class to determine margin 'my-' for top and bottom, 'mx' for left and right-->
     <div class="row justify-content-center no-gutters" align="center">
-        <div class="col-4 col-sm-2 my-2 mx-3">
+        <div class="col-4 col-sm-2 my-2 mx-3 d-block d-lg-none">
             <button class="design-button button-margin-left">DESIGN</button>
         </div>
-        <div class="col-4 col-sm-2 my-2 mx-3">
+        <div class="col-4 col-sm-2 my-2 mx-3 d-block d-lg-none">
             <button class="develop-button button-margin-right">DEVELOP</button>
         </div>
-        <div class="col-4 col-sm-2 my-2 mx-3">
+        <div class="col-4 col-sm-2 my-2 mx-3 d-block d-lg-none">
             <button class="support-button button-margin-left">SUPPORT</button>
         </div>
-        <div class="col-4 col-sm-2 my-2 mx-3">
+        <div class="col-4 col-sm-2 my-2 mx-3 d-block d-lg-none">
             <button class="host-button button-margin-right">HOST</button>
+        </div>
+        <div class="col d-none d-lg-block">
+            <button class="design-button button-margin-left my-2 mx-2">DESIGN</button>
+            <button class="develop-button button-margin-right my-2 mx-2">DEVELOP</button>
+            <button class="support-button button-margin-left my-2 mx-2">SUPPORT</button>
+            <button class="host-button button-margin-right my-2 mx-2">HOST</button>
         </div>
     </div>
     <!--    solid line goes here-->
