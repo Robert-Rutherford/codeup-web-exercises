@@ -17,16 +17,23 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
             integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
             crossorigin="anonymous"></script>
+    <!--    custom code plus fonts and icons-->
     <link rel="stylesheet" href="css/bootstrap-grid-exercise.css">
     <link href="https://fonts.googleapis.com/css?family=Abel|Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Codeup Design</title>
 </head>
+
+<!--html code-->
 <body>
 
-<nav class="nav-bar d-block d-sm-none">
+<!-- Fist nav bar for extra small screen-->
+<!-- will only appear for any screen Bootstap 4 considered extra small resolution-->
+<!-- jumbotron was used to create the effects of the white bar behind the logo-->
+<!-- the logo was moved into place using absolute positioning method (along with all the other add bars)-->
+<nav class="nav-bar my-5 d-block d-sm-none">
     <div class="jumbotron">
-        <img class="logo" src="img/assets/logo.jpg">
+        <img class="logo overflow-auto large-nav-logo" src="img/assets/logo.jpg">
     </div>
     <div class="companyName">Codeup design</div>
     <div class="links-bar">
@@ -39,6 +46,10 @@
     </div>
 </nav>
 
+
+<!-- Second nav bar that will only show for screens resolutions that Bootstrap 4 considers small.-->
+<!-- this nav bar essentially moved the table into the jumbotron where the logo was and moved the logo to its center-->
+<!-- the logo was moved into place using absolute positioning method (along with all the other add bars)-->
 <nav class="nav-bar d-none d-sm-block d-md-none">
     <div class="jumbotron">
         <div class="links-bar">
@@ -54,13 +65,31 @@
     </div>
     <div class="companyName">Codeup design</div>
 </nav>
+<!-- Final nav bar for medium screens and higher -->
+<!-- this bar predominantly uses bootstrap code to function-->
+<!-- the logo was moved into place using absolute positioning method (along with all the other add bars)-->
+<nav class="navbar d-none d-sm-none d-md-block navbar-expand-md navbar-light bg-light mt-4 mb-4">
+    <div class="container bg-light">
+        <div></div>
+        <a class="navbar-brand ml-5" href="#"><img class="logo large-nav-logo" src="img/assets/logo.jpg"></a>
+        <a class="navbar-brand ml-5">Codeup design</a>
+        <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
+            <ul class="navbar-nav bg-light ml-auto">
+                <li class="nav-item bg-light"><a class="nav-link active" href="#">SERVICES</a></li>
+                <li class="nav-item bg-light"><a class="nav-link active" href="#">WORK</a></li>
+                <li class="nav-item bg-light"><a class="nav-link active" href="#">BLOG</a></li>
+                <li class="nav-item bg-light"><a class="nav-link active" href="#">CONTACT</a></li>
+            </ul>
+        </div>
 
-<nav class="navbar">
-    <a class="navbar-brand" href="#"><img class="logo" src="img/assets/logo.jpg"></a>
+    </div>
+
 </nav>
 
-
+<!-- container and where the true part of the body begins-->
+<!-- this container uses bootstrap 4 to create a grid layout for the page that will change based on the 5 screen sizes determined by bootstrap-->
 <div class="container">
+    <!-- Header Text used for the page-->
     <div class="row">
         <div class="center-title col">
             <h2>VISUAL DESIGN & WEB DEVELOPMENT</h2>
@@ -71,41 +100,60 @@
             <h4>FROM PARK CITY, UTAH</h4>
         </div>
     </div>
+
+    <!--    The four buttons ow the web page (design, develop, support, host-->
+    <!--     these buttons will dynamically change from one screen size to the other-->
+    <!--     design note: the 'm*-' class is a bootstrap 4 class to determine margin 'my-' for top and bottom, 'mx' for left and right-->
     <div class="row justify-content-center no-gutters" align="center">
-        <div class="col-5 col-sm-2 m-2">
+        <div class="col-4 col-sm-2 my-2 mx-3">
             <button class="design-button button-margin-left">DESIGN</button>
         </div>
-        <div class="col-5 col-sm-2 m-2">
+        <div class="col-4 col-sm-2 my-2 mx-3">
             <button class="develop-button button-margin-right">DEVELOP</button>
         </div>
-        <div class="col-5 col-sm-2 m-2">
+        <div class="col-4 col-sm-2 my-2 mx-3">
             <button class="support-button button-margin-left">SUPPORT</button>
         </div>
-        <div class="col-5 col-sm-2 m-2">
+        <div class="col-4 col-sm-2 my-2 mx-3">
             <button class="host-button button-margin-right">HOST</button>
         </div>
     </div>
     <!--    solid line goes here-->
+    <!--    will only appear for screens larger than extra small-->
     <hr class="hidden-xs">
     <br>
 
+    <!--    the Selected work and the lasts grid sections-->
+    <!--    this grid is comprised of two sub-grids.-->
+    <!--        Sub-grid one (selected work) holds the featured projects divs. -->
+    <!--        For the featured projects, only the first one will show up on a extra small screen and the others will
+    show up on small screens and higher on a 2X2 grid-->
+    <!--    -->
+    <!--        Sub-grid two (the Last) holds the 3 articles and pictures along with the last tweet-->
+    <!--        This grid will only show on medium screens or larger-->
     <div class="row ">
+        <!--        both sub-grid's headers-->
         <div class="col col-md-8 center-t">SELECTED WORK</div>
         <div class="col-md-4 hidden-s">THE LAST</div>
     </div>
     <br>
+
     <div class="row">
+        <!--    sub-grid 1 ('the featured' sub-grid)-->
         <div class="col col-md-8">
+            <!--            row 1 of the 2x2 featured project sub-grid-->
             <div class="row">
+                <!--                First Featured project-->
+                <!--                This div holds the image, label and icons for this designated project-->
+                <!--                This is one of four projects-->
                 <div class="col col-sm" align="center">
                     <div class="img-container">
                         <img class="project-img" src="img/assets/images/apple-ipad.jpg">
                     </div>
                     <ul class="img-flex">
                         <li><label>FEATURED PROJECT</label>
-                        <li></li>
                         <li>
-                            <ul class="icon-table">
+                            <ul class="icon-table table-fix">
                                 <li><a class="design-icon">D</a></li>
                                 <li><a class="develop-icon">D</a></li>
                                 <li><a class="support-icon">S</a></li>
@@ -114,15 +162,15 @@
                         </li>
                     </ul>
                 </div>
+                <!--                Second featured project-->
                 <div class="col-sm d-none d-sm-block" align="center">
                     <div class="img-container">
                         <img class="project-img" src="img/assets/images/macbook.jpg">
                     </div>
                     <ul class="img-flex">
                         <li><label>FEATURED PROJECT</label>
-                        <li></li>
                         <li>
-                            <ul class="icon-table">
+                            <ul class="icon-table table-fix">
                                 <li><a class="design-icon">D</a></li>
                                 <li><a class="develop-icon">D</a></li>
                                 <li><a class="support-icon">S</a></li>
@@ -133,16 +181,17 @@
                 </div>
             </div>
             <br>
+            <!--            Row 2 of the 2x2 featured project sub-grid-->
             <div class="row">
+                <!--                third featured project-->
                 <div class="col-sm d-none d-sm-block" align="center">
                     <div class="img-container">
                         <img class="project-img img-max-man" src="img/assets/images/man.jpg">
                     </div>
                     <ul class="img-flex">
                         <li><label>FEATURED PROJECT</label>
-                        <li></li>
                         <li>
-                            <ul class="icon-table">
+                            <ul class="icon-table table-fix">
                                 <li><a class="design-icon">D</a></li>
                                 <li><a class="develop-icon">D</a></li>
                                 <li><a class="support-icon">S</a></li>
@@ -151,15 +200,15 @@
                         </li>
                     </ul>
                 </div>
+                <!--                fourth featured project-->
                 <div class="col-sm d-none d-sm-block" align="center">
                     <div class="img-container ">
                         <img class="project-img" src="img/assets/images/security.jpg">
                     </div>
                     <ul class="img-flex">
                         <li><label>FEATURED PROJECT</label>
-                        <li></li>
                         <li>
-                            <ul class="icon-table">
+                            <ul class="icon-table table-fix">
                                 <li><a class="design-icon">D</a></li>
                                 <li><a class="develop-icon">D</a></li>
                                 <li><a class="support-icon">S</a></li>
@@ -170,8 +219,12 @@
                 </div>
             </div>
         </div>
-        <!--        side bar-->
+        <!--        Side bar-->
+        <!--        also known as 'the last' (or second) sub-grid-->
+        <!--        this sub-grid has 3 rows with 2 columns for the image and text side-by-side and then 1 row for the
+         twitter post-->
         <div class="col-md-4 d-none d-md-block">
+            <!--            row 1-->
             <div class="row no-gutters ">
                 <div class="col-md-3  d-none d-sm-block">
                     <!--                    img -->
@@ -179,6 +232,7 @@
                 </div>
                 <div class="col-md-9  d-none d-sm-block"><h5>THE ADMIN BAR AND ABSOLUTE POSITION</h5><br></div>
             </div>
+            <!--            row 2-->
             <div class="row no-gutters ">
                 <div class="col-md-3  d-none d-sm-block">
                     <!--                    img -->
@@ -186,6 +240,7 @@
                 </div>
                 <div class="col-md-9  d-none d-sm-block"><h5>NIBBLER AWESOME WEBSITE TESTING</h5><br></div>
             </div>
+            <!--            row 3-->
             <div class="row no-gutters ">
                 <div class="col-md-3  d-none d-sm-block">
                     <!--                    img -->
@@ -193,6 +248,7 @@
                 </div>
                 <div class="col-md-9  d-none d-sm-block"><h5>HOW TO GET GOOGLE TO LIKE YOU</h5><br></div>
             </div>
+            <!--            row 4 twitter post-->
             <div class="row  d-none d-sm-block">
                 <div class="col  d-none d-sm-block">
                     <div><i class="fa fa-twitter text-primary"></i> &emsp;<span>LAST TWEET</span></div>
@@ -202,10 +258,9 @@
             </div>
         </div>
     </div>
-
+    <!--  end of container and page-->
 
 </div>
-
 
 </body>
 </html>

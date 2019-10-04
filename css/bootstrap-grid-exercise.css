@@ -1,8 +1,14 @@
-/*Constants*/
-/**/
+/*
+    Constants
+*/
+
 * {
     background-color: #F0F0F0;
 }
+
+/*
+   basic set up with fonts and sizes
+*/
 
 body {
     font-family: 'Abel', sans-serif;
@@ -34,21 +40,31 @@ h5 {
     font-size: 28px;
 }
 
+/*
+   ul list item set to none
+*/
+
 ul {
     list-style: none;
 }
+
+/*
+   horizontal line width reduced
+*/
 
 hr {
     width: 75%;
 }
 
+/*
+   images sizes and borders classes set
+*/
+
 .project-img {
-    /*width: 200px;*/
     border: #E6E6E6 solid 10px;
     border-radius: 5px;
     width: 90%;
     object-fit: cover;
-
 }
 
 .sidebar-img {
@@ -56,23 +72,6 @@ hr {
     object-fit: contain;
 }
 
-.img-container {
-    /*border: #E6E6E6 solid 10px;*/
-    /*border-radius: 5px;*/
-    /*width: 90%;*/
-    /*padding-top: 56.25%;*/
-    /*object-fit: contain;*/
-}
-
-.box-frame {
-    /*border: #E6E6E6 solid 10px;*/
-    /*border-radius: 5px;*/
-    /*width: 90%;*/
-    /*object-fit: contain;*/
-    /*max-height: 90%;*/
-}
-
-/*.row > div > img{ width: 100%; display: block;}*/
 
 .img-flex {
     width: 90%;
@@ -82,9 +81,7 @@ hr {
 }
 
 /*
-
-    Button design
-
+   Button classes and designs
 */
 
 .design-button {
@@ -101,7 +98,6 @@ hr {
     color: white;
     padding: 35px 23px;
     border: white solid 5px;
-    border-radius: 53px;
     border-radius: 53px;
     background-color: #E89E17;
 }
@@ -128,18 +124,8 @@ hr {
     margin: 10px;
 }
 
-.button-margin-left {
-    /*margin: 10px 10px 10px 40px;*/
-}
-
-.button-margin-right {
-    /*margin: 10px 40px 10px 10px;*/
-}
-
 /*
-
-    Logo and Nav Bar & xsmall setup
-
+   Logo and Nav Bar & xsmall setup
 */
 
 .jumbotron {
@@ -163,17 +149,13 @@ hr {
 }
 
 .nav-bar {
-    /*background-color: #F0F0F0;*/
-    margin: auto;
-    /*height: ;*/
+    margin: 0;
     text-align: center;
-    /*background-color: white;*/
 }
 
 .links-bar ul {
     display: flex;
-    padding: 0;
-    padding-bottom: 10px;
+    padding: 0 0 10px;
     margin: 0;
     justify-content: space-evenly;
 }
@@ -199,15 +181,16 @@ hr {
     text-align: center;
 }
 
-
 /*
-
-    Icon Table
-
+   Icons classes for Table and design
 */
+
 .icon-table {
     display: flex;
-    /*padding-right: 10px;*/
+}
+
+.table-fix {
+    padding: 0;
 }
 
 .icon-table li {
@@ -256,22 +239,24 @@ hr {
 }
 
 .img-max-man {
-    /*padding-bottom: 20px;*/
-    height: 216px;
+    max-height: 216px;
+}
 
+.large-nav-logo {
+    position: absolute;
+    transform: translate(-50px, -60px);
+    z-index: 100;
 }
 
 /*
+   media screens
 
-    media screens
+ Extra small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap
 
-*/
+ Small devices (landscape phones, 576px and up)
+ */
 
-/*// Extra small devices (portrait phones, less than 576px)*/
-/*// No media query for `xs` since this is the default in Bootstrap*/
-
-
-/*// Small devices (landscape phones, 576px and up)*/
 @media screen and (min-width: 576px) {
     .button-margin-left {
         margin: 0;
@@ -285,11 +270,13 @@ hr {
         visibility: visible;
     }
 
+    .hidden-s {
+
+    }
 
     .links-bar ul {
         display: flex;
-        padding: 0;
-        padding-top: 18px;
+        padding: 18px 0 0;
         margin: 0;
         background-color: white;
         justify-content: space-evenly;
@@ -307,9 +294,17 @@ hr {
         margin-bottom: 10px;
     }
 
+    .img-max-man {
+        max-height: 150px;
+    }
+
+
 }
 
-/*// Medium devices (tablets, 768px and up)*/
+/*
+   Medium devices (tablets, 768px and up)
+*/
+
 @media screen and (min-width: 768px) {
     hr {
         width: 90%;
@@ -319,20 +314,35 @@ hr {
         visibility: visible;
     }
 
+    .img-max-man {
+        max-height: 132px;
+    }
+
 }
 
-/*// Large devices (desktops, 992px and up)*/
+/*
+   Large devices (desktops, 992px and up)
+*/
+
 @media screen and (min-width: 992px) {
     .center-t {
         text-align: left;
         padding-left: 30px;
     }
+
+    .img-max-man {
+        max-height: 180px;
+    }
+
 }
 
-/*// Extra large devices (large desktops, 1200px and up)*/
+/*
+   Extra large devices (large desktops, 1200px and up)
+*/
+
 @media screen and (min-width: 1200px) {
     .img-max-man {
-        /*height: 216px;*/
-
+        max-height: 216px;
     }
+
 }
