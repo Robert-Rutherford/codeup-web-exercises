@@ -205,19 +205,6 @@ hr {
     Icon Table
 
 */
-
-.design-icon {
-    /*padding: 18px;*/
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 9px;
-    /*width: 18px;*/
-    /*height: 18px;*/
-    font-size: 14px;
-    font-weight: bold;
-    background-color: #E6563B;;
-}
-
 .icon-table {
     display: flex;
     /*padding-right: 10px;*/
@@ -227,27 +214,40 @@ hr {
     padding-right: 8px;
 }
 
-.develop-icon {
-    padding-left: 5px;
-    padding-right: 5px;
+.design-icon {
+    padding-left: 6px;
+    padding-right: 6px;
     border-radius: 9px;
-    font-size: 14px;
+    font-size: 12px;
+    font-family: 'Anton', sans-serif;
+    background-color: #E6563B;;
+}
+
+
+.develop-icon {
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-family: 'Anton', sans-serif;
     background-color: #E89E17;
 }
 
 .support-icon {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
     border-radius: 9px;
-    font-size: 14px;
+    font-size: 12px;
+    font-family: 'Anton', sans-serif;
     background-color: #7DB06D;
 }
 
 .host-icon {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
     border-radius: 9px;
-    font-size: 14px;
+    font-size: 12px;
+    font-family: 'Anton', sans-serif;
     background-color: #04AAAA;
 }
 
@@ -285,9 +285,6 @@ hr {
         visibility: visible;
     }
 
-    .hidden-s {
-
-    }
 
     .links-bar ul {
         display: flex;
