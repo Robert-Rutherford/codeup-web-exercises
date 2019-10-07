@@ -153,6 +153,37 @@ alert(analyzeColor2(colorPrompt));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function calculateTotal(luckyNumber, totalPrice) {
+    var dicount;
+    if (luckyNumber === 1){
+        dicount = totalPrice - (totalPrice*.1);
+        alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
+            "The price before your discount is: $" + totalPrice + "\n " +
+            "The price after the discount is: $" +dicount);
+    }else if (luckyNumber === 2){
+        dicount = totalPrice - (totalPrice*.25);
+        alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
+            "The price before your discount is: $" + totalPrice + "\n " +
+            "The price after the discount is: $" +dicount);
+    }else if (luckyNumber === 3){
+        dicount = totalPrice - (totalPrice*.35);
+        alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
+            "The price before your discount is: $" + totalPrice + "\n " +
+            "The price after the discount is: $" +dicount);
+    }else if (luckyNumber === 4){
+        dicount = totalPrice - (totalPrice*.50);
+        alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
+            "The price before your discount is: $" + totalPrice + "\n " +
+            "The price after the discount is: $" +dicount);
+    }else if (luckyNumber === 5){
+        dicount = 0;
+        alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
+            "The price before your discount is: $" + totalPrice + "\n " +
+            "The the item is now FREE!");
+    }else{
+        alert("We're sorry");
+    }
+}
 
 /**
  * TODO:
@@ -162,4 +193,4 @@ alert(analyzeColor2(colorPrompt));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);

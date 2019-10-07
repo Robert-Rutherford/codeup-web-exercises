@@ -44,3 +44,15 @@ var workTotal = googleTotal+amazonTotal+faceTotal;
 alert("You worked for a total of " + hourTotal+ " hour(s) for a salary of: $" + workTotal);
 
 // 3.3
+var roomConf = confirm("Is there room in the class?");
+var studentSchedule = confirm("Is the student available at that time?");
+
+alert("The student can sign up for class:" + (roomConf && studentSchedule));
+
+// 3.4
+
+var validOffer = confirm("Is offer still valid?");
+var cartSize = parseInt(prompt("number of items in cart:"));
+var premiumMember = confirm("Are they a Premium member?");
+
+alert("Discount is available:" + (validOffer && ((cartSize >2) || premiumMember)));
