@@ -15,29 +15,29 @@
  *
  * Can you refactor your code to use functions?
  */
-var confirmNum = confirm("Would you like to enter a number?");
-function numbcheck(confirmNum) {
-    if (confirmNum === true) {
-        var promptNum = parseInt(prompt("Enter a number:"));
-        if (!isNaN(promptNum)) {
-            if (promptNum % 2 === 0) {
-                alert(promptNum + " is a Even Number");
-            } else {
-                alert(promptNum + " is an odd number");
-            }
-            var plus100 = promptNum + 100;
-            alert(plus100 + " is the user's number plus 100");
-            if (promptNum >= 0) {
-                alert(promptNum + " is positive.");
-            } else {
-                alert(promptNum + " is negative");
-            }
-        } else {
-            alert("Error: " + promptNum);
-        }
-    }
-}
-numbcheck(confirmNum);
+// var confirmNum = confirm("Would you like to enter a number?");
+// function numbcheck(confirmNum) {
+//     if (confirmNum === true) {
+//         var promptNum = parseInt(prompt("Enter a number:"));
+//         if (!isNaN(promptNum)) {
+//             if (promptNum % 2 === 0) {
+//                 alert(promptNum + " is a Even Number");
+//             } else {
+//                 alert(promptNum + " is an odd number");
+//             }
+//             var plus100 = promptNum + 100;
+//             alert(plus100 + " is the user's number plus 100");
+//             if (promptNum >= 0) {
+//                 alert(promptNum + " is positive.");
+//             } else {
+//                 alert(promptNum + " is negative");
+//             }
+//         } else {
+//             alert("Error: " + promptNum);
+//         }
+//     }
+// }
+// numbcheck(confirmNum);
 
 /* ########################################################################## */
 
@@ -67,25 +67,25 @@ numbcheck(confirmNum);
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-function analyzeColor(colorName) {
-    if (colorName === "red"){
-        return ("Strawberries are " + colorName);
-    }else if (colorName === "blue"){
-        return (colorName +" is the color of the sky");
-    }else if (colorName === "orange"){
-        return ("Oranges are" + colorName);
-    }else if (colorName === "yellow"){
-        return ("Honey is" + colorName);
-    }else if (colorName === "green"){
-        return ("The grass is "+ colorName);
-    }else if (colorName === "indigo"){
-        return ("who knows "+ colorName);
-    }else if (colorName === "violet"){
-        return ("what can you say about "+ colorName);
-    }else {
-        return ("I don't know anything about " + colorName);
-    }
-}
+// function analyzeColor(colorName) {
+//     if (colorName === "red"){
+//         return ("Strawberries are " + colorName);
+//     }else if (colorName === "blue"){
+//         return (colorName +" is the color of the sky");
+//     }else if (colorName === "orange"){
+//         return ("Oranges are" + colorName);
+//     }else if (colorName === "yellow"){
+//         return ("Honey is" + colorName);
+//     }else if (colorName === "green"){
+//         return ("The grass is "+ colorName);
+//     }else if (colorName === "indigo"){
+//         return ("who knows "+ colorName);
+//     }else if (colorName === "violet"){
+//         return ("what can you say about "+ colorName);
+//     }else {
+//         return ("I don't know anything about " + colorName);
+//     }
+// }
 
 
 /**
@@ -94,33 +94,33 @@ function analyzeColor(colorName) {
  * You should see a different message everytime you refresh the page
  */
 
-console.log(analyzeColor(randomColor));
+// console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
 
-function analyzeColor2(colorName) {
-    switch (colorName) {
-        case "red":
-            return ("Strawberries are " + colorName);
-        case "blue":
-            return (colorName + " is the color of the sky");
-        case "orange":
-            return ("Oranges are" + colorName);
-        case "yellow":
-            return ("Honey is" + colorName);
-        case "green":
-            return ("The grass is " + colorName);
-        case "indigo":
-            return ("who knows " + colorName);
-        case "violet":
-            return ("what can you say about " + colorName);
-        default:
-            return ("I don't know anything about " + colorName);
-    }
-}
+// function analyzeColor2(colorName) {
+//     switch (colorName) {
+//         case "red":
+//             return ("Strawberries are " + colorName);
+//         case "blue":
+//             return (colorName + " is the color of the sky");
+//         case "orange":
+//             return ("Oranges are" + colorName);
+//         case "yellow":
+//             return ("Honey is" + colorName);
+//         case "green":
+//             return ("The grass is " + colorName);
+//         case "indigo":
+//             return ("who knows " + colorName);
+//         case "violet":
+//             return ("what can you say about " + colorName);
+//         default:
+//             return ("I don't know anything about " + colorName);
+//     }
+// }
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -128,8 +128,8 @@ function analyzeColor2(colorName) {
  * function to show it to the user.
  */
 
-var colorPrompt = prompt("Enter a color:");
-alert(analyzeColor2(colorPrompt));
+// var colorPrompt = prompt("Enter a color:");
+// alert(analyzeColor2(colorPrompt));
 
 
 /* ########################################################################## */
@@ -158,30 +158,31 @@ function calculateTotal(luckyNumber, totalPrice) {
     if (luckyNumber === 1){
         dicount = totalPrice - (totalPrice*.1);
         alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
-            "The price before your discount is: $" + totalPrice + "\n " +
+            "The price before your discount is: $" + totalPrice + "\n" +
             "The price after the discount is: $" +dicount);
     }else if (luckyNumber === 2){
         dicount = totalPrice - (totalPrice*.25);
         alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
-            "The price before your discount is: $" + totalPrice + "\n " +
+            "The price before your discount is: $" + totalPrice + "\n" +
             "The price after the discount is: $" +dicount);
     }else if (luckyNumber === 3){
         dicount = totalPrice - (totalPrice*.35);
         alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
-            "The price before your discount is: $" + totalPrice + "\n " +
+            "The price before your discount is: $" + totalPrice + "\n" +
             "The price after the discount is: $" +dicount);
     }else if (luckyNumber === 4){
         dicount = totalPrice - (totalPrice*.50);
         alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
-            "The price before your discount is: $" + totalPrice + "\n " +
+            "The price before your discount is: $" + totalPrice + "\n" +
             "The price after the discount is: $" +dicount);
     }else if (luckyNumber === 5){
         dicount = 0;
         alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
-            "The price before your discount is: $" + totalPrice + "\n " +
+            "The price before your discount is: $" + totalPrice + "\n" +
             "The the item is now FREE!");
     }else{
-        alert("We're sorry");
+        alert("We're sorry, " + luckyNumber + "is not a lucky Number. No discount here.\n" +
+            "The Price is: $" + totalPrice);
     }
 }
 
@@ -194,3 +195,7 @@ function calculateTotal(luckyNumber, totalPrice) {
  */
 // Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
+
+var totalBillPrompt = parseFloat(prompt("Input your total Bill."));
+
+calculateTotal(luckyNumber,totalBillPrompt);
