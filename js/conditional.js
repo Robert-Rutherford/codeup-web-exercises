@@ -155,34 +155,41 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 function calculateTotal(luckyNumber, totalPrice) {
     var dicount;
-    if (luckyNumber === 1){
-        dicount = totalPrice - (totalPrice*.1);
-        alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
-            "The price before your discount is: $" + totalPrice + "\n" +
-            "The price after the discount is: $" +dicount);
-    }else if (luckyNumber === 2){
-        dicount = totalPrice - (totalPrice*.25);
-        alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
-            "The price before your discount is: $" + totalPrice + "\n" +
-            "The price after the discount is: $" +dicount);
-    }else if (luckyNumber === 3){
-        dicount = totalPrice - (totalPrice*.35);
-        alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
-            "The price before your discount is: $" + totalPrice + "\n" +
-            "The price after the discount is: $" +dicount);
-    }else if (luckyNumber === 4){
-        dicount = totalPrice - (totalPrice*.50);
-        alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
-            "The price before your discount is: $" + totalPrice + "\n" +
-            "The price after the discount is: $" +dicount);
-    }else if (luckyNumber === 5){
-        dicount = 0;
-        alert("Congratulations, Your Lucky Number is: " +luckyNumber+ "\n" +
-            "The price before your discount is: $" + totalPrice + "\n" +
-            "The the item is now FREE!");
-    }else{
-        alert("We're sorry, " + luckyNumber + "is not a lucky Number. No discount here.\n" +
-            "The Price is: $" + totalPrice);
+    switch (luckyNumber) {
+        case 1:
+            dicount = totalPrice - (totalPrice * .1);
+            alert("Congratulations, Your Lucky Number is: " + luckyNumber + "\n" +
+                "The price before your discount is: $" + totalPrice + "\n" +
+                "The price after the discount is: $" + dicount);
+            break;
+        case 2:
+            dicount = totalPrice - (totalPrice * .25);
+            alert("Congratulations, Your Lucky Number is: " + luckyNumber + "\n" +
+                "The price before your discount is: $" + totalPrice + "\n" +
+                "The price after the discount is: $" + dicount);
+            break;
+        case 3:
+            dicount = totalPrice - (totalPrice * .35);
+            alert("Congratulations, Your Lucky Number is: " + luckyNumber + "\n" +
+                "The price before your discount is: $" + totalPrice + "\n" +
+                "The price after the discount is: $" + dicount);
+            break;
+        case 4:
+            dicount = totalPrice - (totalPrice * .50);
+            alert("Congratulations, Your Lucky Number is: " + luckyNumber + "\n" +
+                "The price before your discount is: $" + totalPrice + "\n" +
+                "The price after the discount is: $" + dicount);
+            break;
+        case 5:
+            dicount = 0;
+            alert("Congratulations, Your Lucky Number is: " + luckyNumber + "\n" +
+                "The price before your discount is: $" + totalPrice + "\n" +
+                "The the item is now FREE!");
+            break;
+        default:
+            alert("We're sorry, " + luckyNumber + "is not a lucky Number. No discount here.\n" +
+                "The Price is: $" + totalPrice);
+            break;
     }
 }
 
