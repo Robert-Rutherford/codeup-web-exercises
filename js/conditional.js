@@ -154,34 +154,34 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 function calculateTotal(luckyNumber, totalPrice) {
-    var dicount;
+    var discount;
     switch (luckyNumber) {
         case 1:
-            dicount = totalPrice - (totalPrice * .1);
+            discount = totalPrice - (totalPrice * .1);
             alert("Congratulations, Your Lucky Number is: " + luckyNumber + "\n" +
                 "The price before your discount is: $" + totalPrice + "\n" +
-                "The price after the discount is: $" + dicount);
+                "The price after the discount is: $" + discount);
             break;
         case 2:
-            dicount = totalPrice - (totalPrice * .25);
+            discount = totalPrice - (totalPrice * .25);
             alert("Congratulations, Your Lucky Number is: " + luckyNumber + "\n" +
                 "The price before your discount is: $" + totalPrice + "\n" +
-                "The price after the discount is: $" + dicount);
+                "The price after the discount is: $" + discount);
             break;
         case 3:
-            dicount = totalPrice - (totalPrice * .35);
+            discount = totalPrice - (totalPrice * .35);
             alert("Congratulations, Your Lucky Number is: " + luckyNumber + "\n" +
                 "The price before your discount is: $" + totalPrice + "\n" +
-                "The price after the discount is: $" + dicount);
+                "The price after the discount is: $" + discount);
             break;
         case 4:
-            dicount = totalPrice - (totalPrice * .50);
+            discount = totalPrice - (totalPrice * .50);
             alert("Congratulations, Your Lucky Number is: " + luckyNumber + "\n" +
                 "The price before your discount is: $" + totalPrice + "\n" +
-                "The price after the discount is: $" + dicount);
+                "The price after the discount is: $" + discount);
             break;
         case 5:
-            dicount = 0;
+            discount = 0;
             alert("Congratulations, Your Lucky Number is: " + luckyNumber + "\n" +
                 "The price before your discount is: $" + totalPrice + "\n" +
                 "The the item is now FREE!");
