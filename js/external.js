@@ -4,26 +4,26 @@ console.log("Hello from external JavaScript");
 
 alert("Welcome to my Website!");
 
-// var colorPrompt = prompt("what is you favorite color?");
-//
-// if(colorPrompt !== null){
-//     // alert("Users color is: " + colorPrompt);
-//     if (colorPrompt.toLowerCase() === 'red'){
-//         alert("Great, red is my favorite color too!")
-//     }else {
-//         alert("User's color is: " + colorPrompt.toLowerCase());
-//     }
-// }
+var colorPrompt = prompt("what is you favorite color?");
+
+if(colorPrompt !== null){
+    // alert("Users color is: " + colorPrompt);
+    if (colorPrompt.toLowerCase() === 'red'){
+        alert("Great, red is my favorite color too!")
+    }else {
+        alert("User's color is: " + colorPrompt.toLowerCase());
+    }
+}
 
 // exercise 3.1
-// var merDay = parseInt(prompt("how many days did you rent the little mermaid?"));
-// var bearDay = parseInt(prompt("how many days did you rent the Brother Bear?"));
-// var hercDay = parseInt(prompt("how many days did you rent the Hercules?"));
-// var priceDay = parseFloat(prompt("what is the cost per day?"));
-//
-//  var movieTotal = (merDay + bearDay + hercDay) * priceDay;
-//
-//  alert("the total price is: $" + movieTotal);
+var merDay = parseInt(prompt("how many days did you rent the little mermaid?"));
+var bearDay = parseInt(prompt("how many days did you rent the Brother Bear?"));
+var hercDay = parseInt(prompt("how many days did you rent the Hercules?"));
+var priceDay = parseFloat(prompt("what is the cost per day?"));
+
+ var movieTotal = (merDay + bearDay + hercDay) * priceDay;
+
+ alert("the total price is: $" + movieTotal);
 
  // 3.2
 var googleSal = parseFloat(prompt("Google pays you how much per hour?"));
