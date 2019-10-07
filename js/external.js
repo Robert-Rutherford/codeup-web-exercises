@@ -38,8 +38,9 @@ var faceSal = parseFloat(prompt("Facebook pays you how much per hour?"));
 var faceHour = parseInt(prompt("You worked for Facebook for how many hours?"));
 var faceTotal = faceSal*faceHour;
 
-var hourTotal = googleHour+amazonHour+faceTotal;
+var hourTotal = googleHour+amazonHour+faceHour;
 var workTotal = googleTotal+amazonTotal+faceTotal;
 
-
 alert("You worked for a total of " + hourTotal+ " hour(s) for a salary of: $" + workTotal);
+
+// 3.3
