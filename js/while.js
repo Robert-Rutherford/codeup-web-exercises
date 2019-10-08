@@ -14,15 +14,16 @@ do {
     var soldCones = Math.floor(Math.random() * 5) + 1;
     if (allCones < soldCones){
         console.log("Cannot sell you " + soldCones+" cones. I only have " + allCones);
-    }else if (allCones === 0){
+    }else if (allCones === soldCones){
+        console.log("Last "+soldCones + " cone(s) sold...");
         console.log("Yay! I sold all of them!");
-        allCones = -1;
+        allCones = allCones - soldCones;
     }else{
-        console.log(soldCones + " cones sold...");
+        console.log(soldCones + " cone(s) sold...");
         allCones = allCones - soldCones;
     }
 
-}while (allCones >= 0);
+}while (allCones > 0);
 
 
 
