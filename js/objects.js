@@ -127,5 +127,23 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    function createBook(bookTitle, authorFirstName, authorLastName) {
+        var returnObject = {
+            title: bookTitle,
+            firstName: authorFirstName,
+            lastName: authorLastName
+        };
+        books.push(returnObject);
+    }
+
+    createBook("New Book", "James", "Salidor");
+    console.log(books);
+
+    function showBookInfo(bookObject) {
+        console.log(bookObject);
+    }
+
+    showBookInfo(books[5]);
+
 
 })();
