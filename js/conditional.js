@@ -205,4 +205,4 @@ var luckyNumber = Math.floor(Math.random() * 6);
 
 var totalBillPrompt = parseFloat(prompt("Input your total Bill."));
 
-calculateTotal(luckyNumber,totalBillPrompt);
+calculateTotal(luckyNumber, totalBillPrompt);

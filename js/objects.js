@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     /**
@@ -11,7 +11,7 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    var person ={
+    var person = {
         firstName: "Robert",
         lastName: "Rutherford"
     };
@@ -28,7 +28,7 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
     person.sayHello = function () {
-      return "Hello from "+ person.firstName+ " "+ person.lastName;
+        return "Hello from " + person.firstName + " " + person.lastName;
     };
     console.log(person.sayHello());
 
@@ -55,13 +55,13 @@
     shoppers.forEach(function (i) {
         console.log("Buyer: " + i.name);
         console.log("Original price: $" + i.amount);
-        if (i.amount >= 200){
+        if (i.amount >= 200) {
             console.log("A discount of 12% is applied");
-            var newAmount = i.amount - (i.amount*.12);
+            var newAmount = i.amount - (i.amount * .12);
             console.log("Total after discount: $" + newAmount);
-        }else {
+        } else {
             console.log("No discount is applied.");
-            console.log("Total is: $"+i.amount);
+            console.log("Total is: $" + i.amount);
         }
     });
 
@@ -77,12 +77,12 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-    var books =[
-        {title: "a Book to Read",firstName: "Bob", lastName: "Finland"},
-        {title: "Not a book for you",firstName: "David", lastName: "Nobody"},
-        {title: "why read a book?",firstName: "Jill", lastName: "Bookworm"},
-        {title: "Awesome Book",firstName: "Carl", lastName: "Awesome"},
-        {title: "Unoriginal",firstName: "Steve", lastName: "Something"}
+    var books = [
+        {title: "a Book to Read", firstName: "Bob", lastName: "Finland"},
+        {title: "Not a book for you", firstName: "David", lastName: "Nobody"},
+        {title: "why read a book?", firstName: "Jill", lastName: "Bookworm"},
+        {title: "Awesome Book", firstName: "Carl", lastName: "Awesome"},
+        {title: "Unoriginal", firstName: "Steve", lastName: "Something"}
     ];
 
     /**
@@ -111,9 +111,9 @@
      */
     books.forEach(function (i) {
 
-        console.log("Book # "+ (books.indexOf(i)+1));
+        console.log("Book # " + (books.indexOf(i) + 1));
         console.log("Title: " + i.title);
-        console.log("Author: " +i.firstName+" "+i.lastName);
+        console.log("Author: " + i.firstName + " " + i.lastName);
         console.log("---")
     });
 

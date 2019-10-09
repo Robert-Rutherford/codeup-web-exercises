@@ -1,4 +1,4 @@
-(function(){
+(function () {
     "use strict";
 
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
@@ -25,9 +25,9 @@
      */
     var rejoinPlanets = planetsArray.join('<br>');
     console.log(rejoinPlanets);
-    for (var i = 0; i < planetsArray.length; i++){
-        planetsArray[i] = planetsArray[i]+ "</li>";
+    for (var i = 0; i < planetsArray.length; i++) {
+        planetsArray[i] = planetsArray[i] + "</li>";
     }
-    var planetList = "<ul><li>"+ planetsArray.join('<li>') + "</ul>";
+    var planetList = "<ul><li>" + planetsArray.join('<li>') + "</ul>";
     console.log(planetList);
 })();

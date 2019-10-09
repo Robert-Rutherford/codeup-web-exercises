@@ -9,7 +9,7 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-    return "Hello, " + name+"!";
+    return "Hello, " + name + "!";
 }
 
 /**
@@ -55,6 +55,7 @@ var random = Math.floor((Math.random() * 3) + 1);
 function isTwo(numb) {
     return numb === 2;
 }
+
 console.log(isTwo(random));
 
 /**
@@ -69,7 +70,7 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 function calculateTip(percent, billTotal) {
-    return percent*billTotal;
+    return percent * billTotal;
 }
 
 
@@ -82,7 +83,7 @@ function calculateTip(percent, billTotal) {
 
 var percentPrompt = parseFloat(prompt("input percentage tip (in decimal form): "));
 var billTotalPrompt = parseFloat(prompt("Input Bill Total: "));
-alert("Total Tip is: $"+calculateTip(percentPrompt,billTotalPrompt));
+alert("Total Tip is: $" + calculateTip(percentPrompt, billTotalPrompt));
 
 /**
  * TODO:
@@ -100,7 +101,7 @@ alert("Total Tip is: $"+calculateTip(percentPrompt,billTotalPrompt));
  */
 
 function applyDiscount(initialPrice, discountPercent) {
-    return initialPrice - (initialPrice*discountPercent);
+    return initialPrice - (initialPrice * discountPercent);
 }
 
-console.log(applyDiscount(45.99,.12));
+console.log(applyDiscount(45.99, .12));

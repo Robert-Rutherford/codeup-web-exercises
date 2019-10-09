@@ -110,20 +110,21 @@
     console.log(posEven(8));
 
     // october 8
-    function isFive(){
+    function isFive() {
         var fiveprompt = parseInt(prompt("Input a number:"));
         return fiveprompt === 5;
     }
 
     // october 9
-    function helloStranger(string = "stranger"){
+    function helloStranger(string = "stranger") {
         // extra (not part of given exercise
-        if (string === null){
+        if (string === null) {
             string = "stranger";
         }
         //
         return "Hello there, " + string;
     }
+
     var stringPrompt = prompt("Input a name: ");
     alert(helloStranger(stringPrompt));
 

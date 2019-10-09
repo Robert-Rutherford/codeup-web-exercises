@@ -1,6 +1,6 @@
 "use strict";
 
-(function(){
+(function () {
     "use strict";
 
     /**
@@ -15,7 +15,7 @@
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-    console.log("Number of elements in 'names': "+ names.length);
+    console.log("Number of elements in 'names': " + names.length);
 
     /**
      * TODO:
@@ -32,7 +32,7 @@
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-    for (var i = 0; i < names.length;i++){
+    for (var i = 0; i < names.length; i++) {
         console.log(names[i]);
     }
 
@@ -41,7 +41,8 @@
      * Refactor your above code to use a `forEach` loop
      */
     names.forEach(function (names) {
-        console.log(names) });
+        console.log(names)
+    });
 
     /**
      * TODO:
@@ -56,12 +57,14 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-    function first(array){
+    function first(array) {
         return array[0];
     }
+
     function second(array) {
         return array[1];
     }
+
     function last(array) {
         return array[array.length - 1];
     }

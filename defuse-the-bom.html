@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,12 +10,12 @@
 <button id="defuser">Defuse the BOM</button>
 
 <script>
-    (function() {
+    (function () {
         "use strict";
 
         var detonationTimer = 5;
         var interval = 1000;
-        var intervalID = setInterval(updateTimer,interval);
+        var intervalID = setInterval(updateTimer, interval);
 
         // TODO: This function needs to be called once every second
         function updateTimer() {
