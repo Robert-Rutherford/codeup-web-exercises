@@ -46,48 +46,47 @@ console.log("hello from conditionals lec.js!");
 
 //TODO: Write an if statement that alerts "Sorry, game over" if numberOfLives is 0
 var numberOfLives = 5;
-if (numberOfLives === 0){
+if (numberOfLives === 0) {
     alert("Sorry, game over");
 }
 //TODO: Write an if statement that alerts "It's snowing!" if weather is equal to "snowing"
 var weather = "sunny";
-if (weather === "snowing"){
+if (weather === "snowing") {
     alert("It's snowing!")
 }
 //TODO: Write an if statement that alerts true if numberInput is greater than but not equal to 10
 var numberInput = 9;
 
-if (numberInput > 10){
+if (numberInput > 10) {
     alert("number id greater than 10");
 }
-
 
 
 //TODO: EXTRA BONUS - Refactor each of the previous statements as functions.
 numberOfLives = 5;
 
 function gameOver(lives) {
-    if (lives === 0){
+    if (lives === 0) {
         alert("Sorry, game over");
     }
 }
 
 weather = "sunny";
+
 function weatherCheck(dayWeather) {
-    if (dayWeather === "snowing"){
+    if (dayWeather === "snowing") {
         alert("It's snowing!")
     }
 }
 
 
-
 numberInput = 9;
+
 function greaterThanTem(num) {
-    if (num > 10){
+    if (num > 10) {
         alert("number is greater than 10");
     }
 }
-
 
 
 // =============== IF / ELSE SYNTAX ================
@@ -97,7 +96,6 @@ function greaterThanTem(num) {
 // } else {
 //     // code here runs if condition evaluates to false
 // }
-
 
 
 // =============== IF / ELSE STATEMENT EXAMPLES ================
@@ -123,56 +121,56 @@ function greaterThanTem(num) {
 
 
 //TODO: Write an if statement that alerts "Sorry, game over" if numberOfLives is 0, else alert "Next Level!"
-if (numberOfLives === 0){
+if (numberOfLives === 0) {
     alert("Sorry, game over");
-}else {
+} else {
     alert("Next Level!");
 }
 //TODO: Write an if statement that alerts "It's snowing!" if weather is equal to "snowing", else alert "Check back later for more details!"
-if (weather === "snowing"){
+if (weather === "snowing") {
     alert("It's snowing!");
-}else {
+} else {
     alert("Check back later for more details!");
 }
 //TODO: Write an if statement that alerts true if numberInput is greater than 10, else alert "the number is less than 10"
-if (numberInput > 10){
+if (numberInput > 10) {
     alert("number is greater than ten");
-}else {
+} else {
     alert("number is less than 10");
 }
 
 //TODO: Refactor todo#1 as a function named checkIfGameIsOver, that accepts numberOfLives and returns "Sorry, game over" if numberOfLives is 0, else return "Next Level!.
 
 function checkIfGameIsOver(lives) {
-    if (lives === 0){
+    if (lives === 0) {
         return "Sorry, game over";
-    }else {
+    } else {
         return "Next Level!";
     }
 }
 
 
 //TODO: EXTRA BONUS - Refactor todo#2 from above as a function.
-function gameOver2(lives){
-    if (lives === 0){
+function gameOver2(lives) {
+    if (lives === 0) {
         alert("Sorry, game over");
-    }else {
+    } else {
         alert("Next Level!");
     }
 }
 
 function weatherUpdate(weatherFor) {
-    if (weatherFor === "snowing"){
+    if (weatherFor === "snowing") {
         alert("It's snowing!");
-    }else {
+    } else {
         alert("Check back later for more details!");
     }
 }
 
 function greaterThan10(num) {
-    if (num > 10){
+    if (num > 10) {
         alert("number is greater than ten");
-    }else {
+    } else {
         alert("number is less than 10");
     }
 
@@ -192,11 +190,12 @@ function greaterThan10(num) {
 // }
 
 
-//TODO: Write a confirm asking the user if they are 13 years of age or older. If they are, alert "You may proceed", if they are not, alert "Sorry, you are not able to proceed"
+//TODO: Write a confirm asking the user if they are 13 years of age or older. If they are, alert "You may proceed",
+// if they are not, alert "Sorry, you are not able to proceed"
 var confirmAge = confirm("Are you older than 13 years old?");
-if (confirmAge){
+if (confirmAge) {
     alert("You may proceed");
-}else {
+} else {
     alert("Sorry, you are not able to proceed");
 }
 
@@ -211,11 +210,34 @@ if (confirmAge){
 // }
 
 
-
 // =============== IF / ELSE IF/ELSE STATEMENT EXAMPLES ================
-//Together: Write an if/else if/else statement that alerts "It's snowing!" if weather is equal to "snowing", alerts "It's raining" if weather is equal to "raining", alerts "have a nice day" for all other cases
+//Together: Write an if/else if/else statement that alerts "It's snowing!" if weather is equal to "snowing", alerts
+// "It's raining" if weather is equal to "raining", alerts "have a nice day" for all other cases
+// var weather= "snowing";
+
+// if (weather === "rainy") {
+//     alert("It's raining!");
+// } else if (weather === "sunny") {
+//     alert("its sunny!");
+// } else if (weather === "snow") {
+//     alert("It's snowing!");
+// } else {
+//     alert("try again later.");
+// }
+
 
 //Together: refactor the above statement as a function
+function weatherCheck2(weather) {
+    if (weather === "rainy") {
+        return "It's raining!";
+    } else if (weather === "sunny") {
+        return "its sunny!";
+    } else if (weather === "snow") {
+        return "It's snowing!";
+    } else {
+        return "try again later.";
+    }
+}
 
 // Together: PIZZA PREFERENCE EXAMPLE
 
@@ -233,23 +255,19 @@ if (confirmAge){
 // }
 
 
-
-
-//TODO: Write a function that accepts a string that is a traffic light color as an input. When this function is called, it should return a message informing the user what to do when approaching that color light at an intersection.
-function trafficLight(lightColor){
-    if (lightColor === "green"){
+//TODO: Write a function that accepts a string that is a traffic light color as an input. When this function is called,
+// it should return a message informing the user what to do when approaching that color light at an intersection.
+function trafficLight(lightColor) {
+    if (lightColor === "green") {
         return "Good to go!";
-    }else if (lightColor === "yellow"){
+    } else if (lightColor === "yellow") {
         return "Slow down!";
-    }else if (lightColor === "red"){
+    } else if (lightColor === "red") {
         return "Stop!";
-    }else {
+    } else {
         return "That is not a traffic light color."
     }
 }
-
-
-
 
 
 // ================ NESTED STATEMENTS ===============
@@ -257,10 +275,20 @@ function trafficLight(lightColor){
 // check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they
 // are eligible for license, if they are 16 or older and do not have a permit, they are not eligible for a license.
 
+var userAge = 16;
+var hasPermit = false;
 
-
-
-
+if (userAge < 15){
+    alert("Sorry, you are not old enough.");
+}else {
+    if (userAge === 15){
+        alert("you can have a permit.");
+    }else if (userAge > 15 && hasPermit){
+        alert("you can have a license.");
+    }else if (userAge > 15 && !hasPermit){
+        alert("sorry you need a permit first.");
+    }
+}
 
 
 // ================ TERNARY STATEMENT ================
@@ -295,8 +323,8 @@ function trafficLight(lightColor){
 // }
 
 //WRITE YOUR TERNARY STATEMENT HERE!
-
-
+var weatherMessage = ("rainy") ? "It's raining!" : "Have a nice day!";
+console.log(weatherMessage);
 
 // =============== SWITCH STATEMENT ================
 //Together:
@@ -317,10 +345,34 @@ function trafficLight(lightColor){
 
 
 //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
-
+switch (weather) {
+    case "rainy":
+        alert("It's raining!");
+        break;
+    case "sunny":
+        alert("its sunny!");
+        break;
+    case "snow":
+        alert("It's snowing!");
+        break;
+    default:
+        alert("try again later.");
+        break;
+}
 
 //TODO: Rewrite the intersection function from earlier as a switch statement.
-
+function trafficLight2(lightColor) {
+    switch (lightColor) {
+        case "green":
+            return "Good to go!";
+        case "yellow":
+            return "Slow down!";
+        case "red":
+            return "Stop!";
+        default:
+            return "That is not a traffic light color."
+    }
+}
 
 
 // ================ REVERSE ENGINEERING =================
