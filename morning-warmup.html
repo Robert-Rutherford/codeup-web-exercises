@@ -116,14 +116,19 @@
     }
 
     // october 9
-    function helloStranger(argument){
-        if (argument === null){
-            argument = "stranger";
+    function helloStranger(string = "stranger"){
+        // extra (not part of given exercise
+        if (string === null){
+            string = "stranger";
         }
-        return "Hello there, " + argument;
+        //
+        return "Hello there, " + string;
     }
     var stringPrompt = prompt("Input a name: ");
     alert(helloStranger(stringPrompt));
+
+    // october 10
+
 
 </script>
 </body>
