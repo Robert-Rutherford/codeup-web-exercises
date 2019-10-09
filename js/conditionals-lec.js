@@ -381,9 +381,34 @@ function trafficLight2(lightColor) {
 
 // 1) https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html
 
+    // if(checkbox){
+    //     //ten dollars
+    // }
+
 
 // 2) https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html
 
+    // switch (condition) {
+    //     case 1:
+    //         // weather
+    //         break;
+    //     case 2:
+    //         // weather
+    //         break;
+    //     case 3:
+    //         // weather
+    //         break;
+    //     case 4:
+    //         // weather
+    //         break;
+    //     default:
+    //         //none of those
+    // }
 
 // 3) https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html
 
+    // if(white){
+    //     //make screen white
+    // }else{
+    //     // make screen black
+    // }
