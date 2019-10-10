@@ -15,29 +15,33 @@
  *
  * Can you refactor your code to use functions?
  */
-// var confirmNum = confirm("Would you like to enter a number?");
-// function numbcheck(confirmNum) {
-//     if (confirmNum === true) {
-//         var promptNum = parseInt(prompt("Enter a number:"));
-//         if (!isNaN(promptNum)) {
-//             if (promptNum % 2 === 0) {
-//                 alert(promptNum + " is a Even Number");
-//             } else {
-//                 alert(promptNum + " is an odd number");
-//             }
-//             var plus100 = promptNum + 100;
-//             alert(plus100 + " is the user's number plus 100");
-//             if (promptNum >= 0) {
-//                 alert(promptNum + " is positive.");
-//             } else {
-//                 alert(promptNum + " is negative");
-//             }
-//         } else {
-//             alert("Error: " + promptNum);
-//         }
-//     }
-// }
-// numbcheck(confirmNum);
+var confirmNum = confirm("Would you like to enter a number?");
+
+function numbCheck(confirmNum) {
+    if (confirmNum === true) {
+        var promptNum = parseInt(prompt("Enter a number:"));
+        if (!isNaN(promptNum)) {
+            if (promptNum % 2 === 0) {
+                alert(promptNum + " is a Even Number");
+            } else {
+                alert(promptNum + " is an odd number");
+            }
+            var plus100 = promptNum + 100;
+            alert(plus100 + " is the user's number plus 100");
+            if (promptNum >= 0) {
+                alert(promptNum + " is positive.");
+            } else {
+                alert(promptNum + " is negative");
+            }
+        } else {
+            alert("Error: " + promptNum);
+        }
+    } else {
+        alert("game over");
+    }
+}
+
+numbCheck(confirmNum);
 
 /* ########################################################################## */
 
@@ -67,25 +71,25 @@
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-// function analyzeColor(colorName) {
-//     if (colorName === "red"){
-//         return ("Strawberries are " + colorName);
-//     }else if (colorName === "blue"){
-//         return (colorName +" is the color of the sky");
-//     }else if (colorName === "orange"){
-//         return ("Oranges are" + colorName);
-//     }else if (colorName === "yellow"){
-//         return ("Honey is" + colorName);
-//     }else if (colorName === "green"){
-//         return ("The grass is "+ colorName);
-//     }else if (colorName === "indigo"){
-//         return ("who knows "+ colorName);
-//     }else if (colorName === "violet"){
-//         return ("what can you say about "+ colorName);
-//     }else {
-//         return ("I don't know anything about " + colorName);
-//     }
-// }
+function analyzeColor(colorName) {
+    if (colorName === "red") {
+        return ("Strawberries are " + colorName);
+    } else if (colorName === "blue") {
+        return (colorName + " is the color of the sky");
+    } else if (colorName === "orange") {
+        return ("Oranges are" + colorName);
+    } else if (colorName === "yellow") {
+        return ("Honey is" + colorName);
+    } else if (colorName === "green") {
+        return ("The grass is " + colorName);
+    } else if (colorName === "indigo") {
+        return ("who knows " + colorName);
+    } else if (colorName === "violet") {
+        return ("what can you say about " + colorName);
+    } else {
+        return ("I don't know anything about " + colorName);
+    }
+}
 
 
 /**
@@ -94,33 +98,34 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message everytime you refresh the page
  */
 
-// console.log(analyzeColor(randomColor));
+console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
 
-// function analyzeColor2(colorName) {
-//     switch (colorName) {
-//         case "red":
-//             return ("Strawberries are " + colorName);
-//         case "blue":
-//             return (colorName + " is the color of the sky");
-//         case "orange":
-//             return ("Oranges are" + colorName);
-//         case "yellow":
-//             return ("Honey is" + colorName);
-//         case "green":
-//             return ("The grass is " + colorName);
-//         case "indigo":
-//             return ("who knows " + colorName);
-//         case "violet":
-//             return ("what can you say about " + colorName);
-//         default:
-//             return ("I don't know anything about " + colorName);
-//     }
-// }
+function analyzeColor2(colorName) {
+    switch (colorName) {
+        case "red":
+            return ("Strawberries are " + colorName);
+        case "blue":
+            return (colorName + " is the color of the sky");
+        case "orange":
+            return ("Oranges are" + colorName);
+        case "yellow":
+            return ("Honey is" + colorName);
+        case "green":
+            return ("The grass is " + colorName);
+        case "indigo":
+            return ("who knows " + colorName);
+        case "violet":
+            return ("what can you say about " + colorName);
+        default:
+            return ("I don't know anything about " + colorName);
+    }
+}
+
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -128,8 +133,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * function to show it to the user.
  */
 
-// var colorPrompt = prompt("Enter a color:");
-// alert(analyzeColor2(colorPrompt));
+var colorPrompt = prompt("Enter a color:");
+alert(analyzeColor2(colorPrompt));
 
 
 /* ########################################################################## */
