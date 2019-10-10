@@ -278,14 +278,14 @@ function trafficLight(lightColor) {
 var userAge = 16;
 var hasPermit = false;
 
-if (userAge < 15){
+if (userAge < 15) {
     alert("Sorry, you are not old enough.");
-}else {
-    if (userAge === 15){
+} else {
+    if (userAge === 15) {
         alert("you can have a permit.");
-    }else if (userAge > 15 && hasPermit){
+    } else if (userAge > 15 && hasPermit) {
         alert("you can have a license.");
-    }else if (userAge > 15 && !hasPermit){
+    } else if (userAge > 15 && !hasPermit) {
         alert("sorry you need a permit first.");
     }
 }
@@ -381,34 +381,34 @@ function trafficLight2(lightColor) {
 
 // 1) https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html
 
-    // if(checkbox){
-    //     //ten dollars
-    // }
+// if(checkbox){
+//     //ten dollars
+// }
 
 
 // 2) https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html
 
-    // switch (condition) {
-    //     case 1:
-    //         // weather
-    //         break;
-    //     case 2:
-    //         // weather
-    //         break;
-    //     case 3:
-    //         // weather
-    //         break;
-    //     case 4:
-    //         // weather
-    //         break;
-    //     default:
-    //         //none of those
-    // }
+// switch (condition) {
+//     case 1:
+//         // weather
+//         break;
+//     case 2:
+//         // weather
+//         break;
+//     case 3:
+//         // weather
+//         break;
+//     case 4:
+//         // weather
+//         break;
+//     default:
+//         //none of those
+// }
 
 // 3) https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html
 
-    // if(white){
-    //     //make screen white
-    // }else{
-    //     // make screen black
-    // }
+// if(white){
+//     //make screen white
+// }else{
+//     // make screen black
+// }
