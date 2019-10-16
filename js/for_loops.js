@@ -33,7 +33,7 @@ function hundredToFive() {
 //     for (var i = 1; i < 20; i++) {
 //         console.log(hundred -= 5);
 //     }
-    for (var h = 100; h >=5; h-= 5){
+    for (var h = 100; h >= 5; h -= 5) {
         console.log(h);
     }
 }
