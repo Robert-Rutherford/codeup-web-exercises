@@ -28,10 +28,13 @@ function towerLoop() {
 }
 
 function hundredToFive() {
-    var hundred = 100;
-    console.log(hundred);
-    for (var i = 1; i < 20; i++) {
-        console.log(hundred -= 5);
+//     var hundred = 100;
+//     console.log(hundred);
+//     for (var i = 1; i < 20; i++) {
+//         console.log(hundred -= 5);
+//     }
+    for (var h = 100; h >=5; h-= 5){
+        console.log(h);
     }
 }
 
