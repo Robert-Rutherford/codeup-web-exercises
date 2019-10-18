@@ -167,11 +167,18 @@
         return typeof string === "string" && string.length >= 8;
     }
 
-    console.log(length8String("string test"));
-    console.log(length8String("test"));
-    console.log(length8String([1,2,3,4,5,6,7,8]));
+    // console.log(length8String("string test"));
+    // console.log(length8String("test"));
+    // console.log(length8String([1,2,3,4,5,6,7,8]));
 
+    // october 18
+    function roundDown(num) {
+        return !isNaN(parseFloat(num)) ? Math.floor(num) : false;
+    }
 
+    console.log(roundDown(5.8));
+    console.log(roundDown("6.2"));
+    console.log(roundDown("hi"));
 
 </script>
 </body>
