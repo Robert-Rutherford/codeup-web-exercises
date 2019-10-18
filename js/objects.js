@@ -52,16 +52,16 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.forEach(function (i) {
-        console.log("Buyer: " + i.name);
-        console.log("Original price: $" + i.amount);
-        if (i.amount >= 200) {
+    shoppers.forEach(function (shopper) {
+        console.log("Buyer: " + shopper.name);
+        console.log("Original price: $" + shopper.amount);
+        if (shopper.amount > 200) {
             console.log("A discount of 12% is applied");
-            var newAmount = i.amount - (i.amount * .12);
+            var newAmount = shopper.amount - (shopper.amount * .12);
             console.log("Total after discount: $" + newAmount);
         } else {
             console.log("No discount is applied.");
-            console.log("Total is: $" + i.amount);
+            console.log("Total is: $" + shopper.amount);
         }
     });
 
@@ -109,11 +109,11 @@
      *      ---
      *      ...
      */
-    books.forEach(function (i) {
+    books.forEach(function (book) {
 
-        console.log("Book # " + (books.indexOf(i) + 1));
-        console.log("Title: " + i.title);
-        console.log("Author: " + i.firstName + " " + i.lastName);
+        console.log("Book # " + (books.indexOf(book) + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.firstName + " " + book.lastName);
         console.log("---")
     });
 
