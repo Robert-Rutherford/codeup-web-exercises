@@ -78,11 +78,31 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
     var books = [
-        {title: "a Book to Read", firstName: "Bob", lastName: "Finland"},
-        {title: "Not a book for you", firstName: "David", lastName: "Nobody"},
-        {title: "why read a book?", firstName: "Jill", lastName: "Bookworm"},
-        {title: "Awesome Book", firstName: "Carl", lastName: "Awesome"},
-        {title: "Unoriginal", firstName: "Steve", lastName: "Something"}
+        {title: "a Book to Read",
+            author: {
+                firstName: "Bob",
+                lastName: "Finland"}
+            },
+        {title: "Not a book for you",
+            author: {
+                firstName: "David",
+                lastName: "Nobody"}
+            },
+        {title: "why read a book?",
+            author: {
+                firstName: "Jill",
+                lastName: "Bookworm"}
+            },
+        {title: "Awesome Book",
+            author: {
+                firstName: "Carl",
+                lastName: "Awesome"}
+            },
+        {title: "Unoriginal",
+            author: {
+                firstName: "Steve",
+                lastName: "Something"}
+        }
     ];
 
     /**
@@ -109,11 +129,11 @@
      *      ---
      *      ...
      */
-    books.forEach(function (book) {
+    books.forEach(function (book, i) {
 
-        console.log("Book # " + (books.indexOf(book) + 1));
+        console.log("Book # " + (i + 1));
         console.log("Title: " + book.title);
-        console.log("Author: " + book.firstName + " " + book.lastName);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
         console.log("---")
     });
 
@@ -130,8 +150,10 @@
     function createBook(bookTitle, authorFirstName, authorLastName) {
         var returnObject = {
             title: bookTitle,
-            firstName: authorFirstName,
-            lastName: authorLastName
+            author:{
+                firstName: authorFirstName,
+                lastName: authorLastName
+            }
         };
         books.push(returnObject);
     }
