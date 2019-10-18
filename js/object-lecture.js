@@ -173,3 +173,61 @@ myMac.currentUser();
  * Object element and pull the properties and methods that we need.
  */
 
+function spongebob() {
+    return "I'm ready!";
+}
+
+var chooseYourFighter = [
+    {
+        name: {
+            firstName: "Spongebob",
+            lastName: "Squarepants"
+        },
+        weapon: "Spatula",
+        attacks: ["karate","bubble Blowing", "jelly Fishing"],
+        catchPhrase: function () {
+            return "I'm ready!";
+        }
+    },
+    {
+        name: {
+            firstName: "Patric",
+            lastName: "Star"
+        },
+        weapon: "Mayonnaise",
+        attacks: ["Rock hiding","Secret Photo", "Wumbo"],
+        catchPhrase: function () {
+            return "No, This is Patrick";
+        }
+    },
+    {
+        name: {
+            firstName: "Eugene",
+            lastName: "Krabs"
+        },
+        weapon: "Secret Formula",
+        attacks: ["take money","Hide money", "tiny violin"],
+        catchPhrase: function () {
+            return "MONEYYYYY!";
+        }
+    },
+    {
+        name: {
+            firstName: "Squidward",
+            lastName: "Tentacles"
+        },
+        weapon: "Clarinet",
+        attacks: ["bad music","Nag", "SQUILLIAM!"],
+        catchPhrase: function () {
+            return "*Nasal noise*";
+        }
+    }];
+
+chooseYourFighter.forEach(function (fighter) {
+    console.log(fighter.name.firstName + ": "+ fighter.catchPhrase());
+    console.log(fighter.name.firstName + "'s attacks are: ");
+    fighter.attacks.forEach(function (attack) {
+        console.log(attack);
+    });
+    console.log("--------------");
+});
