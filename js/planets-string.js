@@ -25,6 +25,15 @@
      */
     var rejoinPlanets = planetsArray.join('<br>');
     console.log(rejoinPlanets);
+
+    var planetsUL = "<ul>";
+    planetsArray.forEach(function (planet) {
+        planetsUL += "<li>" + planet + "</li>";
+    });
+    planetsUL += "</ul>";
+    
+    console.log(planetsUL);
+
     for (var i = 0; i < planetsArray.length; i++) {
         planetsArray[i] = planetsArray[i] + "</li>";
     }
