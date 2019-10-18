@@ -173,7 +173,7 @@
 
     // october 18
     function roundDown(num) {
-        return !isNaN(parseFloat(num)) ? Math.floor(num) : false;
+        return typeof num === 'number' && !isNaN(parseFloat(num)) ? Math.floor(num) : false;
     }
 
     console.log(roundDown(5.8));
