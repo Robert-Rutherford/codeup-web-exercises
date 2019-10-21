@@ -31,7 +31,7 @@
         planetsUL += "<li>" + planet + "</li>";
     });
     planetsUL += "</ul>";
-    
+
     console.log(planetsUL);
 
     for (var i = 0; i < planetsArray.length; i++) {

@@ -78,30 +78,40 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
     var books = [
-        {title: "a Book to Read",
+        {
+            title: "a Book to Read",
             author: {
                 firstName: "Bob",
-                lastName: "Finland"}
-            },
-        {title: "Not a book for you",
+                lastName: "Finland"
+            }
+        },
+        {
+            title: "Not a book for you",
             author: {
                 firstName: "David",
-                lastName: "Nobody"}
-            },
-        {title: "why read a book?",
+                lastName: "Nobody"
+            }
+        },
+        {
+            title: "why read a book?",
             author: {
                 firstName: "Jill",
-                lastName: "Bookworm"}
-            },
-        {title: "Awesome Book",
+                lastName: "Bookworm"
+            }
+        },
+        {
+            title: "Awesome Book",
             author: {
                 firstName: "Carl",
-                lastName: "Awesome"}
-            },
-        {title: "Unoriginal",
+                lastName: "Awesome"
+            }
+        },
+        {
+            title: "Unoriginal",
             author: {
                 firstName: "Steve",
-                lastName: "Something"}
+                lastName: "Something"
+            }
         }
     ];
 
@@ -150,7 +160,7 @@
     function createBook(bookTitle, authorFirstName, authorLastName) {
         var returnObject = {
             title: bookTitle,
-            author:{
+            author: {
                 firstName: authorFirstName,
                 lastName: authorLastName
             }

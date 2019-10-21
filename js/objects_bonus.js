@@ -3,7 +3,7 @@
 
 // Exercise 1. Write a function called makeCar that takes in two strings, make and model, and returns an object with those properties
 // Example: makeCar("VW", "beetle") returns the object {"make": "VW", "model", "beetle"}
-function makeCar(make,model) {
+function makeCar(make, model) {
     var newObject = {
         make: make,
         model: model
@@ -124,14 +124,14 @@ salesReport.getEmployeeCount = function () {
 salesReport.getTotalNumberOfSales = function () {
     var unitsSold = 0;
     this.employees.forEach(function (units) {
-         unitsSold += units.salesUnits;
+        unitsSold += units.salesUnits;
     });
     return unitsSold;
 };
 // console.log(salesReport.getTotalNumberOfSales());
 
 salesReport.getAverageSalesPerEmployee = function () {
-  return this.getTotalNumberOfSales()/this.getEmployeeCount();
+    return this.getTotalNumberOfSales() / this.getEmployeeCount();
 };
 
 // console.log(salesReport.getAverageSalesPerEmployee());
@@ -1021,7 +1021,7 @@ var profileReport = {
     getActiveCount: function () {
         var activePRof = 0;
         profile.forEach(function (prof) {
-            if (prof.isActive === true){
+            if (prof.isActive === true) {
                 activePRof++;
             }
         });
@@ -1030,7 +1030,7 @@ var profileReport = {
     getInactiveCount: function () {
         var inactivePRof = 0;
         profile.forEach(function (prof) {
-            if (prof.isActive === false){
+            if (prof.isActive === false) {
                 inactivePRof++;
             }
         });
@@ -1039,29 +1039,107 @@ var profileReport = {
     sumOfAllBalances: function () {
         var totalBal = 0;
         profile.forEach(function (bal) {
-            var fixNum = bal.balance.replace('$','');
-            fixNum = fixNum.replace(',','');
+            var fixNum = bal.balance.replace('$', '');
+            fixNum = fixNum.replace(',', '');
             totalBal += parseFloat(fixNum);
         });
         return totalBal;
     },
     getAverageBalance: function () {
-        var avg = this.sumOfAllBalances()/this.getProfileCount();
+        var avg = this.sumOfAllBalances() / this.getProfileCount();
         return avg.toFixed(2);
     },
-    getLowestBalance : function () {
-        var lowestName;
+    getLowestBalance: function () {
         var lowestIndex;
         var lowestVal;
         profile.forEach(function (bal, index) {
-            var fixNum = bal.balance.replace('$','');
-            fixNum = fixNum.replace(',','');
-            if (typeof lowestVal === "undefined" || lowestVal > fixNum){
+            var fixNum = bal.balance.replace('$', '');
+            fixNum = fixNum.replace(',', '');
+            if (typeof lowestVal === "undefined" || lowestVal > fixNum) {
                 lowestVal = fixNum;
                 lowestIndex = index;
             }
         });
         return profile[lowestIndex].name;
+    },
+    getHighestBalance: function () {
+        var highestVal;
+        var highestIndex;
+        profile.forEach(function (bal, index) {
+            var fixNum = bal.balance.replace('$', '');
+            fixNum = fixNum.replace(',', '');
+            if (typeof highestVal === "undefined" || highestVal < fixNum) {
+                highestIndex = fixNum;
+                highestIndex = index;
+            }
+        });
+        return profile[highestIndex].name;
+    },
+    getMostFavoriteFruit: function () {
+        var fruitArray = [];
+        profile.forEach(function (fav){
+            fruitArray.push(fav.favoriteFruit);
+        });
+
+        var mostDup = 0;
+        var mostDupIndex = 0;
+        for (var i = 0; i < fruitArray.length; i++) {
+            var dupCount = 0;
+            for (var j = i + 1; j < fruitArray.length; j++) {
+                if (fruitArray[i] === fruitArray[j]) {
+                    dupCount++;
+                }
+            }
+            if (dupCount > mostDup){
+                mostDup = dupCount;
+                mostDupIndex = i;
+            }
+        }
+        return profile[mostDupIndex].favoriteFruit;
+    },
+    getLeastFavoriteFruit: function () {
+        var fruitArray = [];
+        profile.forEach(function (fav){
+            fruitArray.push(fav.favoriteFruit);
+        });
+
+        var leastDup = fruitArray.length;
+        var leastDupIndex = 0;
+        for (var i = 0; i < fruitArray.length; i++) {
+            var dupCount = 0;
+            for (var j = i + 1; j < fruitArray.length; j++) {
+                if (fruitArray[i] === fruitArray[j]) {
+                    dupCount++;
+                }
+            }
+            if (dupCount < leastDup){
+                leastDup = dupCount;
+                leastDupIndex = i;
+            }
+        }
+        return profile[leastDupIndex].favoriteFruit;
+    },
+    getTotalNumberOfUnreadMessages: function () {
+        var totalUnread = 0;
+        profile.forEach(function (unread) {
+            var messageNum = unread.greeting.match(/\d+/g);
+            totalUnread += parseInt(messageNum);
+        });
+        return totalUnread;
+    },
+    getAverageNumberOfUnreadMessages: function () {
+        var avg = this.getTotalNumberOfUnreadMessages()/this.getProfileCount();
+        return avg.toFixed(2);
+    },
+    getAverageAge: function () {
+        var totalAge = 0;
+        profile.forEach(function (person) {
+            totalAge += person.age;
+        });
+        return (totalAge / this.getProfileCount()).toFixed(0);
+    },
+    getGenderCounts: function () {
+        
     }
 };
 
@@ -1070,7 +1148,14 @@ var profileReport = {
 // console.log(profileReport.getInactiveCount());
 // console.log(profileReport.sumOfAllBalances());
 // console.log(profileReport.getAverageBalance());
-console.log(profileReport.getLowestBalance());
+// console.log(profileReport.getLowestBalance());
+// console.log(profileReport.getHighestBalance());
+// console.log(profileReport.getMostFavoriteFruit());
+// console.log(profileReport.getLeastFavoriteFruit());
+// console.log(profileReport.getTotalNumberOfUnreadMessages());
+// console.log(profileReport.getAverageNumberOfUnreadMessages());
+console.log(profileReport.getAverageAge());
+
 
 // Exercise 6. Practice with assignment by reference
 // create a variable named person1 with a name property. Assign it a name property.

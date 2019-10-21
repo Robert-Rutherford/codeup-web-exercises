@@ -75,9 +75,10 @@ myPhone.name = {
  * an Array representing different folders in your system.
  */
 myMac.folders = ["Home", "Documents", "Downloads", "Desktop"];
+
 // console.log(myMac);
 
-function myApps(){
+function myApps() {
     console.log("These are my apps:");
     myMac.folders.forEach(function (folder) {
         console.log(folder);
@@ -184,7 +185,7 @@ var chooseYourFighter = [
             lastName: "Squarepants"
         },
         weapon: "Spatula",
-        attacks: ["karate","bubble Blowing", "jelly Fishing"],
+        attacks: ["karate", "bubble Blowing", "jelly Fishing"],
         catchPhrase: function () {
             return "I'm ready!";
         }
@@ -195,7 +196,7 @@ var chooseYourFighter = [
             lastName: "Star"
         },
         weapon: "Mayonnaise",
-        attacks: ["Rock hiding","Secret Photo", "Wumbo"],
+        attacks: ["Rock hiding", "Secret Photo", "Wumbo"],
         catchPhrase: function () {
             return "No, This is Patrick";
         }
@@ -206,7 +207,7 @@ var chooseYourFighter = [
             lastName: "Krabs"
         },
         weapon: "Secret Formula",
-        attacks: ["take money","Hide money", "tiny violin"],
+        attacks: ["take money", "Hide money", "tiny violin"],
         catchPhrase: function () {
             return "MONEYYYYY!";
         }
@@ -217,14 +218,14 @@ var chooseYourFighter = [
             lastName: "Tentacles"
         },
         weapon: "Clarinet",
-        attacks: ["bad music","Nag", "SQUILLIAM!"],
+        attacks: ["bad music", "Nag", "SQUILLIAM!"],
         catchPhrase: function () {
             return "*Nasal noise*";
         }
     }];
 
 chooseYourFighter.forEach(function (fighter) {
-    console.log(fighter.name.firstName + ": "+ fighter.catchPhrase());
+    console.log(fighter.name.firstName + ": " + fighter.catchPhrase());
     console.log(fighter.name.firstName + "'s attacks are: ");
     fighter.attacks.forEach(function (attack) {
         console.log(attack);
