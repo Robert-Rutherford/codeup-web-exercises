@@ -868,17 +868,17 @@ var profile = [
         picture: "http://placehold.it/32x32",
         age: 32,
         eyeColor: "green",
-        "name": "Coffey Hayes",
-        "gender": "male",
-        "company": "INQUALA",
-        "email": "coffeyhayes@inquala.com",
-        "phone": "+1 (880) 451-3490",
-        "address": "490 Durland Place, Craig, Tennessee, 5034",
-        "about": "Est esse irure Lorem ullamco veniam fugiat laborum veniam excepteur. Ad enim pariatur nostrud excepteur et nostrud velit dolore ex enim cillum in aliquip fugiat. Nulla laborum exercitation irure magna elit laborum magna ad excepteur. Cillum pariatur Lorem eiusmod ad dolore eiusmod veniam do minim laborum in dolor. Reprehenderit elit ad id voluptate Lorem Lorem dolor cupidatat excepteur. Proident minim ea aute nulla.\r\n",
-        "registered": "2014-04-01T23:04:39 +05:00",
-        "latitude": -30.662644,
-        "longitude": 59.806684,
-        "tags": [
+        name: "Coffey Hayes",
+        gender: "male",
+        company: "INQUALA",
+        email: "coffeyhayes@inquala.com",
+        phone: "+1 (880) 451-3490",
+        address: "490 Durland Place, Craig, Tennessee, 5034",
+        about: "Est esse irure Lorem ullamco veniam fugiat laborum veniam excepteur. Ad enim pariatur nostrud excepteur et nostrud velit dolore ex enim cillum in aliquip fugiat. Nulla laborum exercitation irure magna elit laborum magna ad excepteur. Cillum pariatur Lorem eiusmod ad dolore eiusmod veniam do minim laborum in dolor. Reprehenderit elit ad id voluptate Lorem Lorem dolor cupidatat excepteur. Proident minim ea aute nulla.\r\n",
+        registered: "2014-04-01T23:04:39 +05:00",
+        latitude: -30.662644,
+        longitude: 59.806684,
+        tags: [
             "duis",
             "est",
             "in",
@@ -887,43 +887,43 @@ var profile = [
             "occaecat",
             "mollit"
         ],
-        "friends": [
+        friends: [
             {
-                "id": 0,
-                "name": "Suarez Perry"
+                id: 0,
+                name: "Suarez Perry"
             },
             {
-                "id": 1,
-                "name": "Marlene Sheppard"
+                id: 1,
+                name: "Marlene Sheppard"
             },
             {
-                "id": 2,
-                "name": "Cohen Yates"
+                id: 2,
+                name: "Cohen Yates"
             }
         ],
-        "greeting": "Hello, Coffey Hayes! You have 19 unread messages.",
-        "favoriteFruit": "strawberry"
+        greeting: "Hello, Coffey Hayes! You have 19 unread messages.",
+        favoriteFruit: "strawberry"
     },
     {
-        "_id": "54e23c3e4ac5969958013235",
-        "index": 17,
-        "guid": "fa7e26df-d239-41e8-9aa9-be5e808b6f89",
-        "isActive": true,
-        "balance": "$2,646.76",
-        "picture": "http://placehold.it/32x32",
-        "age": 24,
-        "eyeColor": "brown",
-        "name": "Leanne Hurst",
-        "gender": "female",
-        "company": "ACCIDENCY",
-        "email": "leannehurst@accidency.com",
-        "phone": "+1 (820) 420-3317",
-        "address": "196 Columbus Place, Carbonville, New Jersey, 7513",
-        "about": "Dolor occaecat dolore ut tempor. Veniam elit anim duis do pariatur. Qui excepteur nisi eiusmod mollit laboris fugiat commodo ipsum reprehenderit labore cillum. Aliquip laborum commodo nisi cupidatat labore nostrud exercitation adipisicing mollit eu magna proident ex Lorem. Nostrud magna sint sint consequat consectetur et sint.\r\n",
-        "registered": "2014-11-10T01:25:55 +06:00",
-        "latitude": 16.671695,
-        "longitude": 139.707959,
-        "tags": [
+        id: "54e23c3e4ac5969958013235",
+        index: 17,
+        guid: "fa7e26df-d239-41e8-9aa9-be5e808b6f89",
+        isActive: true,
+        balance: "$2,646.76",
+        picture: "http://placehold.it/32x32",
+        age: 24,
+        eyeColor: "brown",
+        name: "Leanne Hurst",
+        gender: "female",
+        company: "ACCIDENCY",
+        email: "leannehurst@accidency.com",
+        phone: "+1 (820) 420-3317",
+        address: "196 Columbus Place, Carbonville, New Jersey, 7513",
+        about: "Dolor occaecat dolore ut tempor. Veniam elit anim duis do pariatur. Qui excepteur nisi eiusmod mollit laboris fugiat commodo ipsum reprehenderit labore cillum. Aliquip laborum commodo nisi cupidatat labore nostrud exercitation adipisicing mollit eu magna proident ex Lorem. Nostrud magna sint sint consequat consectetur et sint.\r\n",
+        registered: "2014-11-10T01:25:55 +06:00",
+        latitude: 16.671695,
+        longitude: 139.707959,
+        tags: [
             "culpa",
             "deserunt",
             "tempor",
@@ -932,43 +932,43 @@ var profile = [
             "incididunt",
             "est"
         ],
-        "friends": [
+        friends: [
             {
-                "id": 0,
-                "name": "Farley Frank"
+                id: 0,
+                name: "Farley Frank"
             },
             {
-                "id": 1,
-                "name": "Pruitt Frye"
+                id: 1,
+                name: "Pruitt Frye"
             },
             {
-                "id": 2,
-                "name": "Simpson Cardenas"
+                id: 2,
+                name: "Simpson Cardenas"
             }
         ],
-        "greeting": "Hello, Leanne Hurst! You have 5 unread messages.",
-        "favoriteFruit": "banana"
+        greeting: "Hello, Leanne Hurst! You have 5 unread messages.",
+        favoriteFruit: "banana"
     },
     {
-        "_id": "54e23c3ed945981ba2580614",
-        "index": 18,
-        "guid": "e608dc5c-fee4-4086-971b-3ebd37bfa137",
-        "isActive": true,
-        "balance": "$2,227.79",
-        "picture": "http://placehold.it/32x32",
-        "age": 22,
-        "eyeColor": "brown",
-        "name": "Ewing Larson",
-        "gender": "male",
-        "company": "ESCENTA",
-        "email": "ewinglarson@escenta.com",
-        "phone": "+1 (943) 439-3760",
-        "address": "136 Beard Street, Wattsville, New Hampshire, 2803",
-        "about": "Veniam eiusmod exercitation culpa mollit reprehenderit ullamco voluptate voluptate irure qui duis anim et. Laborum dolor quis do voluptate. In pariatur dolor id mollit et enim. Qui ex qui in cillum irure enim non reprehenderit irure et excepteur aliquip eu eu.\r\n",
-        "registered": "2014-07-21T19:17:41 +05:00",
-        "latitude": 15.903555,
-        "longitude": -159.721203,
-        "tags": [
+        id: "54e23c3ed945981ba2580614",
+        index: 18,
+        guid: "e608dc5c-fee4-4086-971b-3ebd37bfa137",
+        isActive: true,
+        balance: "$2,227.79",
+        picture: "http://placehold.it/32x32",
+        age: 22,
+        eyeColor: "brown",
+        name: "Ewing Larson",
+        gender: "male",
+        company: "ESCENTA",
+        email: "ewinglarson@escenta.com",
+        phone: "+1 (943) 439-3760",
+        address: "136 Beard Street, Wattsville, New Hampshire, 2803",
+        about: "Veniam eiusmod exercitation culpa mollit reprehenderit ullamco voluptate voluptate irure qui duis anim et. Laborum dolor quis do voluptate. In pariatur dolor id mollit et enim. Qui ex qui in cillum irure enim non reprehenderit irure et excepteur aliquip eu eu.\r\n",
+        registered: "2014-07-21T19:17:41 +05:00",
+        latitude: 15.903555,
+        longitude: -159.721203,
+        tags: [
             "Lorem",
             "magna",
             "dolor",
@@ -977,22 +977,22 @@ var profile = [
             "eu",
             "voluptate"
         ],
-        "friends": [
+        friends: [
             {
-                "id": 0,
-                "name": "Suzette Huffman"
+                id: 0,
+                name: "Suzette Huffman"
             },
             {
-                "id": 1,
-                "name": "Paige Santiago"
+                id: 1,
+                name: "Paige Santiago"
             },
             {
-                "id": 2,
-                "name": "Dollie Fernandez"
+                id: 2,
+                name: "Dollie Fernandez"
             }
         ],
-        "greeting": "Hello, Ewing Larson! You have 16 unread messages.",
-        "favoriteFruit": "strawberry"
+        greeting: "Hello, Ewing Larson! You have 16 unread messages.",
+        favoriteFruit: "strawberry"
     }
 ];
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
@@ -1014,6 +1014,63 @@ var profile = [
 //  getBalancesForActiveAndNonActive() should return the balance of all non-active accounts vs. the balance of all active accounts?
 //     this last method should return an object that looks like {"active-balances": 23000, "inactive-balances": 4000} w/ different numbers.
 
+var profileReport = {
+    getProfileCount: function () {
+        return profile.length;
+    },
+    getActiveCount: function () {
+        var activePRof = 0;
+        profile.forEach(function (prof) {
+            if (prof.isActive === true){
+                activePRof++;
+            }
+        });
+        return activePRof;
+    },
+    getInactiveCount: function () {
+        var inactivePRof = 0;
+        profile.forEach(function (prof) {
+            if (prof.isActive === false){
+                inactivePRof++;
+            }
+        });
+        return inactivePRof;
+    },
+    sumOfAllBalances: function () {
+        var totalBal = 0;
+        profile.forEach(function (bal) {
+            var fixNum = bal.balance.replace('$','');
+            fixNum = fixNum.replace(',','');
+            totalBal += parseFloat(fixNum);
+        });
+        return totalBal;
+    },
+    getAverageBalance: function () {
+        var avg = this.sumOfAllBalances()/this.getProfileCount();
+        return avg.toFixed(2);
+    },
+    getLowestBalance : function () {
+        var lowestName;
+        var lowestIndex;
+        var lowestVal;
+        profile.forEach(function (bal, index) {
+            var fixNum = bal.balance.replace('$','');
+            fixNum = fixNum.replace(',','');
+            if (typeof lowestVal === "undefined" || lowestVal > fixNum){
+                lowestVal = fixNum;
+                lowestIndex = index;
+            }
+        });
+        return profile[lowestIndex].name;
+    }
+};
+
+// console.log(profileReport.getProfileCount());
+// console.log(profileReport.getActiveCount());
+// console.log(profileReport.getInactiveCount());
+// console.log(profileReport.sumOfAllBalances());
+// console.log(profileReport.getAverageBalance());
+console.log(profileReport.getLowestBalance());
 
 // Exercise 6. Practice with assignment by reference
 // create a variable named person1 with a name property. Assign it a name property.
