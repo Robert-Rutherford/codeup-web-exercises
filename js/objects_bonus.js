@@ -1139,7 +1139,23 @@ var profileReport = {
         return (totalAge / this.getProfileCount()).toFixed(0);
     },
     getGenderCounts: function () {
-        
+        var maleCount = 0;
+        var femaleCount = 0;
+        profile.forEach(function (person) {
+            if (person.gender === "male"){
+                maleCount++;
+            }else {
+                femaleCount++;
+            }
+        });
+        return "\"m\": " + maleCount+ ", \"f\": " + femaleCount;
+    },
+    getAllCompanyNames: function () {
+        var companyArray = [];
+        profile.forEach(function (person) {
+            companyArray.push(person.company);
+        });
+        return companyArray;
     }
 };
 
@@ -1154,7 +1170,9 @@ var profileReport = {
 // console.log(profileReport.getLeastFavoriteFruit());
 // console.log(profileReport.getTotalNumberOfUnreadMessages());
 // console.log(profileReport.getAverageNumberOfUnreadMessages());
-console.log(profileReport.getAverageAge());
+// console.log(profileReport.getAverageAge());
+// console.log(profileReport.getGenderCounts());
+console.log(profileReport.getAllCompanyNames());
 
 
 // Exercise 6. Practice with assignment by reference
