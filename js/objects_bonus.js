@@ -11,7 +11,7 @@ function makeCar(make, model) {
     return newObject;
 }
 
-console.log(makeCar("VW", "beetle"));
+// console.log(makeCar("VW", "beetle"));
 
 // Exercise 2. Use the following data to create an object named salesReport.
 //     The object should have the following properties:
@@ -111,7 +111,7 @@ var salesReport = {
         }]
 };
 
-console.log(salesReport);
+// console.log(salesReport);
 
 // Exercise 3. On the salesReport object you made, add the following methods.
 // getEmployeeCount() should return the total number of employees
@@ -1156,6 +1156,45 @@ var profileReport = {
             companyArray.push(person.company);
         });
         return companyArray;
+    },
+    getMostCommonEyeColor: function () {
+        var eyeArray = [];
+        profile.forEach(function (fav){
+            eyeArray.push(fav.eyeColor);
+        });
+
+        var mostDup = 0;
+        var mostDupIndex = 0;
+        for (var i = 0; i < eyeArray.length; i++) {
+            var dupCount = 0;
+            for (var j = i + 1; j < eyeArray.length; j++) {
+                if (eyeArray[i] === eyeArray[j]) {
+                    dupCount++;
+                }
+            }
+            if (dupCount > mostDup){
+                mostDup = dupCount;
+                mostDupIndex = i;
+            }
+        }
+        return profile[mostDupIndex].eyeColor;
+    },
+    getBalancesForActiveAndNonActive: function () {
+        var activeBalance = 0;
+        var inactiveBalance = 0;
+        var fixNum;
+        profile.forEach(function (prof) {
+            if (prof.isActive === true) {
+                fixNum = prof.balance.replace('$', '');
+                fixNum = fixNum.replace(',', '');
+                activeBalance += parseFloat(fixNum);
+            }else {
+                fixNum = prof.balance.replace('$', '');
+                fixNum = fixNum.replace(',', '');
+                inactiveBalance += parseFloat(fixNum);
+            }
+        });
+        return "\"Active-balances\": "+ activeBalance.toFixed(2)+ ", \"Inactive-balances\": "+ inactiveBalance.toFixed(2);
     }
 };
 
@@ -1172,8 +1211,9 @@ var profileReport = {
 // console.log(profileReport.getAverageNumberOfUnreadMessages());
 // console.log(profileReport.getAverageAge());
 // console.log(profileReport.getGenderCounts());
-console.log(profileReport.getAllCompanyNames());
-
+// console.log(profileReport.getAllCompanyNames());
+// console.log(profileReport.getMostCommonEyeColor());
+// console.log(profileReport.getBalancesForActiveAndNonActive());
 
 // Exercise 6. Practice with assignment by reference
 // create a variable named person1 with a name property. Assign it a name property.
@@ -1182,6 +1222,12 @@ console.log(profileReport.getAllCompanyNames());
 // console.log the name property on person 1.
 // Why do you think changing person2 altered person1?
 // The term for this behavior is assignment by reference.
+
+var person1 = {name: "Phil"};
+var person2 = person1;
+person2.name = "Bob";
+// console.log(person1);
+// console.log(person2);
 
 
 // Exercise 7. More practice with assignment by reference
@@ -1194,3 +1240,8 @@ console.log(profileReport.getAllCompanyNames());
 // now, run inputElement.value = "I am altering an object by altering its properties" in your JS console.
 // See how both the "input" and "textInput" varialbes are referencing the same underlying HTML element?
 // This behavior is another example of "assignment by reference"
+
+// var input = document.getElementById("input");
+// var inputElement = document.getElementById("input");
+
+
