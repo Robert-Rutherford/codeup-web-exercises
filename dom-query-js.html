@@ -45,22 +45,23 @@
         // TODO: Set the text color of subHeader to blue
         // subHeader.style.color = "blue";
         // TODO: Uncomment the next line and get all list items
-        // var listItems = document.getElementsByTagName("li");
+        var listItems = document.getElementsByTagName("li");
         // console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
         // TODO: Set text color of li with dbid = 1 to blue
-        // listItems.style.color = "grey";
-        // listItems.getAttribute()= "blue";
-        // for (var i = 0; i < listItems.length; i++) {
-        //     var dbId = listItems[i];
-        //     if (i === 0) {
-        //         dbId.style.color = "blue";
-        //     } else {
-        //         dbId.style.color = "grey";
-        //     }
-        //     // console.log(dbId);
-        // }
+        for (var i = 0; i < listItems.length; i++) {
+            var item = listItems[i];
+            if (listItems[i].getAttribute("data-dbid") == 1) {
+                item.style.color = "blue";
+            } else if (i%2==0){
+                item.style.color = "grey";
+            }else   {
+
+            }
+            // console.log(dbId);
+        }
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         // var subParagraphs = document.getElementsByClassName("sub-paragraph");
@@ -94,11 +95,12 @@
     var listItems = document.getElementsByTagName("li");
     function coloTable(event){
         for (var i = 0; i < listItems.length; i++) {
-            var dbId = listItems[i];
-            if (i === 0) {
-                dbId.style.color = "blue";
-            } else {
-                dbId.style.color = "grey";
+            var item = listItems[i];
+            if (listItems[i].getAttribute("data-dbid") == 1) {
+                item.style.color = "blue";
+            } else if (i%2==0){
+                item.style.color = "grey";
+            }else   {
             }
             // console.log(dbId);
         }
