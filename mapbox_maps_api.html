@@ -2,9 +2,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Map Marker Exercise</title>
+    <title>Mapbox Exercise</title>
 
+<!--        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>-->
+<!--        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />-->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
 <body>
 
+<h1>Mapbox Map Exercise</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+<br>
+<div id="inputZoom">
+    <label for="inputZoomNum">Zoom Control</label>
+    <input type="number" id="inputZoomNum" placeholder="enter number between 0 and 24">
+    <button id="setZoom">Submit</button>
+</div>
+<br>
+<div id="textBoxAddress">
+    <label for="addressInput">Input address: </label>
+    <input type="text" id="addressInput">
+    <button id="searchAddress">Search</button>
+</div>
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script>
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function(data) {
+                return data.features[0].center;
+            });
+    }
+</script>
+<script>
+    mapboxgl.accessToken = mapboxToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+    });
+
+    var favoriteRestaurants = [{
+        address: "14250 San Pedro Ave, San Antonio, TX 78232",
+        information: "<h3>Alamo Cafe</h3><p>Fast and simply great food</p>"
+    },{
+        address: "Mary's, 501 N St Mary's St, San Antonio, TX 78205",
+        information: "<h3>Bill Millers B-B-Q</h3><p>Good place to get lunch</p>"
+    },{
+        address: "15639 W, I-10, San Antonio, TX 78249",
+        information: "<h3>Chuy's</h3><p>Place to get food on the way home</p>"
+    }];
+
+    favoriteRestaurants.forEach(function (restaurant) {
+        geocode(restaurant.address, mapboxToken).then(function (result) {
+            // console.log(result);
+            // map.setCenter(result);
+            // map.setZoom(20);
+
+             restaurant.marker = new mapboxgl.Marker()
+                .setLngLat(result)
+                .addTo(map);
+
+
+
+            result.popup = new mapboxgl.Popup()
+                .setHTML(restaurant.information)
+                .addTo(map);
+
+            restaurant.marker.setPopup(result.popup);
+            restaurant.marker.togglePopup();
+
+        });
+    });
+
+    var btn1 = document.getElementById('setZoom');
+    btn1.addEventListener('click', setZoom, false);
+
+    function setZoom(event) {
+        var inputtedZoom = document.getElementById("inputZoomNum").value;
+        if (!isNaN(parseInt(inputtedZoom)) && parseInt(inputtedZoom) >=0 && parseInt(inputtedZoom)<= 24){
+            map.setZoom(parseInt(inputtedZoom));
+        }else{
+            alert("ERROR: not a proper input!")
+        }
+    }
+
+
+
+
+    // geocode("14250 San Pedro Ave, San Antonio, TX 78232", mapboxToken).then(function (result) {
+    //     console.log(result);
+    //     map.setCenter(result);
+    //     // map.setZoom(20);
+    //
+    //     var alamoCafeMarker = new mapboxgl.Marker()
+    //         .setLngLat(result)
+    //         .addTo(map);
+    //
+    //
+    //
+    //     var alamoCafePopup = new mapboxgl.Popup()
+    //         .setHTML("<p>Alamo Cafe!</p>")
+    //         .addTo(map);
+    //
+    //     alamoCafeMarker.setPopup(alamoCafePopup);
+    //     alamoCafeMarker.togglePopup();
+    //
+    // });
+
+
+
+    // map.setZoom(20);
+
+    // mapboxgl.accessToken = mapboxToken;
+    // var map = new mapboxgl.Map({
+    //     container: 'map',
+    //     style: 'mapbox://styles/mapbox/streets-v9',
+    //     zoom: 10,
+    //     center: [-98.4916, 29.4252]
+    // });
+
+
+</script>
 </body>
 </html>
