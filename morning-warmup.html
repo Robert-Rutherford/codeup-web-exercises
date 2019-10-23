@@ -196,9 +196,7 @@
 
     //october 23
     function createPersonObject(name,age) {
-        if (typeof name === 'string' && typeof age === 'number'){
-            return { name: name, age: age};
-        }
+        return typeof name === 'string' && typeof age === 'number' ? {name: name, age: age} : false;
     }
 
     console.log(createPersonObject("Bill", 23));
