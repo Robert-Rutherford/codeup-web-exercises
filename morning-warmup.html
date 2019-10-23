@@ -194,6 +194,15 @@
     //october 22
     // no warm-up
 
+    //october 23
+    function createPersonObject(name,age) {
+        if (typeof name === 'string' && typeof age === 'number'){
+            return { name: name, age: age};
+        }
+    }
+
+    console.log(createPersonObject("Bill", 23));
+
 </script>
 </body>
 </html>
