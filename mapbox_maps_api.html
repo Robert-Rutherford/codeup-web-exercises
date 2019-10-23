@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Mapbox Exercise</title>
 
-<!--        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>-->
-<!--        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />-->
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <!-- Custom CSS -->
     <style>
@@ -31,8 +32,12 @@
 <br>
 <div id="textBoxAddress">
     <label for="addressInput">Input address: </label>
-    <input type="text" id="addressInput">
+    <input type="text" id="addressInput" onfocus="this.value=''">
     <button id="searchAddress">Search</button>
+</div>
+<br>
+<div id="hideMarkersBox">
+    <button id="hideMarkersBtn">Hide Markers</button>
 </div>
 
 <!-- Mapbox JS -->
@@ -60,6 +65,7 @@
         center: [-98.4916, 29.4252]
     });
 
+    var makerArray=[];
     var favoriteRestaurants = [{
         address: "14250 San Pedro Ave, San Antonio, TX 78232",
         information: "<h3>Alamo Cafe</h3><p>Fast and simply great food</p>"
@@ -81,7 +87,7 @@
                 .setLngLat(result)
                 .addTo(map);
 
-
+             makerArray.push(restaurant.marker);
 
             result.popup = new mapboxgl.Popup()
                 .setHTML(restaurant.information)
@@ -105,8 +111,68 @@
         }
     }
 
+    var btn2 = document.getElementById('searchAddress');
+    btn2.addEventListener('click', addAddressMarker, false);
 
+    function addAddressMarker(event) {
+        var inputtedAddress = document.getElementById("addressInput").value;
+        geocode(inputtedAddress, mapboxToken).then(function (result) {
+                console.log(result);
+                map.setCenter(result);
+                // map.setZoom(20);
 
+                var newMarker = new mapboxgl.Marker()
+                    .setLngLat(result)
+                    .addTo(map);
+
+            makerArray.push(newMarker);
+
+                var newMarkerPopup = new mapboxgl.Popup()
+                    .setHTML("<p>Location Found</p>")
+                    .addTo(map);
+
+            newMarker.setPopup(newMarkerPopup);
+            newMarker.togglePopup();
+
+            });
+        // return inputtedAddress = '';
+    }
+
+    var btn3 = document.getElementById('hideMarkersBtn');
+    btn3.addEventListener('click', hideAllMarkers, false);
+
+    function hideAllMarkers(event) {
+        makerArray.forEach(function (mark) {
+           mark.remove();
+        });
+    }
+
+    // makerArray.forEach(function (mark) {
+    //     function animateMarker(timestamp) {
+    //         var bounceHeight = 10;
+    //         mark.setLngLat([
+    //             Math.cos(timestamp/1000)*bounceHeight,
+    //             Math.cos(timestamp/1000)*bounceHeight
+    //         ]);
+    //
+    //         mark.addTo(map);
+    //
+    //
+    //         requestAnimationFrame(animateMarker);
+    //     }
+    //     requestAnimationFrame(animateMarker);
+    // });
+
+    // function animateMarker(timestamp) {
+    //     var bounceHeight = 2;
+    //     // maker.setLngLat
+    //
+    //
+    //
+    // }
+
+    // 13307 Teagarden Lane, San Antonio, Tx 78232
+    // 600 Navarro St #350, San Antonio, Tx 78205
 
     // geocode("14250 San Pedro Ave, San Antonio, TX 78232", mapboxToken).then(function (result) {
     //     console.log(result);
