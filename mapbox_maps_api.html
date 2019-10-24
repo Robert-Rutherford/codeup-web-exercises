@@ -38,6 +38,7 @@
 <br>
 <div id="hideMarkersBox">
     <button id="hideMarkersBtn">Hide Markers</button>
+    <button id="showMarkersBtn">Show Markers</button>
 </div>
 
 <!-- Mapbox JS -->
@@ -68,13 +69,13 @@
     var makerArray=[];
     var favoriteRestaurants = [{
         address: "14250 San Pedro Ave, San Antonio, TX 78232",
-        information: "<h3>Alamo Cafe</h3><p>Fast and simply great food</p>"
+        information: "<h3>Alamo Cafe</h3><p>14250 San Pedro Ave, San Antonio, TX 78232</p><p>Fast and simply great food</p>"
     },{
         address: "Mary's, 501 N St Mary's St, San Antonio, TX 78205",
-        information: "<h3>Bill Millers B-B-Q</h3><p>Good place to get lunch</p>"
+        information: "<h3>Bill Millers B-B-Q</h3><p>Mary's, 501 N St Mary's St, San Antonio, TX 78205</p><p>Good place to get lunch</p>"
     },{
         address: "15639 W, I-10, San Antonio, TX 78249",
-        information: "<h3>Chuy's</h3><p>Place to get food on the way home</p>"
+        information: "<h3>Chuy's</h3><p>15639 W, I-10, San Antonio, TX 78249</p><p>Place to get food on the way home</p>"
     }];
 
     favoriteRestaurants.forEach(function (restaurant) {
@@ -128,7 +129,7 @@
             makerArray.push(newMarker);
 
                 var newMarkerPopup = new mapboxgl.Popup()
-                    .setHTML("<p>Location Found</p>")
+                    .setHTML("<p>Location Found</p><p>"+ inputtedAddress + "</p>")
                     .addTo(map);
 
             newMarker.setPopup(newMarkerPopup);
@@ -144,6 +145,15 @@
     function hideAllMarkers(event) {
         makerArray.forEach(function (mark) {
            mark.remove();
+        });
+    }
+
+    var btn4 = document.getElementById('showMarkersBtn');
+    btn4.addEventListener('click', showAllMarkers, false);
+
+    function showAllMarkers(event) {
+        makerArray.forEach(function (mark) {
+            mark.addTo(map);
         });
     }
 
