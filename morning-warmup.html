@@ -224,8 +224,44 @@
         return typeof string === 'string' && string === "five" ? 5 : false;
     }
 
-    var get = document.g
+    // october 28
+    var shoppingCarts = [
+        {
+            apples: 8,
+            bananas: 2,
+            oranges: 4,
+            grapes: 24
+        }, {
+            apples: 3,
+            bananas: 6,
+            oranges: 8,
+            grapes: 12
+        } , {
+            apples: 0,
+            bananas: 12,
+            oranges: 0,
+            grapes: 0
+        } , {
+            apples: 4,
+            bananas: 0,
+            oranges: 8,
+            grapes: 10
+        }
+    ];
 
+    function mostOranges(obj) {
+        var mostOrange = 0;
+        var amountOrange = 0;
+        obj.forEach(function (val, index) {
+            if (val.oranges > amountOrange){
+                amountOrange = val.oranges;
+                mostOrange = index;
+            }
+        });
+        return obj[mostOrange];
+    }
+
+    console.log(mostOranges(shoppingCarts));
 
 </script>
 </body>
