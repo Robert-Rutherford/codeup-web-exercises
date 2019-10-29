@@ -1,5 +1,5 @@
 /**********************************************
- * 				jQuery Intro
+ *                jQuery Intro
  *********************************************/
 
 // jQuery is the most widely used JavaScript library on the internet today.
@@ -7,7 +7,7 @@
 
 
 /**********************************************
- * 			Adding jQuery to HTML
+ *            Adding jQuery to HTML
  *********************************************/
 
 // Download a local copy and save to your js directory
@@ -23,33 +23,32 @@
 // TODO: Add jQuery to the html file using the CDN
 
 /**********************************************
- * 				jQuery Object
+ *                jQuery Object
  *********************************************/
 // jQuery object returns a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
 // We commonly use the dollar sign $ as an alias for 'jQuery'
 
 /**********************************************
- * 				Document Ready
+ *                Document Ready
  *********************************************/
 
 // Javascript version: This will wait until all images are loaded on page
 
-window.onload = function() {
-    alert( 'The page has finished loading!' );
+window.onload = function () {
+    alert('The page has finished loading!');
 }
 
 // jQuery version: This will fire before the images are loaded
 // We use jQuery to select the document
 // we add the event listener 'ready'
 // the event listener will fire before the images are loaded
-$(document).ready(function() {
-    alert( 'The DOM has finished loading!' );
+$(document).ready(function () {
+    alert('The DOM has finished loading!');
 });
 
 
-
 /**********************************************
- * 				** Note **
+ *                ** Note **
  *********************************************/
 // Our JS files will still contain 'use strict' at the top of the file
 // we will also include a wrapper $(document).ready function.
@@ -57,7 +56,7 @@ $(document).ready(function() {
 
 "use strict";
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     // INSERT JAVASCRIPT CODE HERE
 

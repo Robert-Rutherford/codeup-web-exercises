@@ -1077,7 +1077,7 @@ var profileReport = {
     },
     getMostFavoriteFruit: function () {
         var fruitArray = [];
-        profile.forEach(function (fav){
+        profile.forEach(function (fav) {
             fruitArray.push(fav.favoriteFruit);
         });
 
@@ -1090,7 +1090,7 @@ var profileReport = {
                     dupCount++;
                 }
             }
-            if (dupCount > mostDup){
+            if (dupCount > mostDup) {
                 mostDup = dupCount;
                 mostDupIndex = i;
             }
@@ -1099,7 +1099,7 @@ var profileReport = {
     },
     getLeastFavoriteFruit: function () {
         var fruitArray = [];
-        profile.forEach(function (fav){
+        profile.forEach(function (fav) {
             fruitArray.push(fav.favoriteFruit);
         });
 
@@ -1112,7 +1112,7 @@ var profileReport = {
                     dupCount++;
                 }
             }
-            if (dupCount < leastDup){
+            if (dupCount < leastDup) {
                 leastDup = dupCount;
                 leastDupIndex = i;
             }
@@ -1128,7 +1128,7 @@ var profileReport = {
         return totalUnread;
     },
     getAverageNumberOfUnreadMessages: function () {
-        var avg = this.getTotalNumberOfUnreadMessages()/this.getProfileCount();
+        var avg = this.getTotalNumberOfUnreadMessages() / this.getProfileCount();
         return avg.toFixed(2);
     },
     getAverageAge: function () {
@@ -1142,13 +1142,13 @@ var profileReport = {
         var maleCount = 0;
         var femaleCount = 0;
         profile.forEach(function (person) {
-            if (person.gender === "male"){
+            if (person.gender === "male") {
                 maleCount++;
-            }else {
+            } else {
                 femaleCount++;
             }
         });
-        return "\"m\": " + maleCount+ ", \"f\": " + femaleCount;
+        return "\"m\": " + maleCount + ", \"f\": " + femaleCount;
     },
     getAllCompanyNames: function () {
         var companyArray = [];
@@ -1159,7 +1159,7 @@ var profileReport = {
     },
     getMostCommonEyeColor: function () {
         var eyeArray = [];
-        profile.forEach(function (fav){
+        profile.forEach(function (fav) {
             eyeArray.push(fav.eyeColor);
         });
 
@@ -1172,7 +1172,7 @@ var profileReport = {
                     dupCount++;
                 }
             }
-            if (dupCount > mostDup){
+            if (dupCount > mostDup) {
                 mostDup = dupCount;
                 mostDupIndex = i;
             }
@@ -1188,13 +1188,13 @@ var profileReport = {
                 fixNum = prof.balance.replace('$', '');
                 fixNum = fixNum.replace(',', '');
                 activeBalance += parseFloat(fixNum);
-            }else {
+            } else {
                 fixNum = prof.balance.replace('$', '');
                 fixNum = fixNum.replace(',', '');
                 inactiveBalance += parseFloat(fixNum);
             }
         });
-        return "\"Active-balances\": "+ activeBalance.toFixed(2)+ ", \"Inactive-balances\": "+ inactiveBalance.toFixed(2);
+        return "\"Active-balances\": " + activeBalance.toFixed(2) + ", \"Inactive-balances\": " + inactiveBalance.toFixed(2);
     }
 };
 

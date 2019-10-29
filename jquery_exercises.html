@@ -5,19 +5,98 @@
     <title>JQuery Intro Exercise</title>
 </head>
 <body>
-<h1> JQuery Intro Exercise</h1
-<div> I have know idea what I am doing</div>
-<p> Or maybe I do and it will be a surprise.</p>
+<div id = "also-container">
+    <h1 class="h1Exercise"> JQuery Intro Exercise</h1>
+    <div id="unknownDiv" class = "whatDiv"> I have know idea what I am doing</div>
+    <p id="doKnowParagraph"> Or maybe I do and it will be a surprise.</p>
+    <ul class="dots-list">
+        <li class="codeup">This</li>
+        <li class="codeup">Is</li>
+        <li class="codeup">A</li>
+        <li class="codeup">Set</li>
+        <li class="codeup">Of</li>
+        <li class="codeup">Dotes</li>
+    </ul>
+</div>
 
+<!--borrowed from lecture-->
+<div id="container">
+
+    <h1 class="main-headings" id="book-welcome">Welcome to Books 4 U</h1>
+    <p>Take a look around... we have plenty of affordable books!</p>
+
+    <hr>
+
+    <h4 class="main-headings" id="book-genre-heading">Book Genres</h4>
+    <ul id="book-genre-list">
+        <li id="mystery-genre">Mystery</li>
+        <li id="romance-genre">Romance</li>
+        <li id="science-fiction-genre">Science Fiction</li>
+        <li id="international-genre">International</li>
+    </ul>
+
+    <hr>
+
+    <h4 class="main-headings" id="about-us">About Us</h4>
+    <p>We are locally owned and operated since 1996, and we're here to stay! We take pride in providing the best service
+        possible to all of our customers!</p>
+
+    <hr>
+
+    <h4 class="main-headings" id="book-bundle">Book Bundles</h4>
+    <p>Check out the following book bundles featured this week</p>
+
+    <ul id="book-bundle-list">
+        <li id="book-bundle-one">Far Far Away, Under the Moon, Just Like Kay = $12.99</li>
+        <li id="book-bundle-two">Don't Look Under the Bed, Oh No - Run, There's Something in the Closet = $8.99</li>
+        <li id="book-bundle-three">Rainy Mars, Pluto Empire, Nova Nova = $10.99</li>
+    </ul>
+
+
+</div>
 
 
 <script src="js/jquery-2.2.4.js"></script>
-<script src="js/jquery_exercises.js"></script>
-<script>
+<!--<script src="js/jquery_exercises.js"></script>-->
+<!--<script class="intro-exercise selector-exercise">-->
+<!--    "use strict";-->
+<!--    $(document).ready(function () {-->
+
+<!--        // alert($('#unknownDiv').html());-->
+<!--        // alert($('#doKnowParagraph').html());-->
+<!--        // $('.codeup').css('border', 'solid red 1px');-->
+<!--        $('li').css('font-size', '20px');-->
+<!--        $('h1,li,p').css('background-color', 'yellow');-->
+<!--        alert($('h1').html());-->
+
+
+<!--        // alert('The DOM has finished loading!');-->
+<!--    });-->
+<!--</script>-->
+<script class="click-event-exercise">
     "use strict";
-    $(document).ready(function() {
-        alert( 'The DOM has finished loading!' );
+    $(document).ready(function () {
+
+        $('h1').click(function () {
+            $(this).css('background-color', 'yellow');
+        });
+
+        $('p').dblclick(function () {
+            $(this).css('font-size', '18px');
+        });
+
+        $('li').hover(function () {
+           $(this).css('color', 'red');
+        },function () {
+            $(this).css('color', 'black');
+        });
+
+
+
     });
+
 </script>
+
+
 </body>
 </html>

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Mapbox Exercise</title>
 
-        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet'/>
 
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
     <!-- Custom CSS -->
     <style>
         #map {
@@ -49,10 +49,10 @@
         var baseUrl = 'https://api.mapbox.com';
         var endPoint = '/geocoding/v5/mapbox.places/';
         return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
-            .then(function(res) {
+            .then(function (res) {
                 return res.json();
                 // to get all the data from the request, comment out the following three lines...
-            }).then(function(data) {
+            }).then(function (data) {
                 return data.features[0].center;
             });
     }
@@ -66,14 +66,14 @@
         center: [-98.4916, 29.4252]
     });
 
-    var makerArray=[];
+    var makerArray = [];
     var favoriteRestaurants = [{
         address: "14250 San Pedro Ave, San Antonio, TX 78232",
         information: "<h3>Alamo Cafe</h3><p>14250 San Pedro Ave, San Antonio, TX 78232</p><p>Fast and simply great food</p>"
-    },{
+    }, {
         address: "Mary's, 501 N St Mary's St, San Antonio, TX 78205",
         information: "<h3>Bill Millers B-B-Q</h3><p>Mary's, 501 N St Mary's St, San Antonio, TX 78205</p><p>Good place to get lunch</p>"
-    },{
+    }, {
         address: "15639 W, I-10, San Antonio, TX 78249",
         information: "<h3>Chuy's</h3><p>15639 W, I-10, San Antonio, TX 78249</p><p>Place to get food on the way home</p>"
     }];
@@ -84,11 +84,11 @@
             // map.setCenter(result);
             // map.setZoom(20);
 
-             restaurant.marker = new mapboxgl.Marker()
+            restaurant.marker = new mapboxgl.Marker()
                 .setLngLat(result)
                 .addTo(map);
 
-             makerArray.push(restaurant.marker);
+            makerArray.push(restaurant.marker);
 
             result.popup = new mapboxgl.Popup()
                 .setHTML(restaurant.information)
@@ -105,9 +105,9 @@
 
     function setZoom(event) {
         var inputtedZoom = document.getElementById("inputZoomNum").value;
-        if (!isNaN(parseInt(inputtedZoom)) && parseInt(inputtedZoom) >=0 && parseInt(inputtedZoom)<= 24){
+        if (!isNaN(parseInt(inputtedZoom)) && parseInt(inputtedZoom) >= 0 && parseInt(inputtedZoom) <= 24) {
             map.setZoom(parseInt(inputtedZoom));
-        }else{
+        } else {
             alert("ERROR: not a proper input!")
         }
     }
@@ -118,24 +118,24 @@
     function addAddressMarker(event) {
         var inputtedAddress = document.getElementById("addressInput").value;
         geocode(inputtedAddress, mapboxToken).then(function (result) {
-                console.log(result);
-                map.setCenter(result);
-                // map.setZoom(20);
+            console.log(result);
+            map.setCenter(result);
+            // map.setZoom(20);
 
-                var newMarker = new mapboxgl.Marker()
-                    .setLngLat(result)
-                    .addTo(map);
+            var newMarker = new mapboxgl.Marker()
+                .setLngLat(result)
+                .addTo(map);
 
             makerArray.push(newMarker);
 
-                var newMarkerPopup = new mapboxgl.Popup()
-                    .setHTML("<p>Location Found</p><p>"+ inputtedAddress + "</p>")
-                    .addTo(map);
+            var newMarkerPopup = new mapboxgl.Popup()
+                .setHTML("<p>Location Found</p><p>" + inputtedAddress + "</p>")
+                .addTo(map);
 
             newMarker.setPopup(newMarkerPopup);
             newMarker.togglePopup();
 
-            });
+        });
         // return inputtedAddress = '';
     }
 
@@ -144,7 +144,7 @@
 
     function hideAllMarkers(event) {
         makerArray.forEach(function (mark) {
-           mark.remove();
+            mark.remove();
         });
     }
 
@@ -203,7 +203,6 @@
     //     alamoCafeMarker.togglePopup();
     //
     // });
-
 
 
     // map.setZoom(20);

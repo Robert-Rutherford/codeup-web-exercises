@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+
+    var global = {
+        konami: function()
+    {
+        var konamiKeys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], started = false, count = 0;
+
+        $(document).keydown(function (e) {
+            var reset = function () {
+                started = false;
+                count = 0;
+                return;
+            };
+
+             var key = e.keyCode;
+
+            if (!started) {
+                if (key == 38) {
+                    started = true;
+                }
+            }
+
+            if (started) {
+                if (konamiKeys[count] == key) {
+                    count++;
+                } else {
+                    reset();
+                }
+                if (count == 10) {
+                    alert("You have added 30 lives!");
+                    reset();
+                }
+            } else {
+                reset();
+            }
+        });
+    }
+    };
+    global.konami();
+
+</script>
+</body>
+</html>

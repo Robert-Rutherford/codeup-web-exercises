@@ -1,11 +1,11 @@
 /**********************************************
- * 			SETTING UP KEYS.JS
+ *            SETTING UP KEYS.JS
  *********************************************/
 // TODO TOGETHER: Open .gitignore and add keys.js. Add keys.js file and import to mapbox html file. Your api keys are stored in keys.js and are added to the .gitignore so they are protected
 
 // console.log(mapboxToken);
 /**********************************************
- * 			CUSTOMIZING THE MAP
+ *            CUSTOMIZING THE MAP
  *********************************************/
 // Predefined map styles --> https://docs.mapbox.com/mapbox-gl-js/api/#map
 // A map center can be set by passing in the latitude and longitude coordinates of a location as an array [LONGITUDE_VALUE, LATITUDE_VALUE]
@@ -24,9 +24,8 @@ var map = new mapboxgl.Map({
 //TODO: Experiment with different map styles, zoom levels, and centers. You will need to reference the mapbox docs. (~15 minutes)
 
 
-
 /**********************************************
- * 					MARKERS
+ *                    MARKERS
  *********************************************/
 // Marker Docs --> https://docs.mapbox.com/mapbox-gl-js/api/#marker
 // Markers are specific locations on a map
@@ -35,9 +34,9 @@ var map = new mapboxgl.Map({
 
 // TODO TOGETHER: Add a marker to the map using the following coordinates [-98.4916, 29.4260]. This marker will mark the Alamo on our map.
 
-    var markerOptions = {
-        color: "#ff0000",
-        draggable: true
+var markerOptions = {
+    color: "#ff0000",
+    draggable: true
 };
 
 var marker = new mapboxgl.Marker(markerOptions)
@@ -51,7 +50,7 @@ var marker = new mapboxgl.Marker(markerOptions)
 
 
 /**********************************************
- * 					POPUPS
+ *                    POPUPS
  *********************************************/
 // Popups are the info boxes that appear on a map and may describe a given location.
 // Popup docs --> https://docs.mapbox.com/mapbox-gl-js/api/#popup
@@ -78,7 +77,7 @@ codeupPopup.setText("What's Codeup?");
 
 
 /**********************************************
- * 					Geocoder
+ *                    Geocoder
  *********************************************/
 // Geocoding Docs --> https://docs.mapbox.com/api/search/#geocoding
 
@@ -103,10 +102,9 @@ codeupPopup.setText("What's Codeup?");
 //TODO: Instead of setCenter try using map.flyTo()
 
 
-
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -98.4861, lat: 29.4260} to get a physical address for the alamo
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
-reverseGeocode({lng: -98.4861, lat: 29.4260}, mapboxToken).then(function(results) {
+reverseGeocode({lng: -98.4861, lat: 29.4260}, mapboxToken).then(function (results) {
     // logs the address for The Alamo
     console.log(results);
 });

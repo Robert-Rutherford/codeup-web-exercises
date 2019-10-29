@@ -195,7 +195,7 @@
     // no warm-up
 
     //october 23
-    function createPersonObject(name,age) {
+    function createPersonObject(name, age) {
         return typeof name === 'string' && typeof age === 'number' ? {name: name, age: age} : false;
     }
 
@@ -203,15 +203,19 @@
 
     //october 24
     function fizzBuzz() {
-        for (var i=1; i<=100; i++){
-            if (i%3 === 0 && i%5 === 0){
-                console.log("FizzBuzz");;
-            }else if (i%3 === 0){
-                console.log("Fizz");;
-            }else if (i%5 === 0){
-                console.log("Buzz");;
-            }else {
-                console.log(i);;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log("FizzBuzz");
+                ;
+            } else if (i % 3 === 0) {
+                console.log("Fizz");
+                ;
+            } else if (i % 5 === 0) {
+                console.log("Buzz");
+                ;
+            } else {
+                console.log(i);
+                ;
             }
         }
     }
@@ -236,12 +240,12 @@
             bananas: 6,
             oranges: 8,
             grapes: 12
-        } , {
+        }, {
             apples: 0,
             bananas: 12,
             oranges: 0,
             grapes: 0
-        } , {
+        }, {
             apples: 4,
             bananas: 0,
             oranges: 8,
@@ -253,7 +257,7 @@
         var mostOrange = 0;
         var amountOrange = 0;
         obj.forEach(function (val, index) {
-            if (val.oranges > amountOrange){
+            if (val.oranges > amountOrange) {
                 amountOrange = val.oranges;
                 mostOrange = index;
             }
@@ -291,10 +295,10 @@
         }
     ];
 
-    function notRegistered(studentsArray){
+    function notRegistered(studentsArray) {
         var notIn = [];
         studentsArray.forEach(function (student) {
-            if (student.isRegistered === false){
+            if (student.isRegistered === false) {
                 notIn.push(student);
             }
         });
