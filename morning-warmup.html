@@ -291,9 +291,9 @@
         }
     ];
 
-    function notRegistered(students){
+    function notRegistered(studentsArray){
         var notIn = [];
-        students.forEach(function (student) {
+        studentsArray.forEach(function (student) {
             if (student.isRegistered === false){
                 notIn.push(student);
             }
