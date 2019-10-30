@@ -5,6 +5,16 @@
 </head>
 <body>
 <h1>Cheat Code</h1>
+<h3>What do these codes do?</h3>
+<ul>
+    <li>"Up","Up","Down","Down","Left","Right","Left","Right","B","A"</li>
+    <li>"I","D","D","Q","D"</li>
+    <li>"A","B","A","C","A","B","B"</li>
+    <li>"Right","Up","Down","Left","X","B","Left","A","Right","Y"</li>
+    <li>"Up","Down","Left","Right","A"</li>
+    <li>"KOELSCH"</li>
+    <li>"ZELDA"</li>
+</ul>
 <div id="hidden-img"></div>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
@@ -15,8 +25,8 @@
     });
 
     var cheatCode = {
-        konami: function()
-    {
+        // "Up","Up","Down","Down","Left","Right","Left","Right","B","A"
+        konami: function() {
         var konamiKeys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], started = false, count = 0;
 
         $(document).keydown(function (e) {
@@ -29,7 +39,7 @@
              var key = e.keyCode;
 
             if (!started) {
-                if (key == 38) {
+                if (key == konamiKeys[0]) {
                     started = true;
                 }
             }
@@ -41,8 +51,8 @@
                     reset();
                 }
                 if (count == 10) {
-                    alert("You have added 30 lives!");
                     document.getElementById("hidden-img").innerHTML = '<img src= "img/konamiblog-konamicode-3-800x445.png">';
+                    alert("You have added 30 lives!");
                     reset();
                 }
             } else {
@@ -50,6 +60,7 @@
             }
         });
     },
+        // "I","D","D","Q","D"
         doomGM: function () {
             var doomKeys = [73,68,68,81,68], started = false, count = 0;
 
@@ -75,8 +86,8 @@
                         reset();
                     }
                     if (count == doomKeys.length) {
-                        alert("God Mode Activated!");
                         document.getElementById("hidden-img").innerHTML = '<img src= "img/retroDoom.jpeg">';
+                        alert("God Mode Activated!");
                         reset();
                     }
                 } else {
@@ -84,6 +95,7 @@
                 }
             });
         },
+        // "A","B","A","C","A","B","B"
         mortalCombatUC: function () {
             var combatKeys = [65,66,65,67,65,66,66], started = false, count = 0;
 
@@ -109,8 +121,8 @@
                         reset();
                     }
                     if (count == combatKeys.length) {
-                        alert("Uncensored Mode Activated!");
                         document.getElementById("hidden-img").innerHTML = '<img src= "img/MortalKombat_title.png">';
+                        alert("Uncensored Mode Activated!");
                         reset();
                     }
                 } else {
@@ -118,8 +130,79 @@
                 }
             });
         },
-        mortalCombatUC: function () {
-            var combatKeys = [65,66,65,67,65,66,66], started = false, count = 0;
+        // hit right, up, down, left, X, B, left, A, right and Y,
+        dogO: function () {
+            var dogsKeys = [39,38,40,37,88,66,37,65,39,89], started = false, count = 0;
+
+            $(document).keydown(function (e) {
+                var reset = function () {
+                    started = false;
+                    count = 0;
+                    return;
+                };
+
+                var key = e.keyCode;
+
+                if (!started) {
+                    if (key == dogsKeys[0]) {
+                        started = true;
+                    }
+                }
+
+                if (started) {
+                    if (dogsKeys[count] == key) {
+                        count++;
+                    } else {
+                        reset();
+                    }
+                    if (count == dogsKeys.length) {
+                        document.getElementById("hidden-img").innerHTML = '<div>International Superstar Soccer Deluxe: Dog officials</div><img src= "img/dogsGame.jpg"><img src= "img/dogsPics1.jpg"><img src= "img/dogPic2.jpg"><img src= "img/dogPic4.jpeg">';
+                        alert("...is that dogs I hear?");
+                        reset();
+                    }
+                } else {
+                    reset();
+                }
+            });
+        },
+        // Up, Down, Left, Right, A
+        sonic: function() {
+            var sonicKeys = [38,40,37,39,65], started = false, count = 0;
+
+            $(document).keydown(function (e) {
+                var reset = function () {
+                    started = false;
+                    count = 0;
+                    return;
+                };
+
+                var key = e.keyCode;
+
+                if (!started) {
+                    if (key == sonicKeys[0]) {
+                        started = true;
+                    }
+                }
+
+                if (started) {
+                    if (sonicKeys[count] == key) {
+                        count++;
+                    } else {
+                        reset();
+                    }
+                    if (count == sonicKeys.length) {
+                        document.getElementById("hidden-img").innerHTML = '<img src= "img/sonicIntro.png">';
+                        alert("Gotta go Fast!");
+                        reset();
+                    }
+                } else {
+                    reset();
+                }
+            });
+        },
+        // "KOELSCH"
+        rogueSquadCar: function () {
+            var combatKeys = [75,79,69,76,83,67,72], started = false, count = 0;
 
             $(document).keydown(function (e) {
                 var reset = function () {
@@ -143,20 +226,60 @@
                         reset();
                     }
                     if (count == combatKeys.length) {
-                        alert("Uncensored Mode Activated!");
-                        document.getElementById("hidden-img").innerHTML = '<img src= "img/MortalKombat_title.png">';
+                        document.getElementById("hidden-img").innerHTML = '<img src= "img/Star-wars-rogue-squadron.jpg"><img src= "img/rsCar.jpg">';
+                        alert("save the galaxy in style!");
                         reset();
                     }
                 } else {
                     reset();
                 }
             });
-        }
+        },
+        // "ZELDA"
+        legendOfZeldaSkip: function () {
+            var zeldaKeys = [90,69,76,68,65], started = false, count = 0;
+
+            $(document).keydown(function (e) {
+                var reset = function () {
+                    started = false;
+                    count = 0;
+                    return;
+                };
+
+                var key = e.keyCode;
+
+                if (!started) {
+                    if (key == zeldaKeys[0]) {
+                        started = true;
+                    }
+                }
+
+                if (started) {
+                    if (zeldaKeys[count] == key) {
+                        count++;
+                    } else {
+                        reset();
+                    }
+                    if (count == zeldaKeys.length) {
+                        document.getElementById("hidden-img").innerHTML = '<img src= "img/legendOfZelda.jpg">';
+                        alert("lets just skip half of the adventure! the princess isn't going to save herself...wait a minute.");
+                        reset();
+                    }
+                } else {
+                    reset();
+                }
+            });
+        },
+
 
     };
     cheatCode.konami();
     cheatCode.doomGM();
     cheatCode.mortalCombatUC();
+    cheatCode.dogO();
+    cheatCode.sonic();
+    cheatCode.rogueSquadCar();
+    cheatCode.legendOfZeldaSkip();
 
 </script>
 </body>
