@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Konami Code</title>
+    <title>Cheat Codes</title>
 </head>
 <body>
-<h1>Konami Code</h1>
-
+<h1>Cheat Code</h1>
+<div id="hidden-img"></div>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
@@ -42,15 +42,121 @@
                 }
                 if (count == 10) {
                     alert("You have added 30 lives!");
+                    document.getElementById("hidden-img").innerHTML = '<img src= "img/konamiblog-konamicode-3-800x445.png">';
                     reset();
                 }
             } else {
                 reset();
             }
         });
-    }
+    },
+        doomGM: function () {
+            var doomKeys = [73,68,68,81,68], started = false, count = 0;
+
+            $(document).keydown(function (e) {
+                var reset = function () {
+                    started = false;
+                    count = 0;
+                    return;
+                };
+
+                var key = e.keyCode;
+
+                if (!started) {
+                    if (key == doomKeys[0]) {
+                        started = true;
+                    }
+                }
+
+                if (started) {
+                    if (doomKeys[count] == key) {
+                        count++;
+                    } else {
+                        reset();
+                    }
+                    if (count == doomKeys.length) {
+                        alert("God Mode Activated!");
+                        document.getElementById("hidden-img").innerHTML = '<img src= "img/retroDoom.jpeg">';
+                        reset();
+                    }
+                } else {
+                    reset();
+                }
+            });
+        },
+        mortalCombatUC: function () {
+            var combatKeys = [65,66,65,67,65,66,66], started = false, count = 0;
+
+            $(document).keydown(function (e) {
+                var reset = function () {
+                    started = false;
+                    count = 0;
+                    return;
+                };
+
+                var key = e.keyCode;
+
+                if (!started) {
+                    if (key == combatKeys[0]) {
+                        started = true;
+                    }
+                }
+
+                if (started) {
+                    if (combatKeys[count] == key) {
+                        count++;
+                    } else {
+                        reset();
+                    }
+                    if (count == combatKeys.length) {
+                        alert("Uncensored Mode Activated!");
+                        document.getElementById("hidden-img").innerHTML = '<img src= "img/MortalKombat_title.png">';
+                        reset();
+                    }
+                } else {
+                    reset();
+                }
+            });
+        },
+        mortalCombatUC: function () {
+            var combatKeys = [65,66,65,67,65,66,66], started = false, count = 0;
+
+            $(document).keydown(function (e) {
+                var reset = function () {
+                    started = false;
+                    count = 0;
+                    return;
+                };
+
+                var key = e.keyCode;
+
+                if (!started) {
+                    if (key == combatKeys[0]) {
+                        started = true;
+                    }
+                }
+
+                if (started) {
+                    if (combatKeys[count] == key) {
+                        count++;
+                    } else {
+                        reset();
+                    }
+                    if (count == combatKeys.length) {
+                        alert("Uncensored Mode Activated!");
+                        document.getElementById("hidden-img").innerHTML = '<img src= "img/MortalKombat_title.png">';
+                        reset();
+                    }
+                } else {
+                    reset();
+                }
+            });
+        }
+
     };
     cheatCode.konami();
+    cheatCode.doomGM();
+    cheatCode.mortalCombatUC();
 
 </script>
 </body>
