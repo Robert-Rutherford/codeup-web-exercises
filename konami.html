@@ -20,49 +20,49 @@
 <script>
     "use strict";
 
-    $(document).keyup(function(event){
+    $(document).keyup(function (event) {
         console.log(event.keyCode);
     });
 
     var cheatCode = {
         // "Up","Up","Down","Down","Left","Right","Left","Right","B","A"
-        konami: function() {
-        var konamiKeys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], started = false, count = 0;
+        konami: function () {
+            var konamiKeys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65], started = false, count = 0;
 
-        $(document).keydown(function (e) {
-            var reset = function () {
-                started = false;
-                count = 0;
-                return;
-            };
+            $(document).keydown(function (e) {
+                var reset = function () {
+                    started = false;
+                    count = 0;
+                    return;
+                };
 
-             var key = e.keyCode;
+                var key = e.keyCode;
 
-            if (!started) {
-                if (key == konamiKeys[0]) {
-                    started = true;
+                if (!started) {
+                    if (key == konamiKeys[0]) {
+                        started = true;
+                    }
                 }
-            }
 
-            if (started) {
-                if (konamiKeys[count] == key) {
-                    count++;
+                if (started) {
+                    if (konamiKeys[count] == key) {
+                        count++;
+                    } else {
+                        reset();
+                    }
+                    if (count == konamiKeys.length) {
+                        document.getElementById("hidden-img").innerHTML = '<img src= "img/konamiblog-konamicode-3-800x445.png">';
+                        alert("You have added 30 lives!");
+                        reset();
+                    }
                 } else {
                     reset();
                 }
-                if (count == 10) {
-                    document.getElementById("hidden-img").innerHTML = '<img src= "img/konamiblog-konamicode-3-800x445.png">';
-                    alert("You have added 30 lives!");
-                    reset();
-                }
-            } else {
-                reset();
-            }
-        });
-    },
+            });
+        },
         // "I","D","D","Q","D"
         doomGM: function () {
-            var doomKeys = [73,68,68,81,68], started = false, count = 0;
+            var doomKeys = [73, 68, 68, 81, 68], started = false, count = 0;
 
             $(document).keydown(function (e) {
                 var reset = function () {
@@ -97,7 +97,7 @@
         },
         // "A","B","A","C","A","B","B"
         mortalCombatUC: function () {
-            var combatKeys = [65,66,65,67,65,66,66], started = false, count = 0;
+            var combatKeys = [65, 66, 65, 67, 65, 66, 66], started = false, count = 0;
 
             $(document).keydown(function (e) {
                 var reset = function () {
@@ -132,7 +132,7 @@
         },
         // hit right, up, down, left, X, B, left, A, right and Y,
         dogO: function () {
-            var dogsKeys = [39,38,40,37,88,66,37,65,39,89], started = false, count = 0;
+            var dogsKeys = [39, 38, 40, 37, 88, 66, 37, 65, 39, 89], started = false, count = 0;
 
             $(document).keydown(function (e) {
                 var reset = function () {
@@ -166,8 +166,8 @@
             });
         },
         // Up, Down, Left, Right, A
-        sonic: function() {
-            var sonicKeys = [38,40,37,39,65], started = false, count = 0;
+        sonic: function () {
+            var sonicKeys = [38, 40, 37, 39, 65], started = false, count = 0;
 
             $(document).keydown(function (e) {
                 var reset = function () {
@@ -202,7 +202,7 @@
         },
         // "KOELSCH"
         rogueSquadCar: function () {
-            var combatKeys = [75,79,69,76,83,67,72], started = false, count = 0;
+            var combatKeys = [75, 79, 69, 76, 83, 67, 72], started = false, count = 0;
 
             $(document).keydown(function (e) {
                 var reset = function () {
@@ -237,7 +237,7 @@
         },
         // "ZELDA"
         legendOfZeldaSkip: function () {
-            var zeldaKeys = [90,69,76,68,65], started = false, count = 0;
+            var zeldaKeys = [90, 69, 76, 68, 65], started = false, count = 0;
 
             $(document).keydown(function (e) {
                 var reset = function () {
@@ -269,8 +269,7 @@
                     reset();
                 }
             });
-        },
-
+        }
 
     };
     cheatCode.konami();
