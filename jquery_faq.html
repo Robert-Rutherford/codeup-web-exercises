@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <title>Jquery FAQ</title>
     <style>
-    .invisible{
-        visibility: hidden;
-    }
+        .invisible {
+            visibility: hidden;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        .pictureSizes{
+            max-width: 300px;
+            object-fit: contain;
+        }
+        .pic-row{
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .bgPic1{
+            background: url("img/dogsPics1.jpg");
+            max-width: 300px;
+            object-fit: contain;
+        }
+
+        .bgPic2{
+            background: url("img/dogPic2.jpg");
+            max-width: 300px;
+            object-fit: contain;
+        }
+
+        .bgPic3{
+            background: url("img/dogPic4.jpeg");
+            max-width: 300px;
+            object-fit: contain;
+        }
+
 
     </style>
 </head>
@@ -14,50 +49,58 @@
 <h1>10 Frequently Asked Questions about Yellowstone national park</h1>
 <dl>
     <dt class="question1"><h2>How do I get there?</h2></dt>
-    <dd class="invisible" id="reply1">Three of the five entrances to Yellowstone National Park are located in Montana’s Yellowstone Country; they can
+    <dd class="invisible" id="reply1">Three of the five entrances to Yellowstone National Park are located in Montana’s
+        Yellowstone Country; they can
         be accessed through West Yellowstone, Gardiner and Cooke City, MT.
     </dd>
 
     <dt class="question2"><h2>Is the park open year-round?</h2></dt>
-    <dd class="invisible" id="reply2">The park is open all year, but not all of the roads are open to motorized vehicles during the winter, which
+    <dd class="invisible" id="reply2">The park is open all year, but not all of the roads are open to motorized vehicles
+        during the winter, which
         makes it a magical time to visit. Snowcoach and snowmobile tours are offered, and the steaming hot pots and
         geysers are even more dramatic against the cold wintry landscape. Fewer people visit in the winter, which gives
         it a different feel—the quietness is uncanny.
     </dd>
 
     <dt class="question3"><h2>What animals can I expect to see?</h2></dt>
-    <dd class="invisible" id="reply3">While we can’t guarantee wildlife sightings, Yellowstone is home to the largest concentration of mammals in the
+    <dd class="invisible" id="reply3">While we can’t guarantee wildlife sightings, Yellowstone is home to the largest
+        concentration of mammals in the
         United States, so your chances of spotting some are pretty good. There are 67 species of mammals living in the
         park, including black bears and grizzly bears. You will most likely see bison, elk, deer and possibly bears. For
         those willing to get up early, you may be lucky enough to spot a wolf.
     </dd>
 
     <dt class="question4"><h2>Can you stay in the park?</h2></dt>
-    <dd class="invisible" id="reply4">Yes, and we highly recommend it! Immersing yourself in the essence of the park gives a whole different
+    <dd class="invisible" id="reply4">Yes, and we highly recommend it! Immersing yourself in the essence of the park
+        gives a whole different
         perspective. Taking the time to experience the area over a few days is well worth it. There are nine lodging
         options in the summer, ranging from the most famous Old Faithful Inn to rustic cabins, or one of the newly
         renovated rooms in the elegant Lake Yellowstone Hotel.
     </dd>
 
     <dt class="question5"><h2>What can I do besides scenic driving?</h2></dt>
-    <dd class="invisible" id="reply5">Simply put, a lot. While scenic drives, photography and wildlife watching are the most popular activities in the
+    <dd class="invisible" id="reply5">Simply put, a lot. While scenic drives, photography and wildlife watching are the
+        most popular activities in the
         park, exploration is endless. Adventurers can hike, fish, bike, horseback ride and boat. For those who prefer a
         more educational experience, sign up for a Ranger Program or seasonal talks. Yellowstone also offers a number of
         youth programs and activities.
     </dd>
 
     <dt class="question6"><h2>Can I get food, gas and supplies inside the park?</h2></dt>
-    <dd class="invisible" id="reply6">Gas, snacks and restaurants are all available within the park, but there is not a full-service grocery store.
+    <dd class="invisible" id="reply6">Gas, snacks and restaurants are all available within the park, but there is not a
+        full-service grocery store.
         Gas pumps are available at Canyon, Fishing Bridge, Grant Village, Mammoth
     </dd>
 
     <dt class="question7"><h2>Does the park have cell service and internet connections?</h2></dt>
-    <dd class="invisible" id="reply7">Cell phone service is limited, but available at Old Faithful, Yellowstone Lake, Canyon, Grant and Mammoth Hot
+    <dd class="invisible" id="reply7">Cell phone service is limited, but available at Old Faithful, Yellowstone Lake,
+        Canyon, Grant and Mammoth Hot
         Springs Villages. Wireless internet can be purchased at select locations within these area lodges.
     </dd>
 
     <dt class="question8"><h2>Can I bring pets?</h2></dt>
-    <dd class="invisible" id="reply8">Yes, you can bring your pet, and if you are staying in the park, the cabin accommodations allow for this.
+    <dd class="invisible" id="reply8">Yes, you can bring your pet, and if you are staying in the park, the cabin
+        accommodations allow for this.
         However, there are restrictions to consider. Wildlife is dangerous and pets must be kept on a leash at all
         times. Pets are not allowed on trails or boardwalks, in the backcountry or in thermal areas. You must not leave
         your pet unattended or tied to an object. If you’re headed into the backcountry, a permit is also required for
@@ -66,70 +109,151 @@
     </dd>
 
     <dt class="question9"><h2>What kind of clothes should I bring?</h2></dt>
-    <dd class="invisible" id="reply9">Weather changes rapidly in the Rocky Mountains, so plan to bring a variety of layers. Spring and fall weather
+    <dd class="invisible" id="reply9">Weather changes rapidly in the Rocky Mountains, so plan to bring a variety of
+        layers. Spring and fall weather
         can turn from warm sunshine to a small snowstorm in the same day. Summer days average 70 – 80 degrees, but
         temperatures drop to 30 – 40 degrees at night. Afternoon thunderstorms are common. It may seem out of season,
         but hats and gloves are good to have on hand.
     </dd>
 
     <dt class="question10"><h2>Do I need special licenses or permits?</h2></dt>
-    <dd class="invisible" id="reply10">In addition to entrance fees, certain activities do require a permit. Fishing, backcountry hiking and camping,
+    <dd class="invisible" id="reply10">In addition to entrance fees, certain activities do require a permit. Fishing,
+        backcountry hiking and camping,
         boating, research and commercial photography all need a permit. A special permit must also be obtained for large
         gatherings such as weddings or other public assemblies.
     </dd>
 </dl>
+<div>
+    <h3>Amistad</h3>
+    <ul>
+        <li>Mailing Address: 10477 Highway 90 West Del Rio, TX 78840</li>
+        <li>Swimming at Amistad is a great way to escape the desert heat. Water temperatures range from 54°F in winter
+            months to 86°F in late summer.
+        </li>
+        <li>Prehistoric Native American paintings abound in the Amistad area. Visitors may view these 4,000 year-old
+            pictographs by boat or on foot.
+        </li>
+        <li class="last-fact">Group picnic shelters located at San Pedro and Rough Canyon and are available by reservation only.</li>
+    </ul>
+</div>
+<div>
+    <h3>Big Bend</h3>
+    <ul>
+        <li>Big Bend National Park covers a total area of 801,163 acres</li>
+        <li>The number of people visiting Big Bend in 2017 was 440,276</li>
+        <li>Big Bend was made a national park on June 20, 1935</li>
+        <li class="last-fact">The lowest elevation found in Big Bend is 1,715 feet at the Rio Grande River</li>
+    </ul>
+</div>
+<div>
+    <h3>Fort Vancouver</h3>
+    <ul>
+        <li>From American Indian inhabitants to immigrants from the American Midwest; from Orkney Island laborers to
+            African American Buffalo Soldiers; from Hawaiian sailors to French Canadian voyageurs, people have played an
+            integral role in shaping the site's history.
+        </li>
+        <li>The park's Lantern Tour Series offers attendees an opportunity to view many of the resources of Fort
+            Vancouver National Historic Site in a different light -- at night, on foot, and by candle lantern!
+        </li>
+        <li>Mailing Address: 612 E Reserve St Vancouver , WA 98661</li>
+        <li class="last-fact">The McLoughlin House in Oregon City, a unit of Fort Vancouver National Historic Site, is the retirement home
+            of Dr. John McLoughlin, the chief factor of Fort Vancouver who provided much-needed assistance to Oregon
+            Trail emigrants.
+        </li>
+    </ul>
+</div>
+<button id="highlight-last">button</button>
+<br>
+<br>
+<br>
+<br>
+
+<div class="pic-row">
+    <div class="pic-container"><img class="pictureSizes" src="img/dogsPics1.jpg"></div>
+    <div class="pic-container"><img class="pictureSizes" src="img/dogPic2.jpg"></div>
+    <div class="pic-container"><img class="pictureSizes" src="img/dogPic4.jpeg"></div>
+</div>
+    <div class="pic-buttons pic-row">
+        <button class="switch-img">Move Image >></buttonclass>
+            <button class="switch-img"><< Move Image >></buttonclass>
+                <button class="switch-img"><< Move Image</buttonclass>
+    </div>
+
 <script src="js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
 
-    $(document).ready(function() {
-        $('h1').click(function(event) {
+    $(document).ready(function () {
+        $('h1').click(function (event) {
             event.preventDefault();
             $('dd').toggleClass('invisible');
         });
-        $('.question1').click(function(event) {
+        $('.question1').click(function (event) {
             event.preventDefault();
             $('#reply1').toggleClass('invisible');
         });
-        $('.question2').click(function(event) {
+        $('.question2').click(function (event) {
             event.preventDefault();
             $('#reply2').toggleClass('invisible');
         });
-        $('.question3').click(function(event) {
+        $('.question3').click(function (event) {
             event.preventDefault();
             $('#reply3').toggleClass('invisible');
         });
-        $('.question4').click(function(event) {
+        $('.question4').click(function (event) {
             event.preventDefault();
             $('#reply4').toggleClass('invisible');
         });
-        $('.question5').click(function(event) {
+        $('.question5').click(function (event) {
             event.preventDefault();
             $('#reply5').toggleClass('invisible');
         });
-        $('.question6').click(function(event) {
+        $('.question6').click(function (event) {
             event.preventDefault();
             $('#reply6').toggleClass('invisible');
         });
-        $('.question7').click(function(event) {
+        $('.question7').click(function (event) {
             event.preventDefault();
             $('#reply7').toggleClass('invisible');
         });
-        $('.question8').click(function(event) {
+        $('.question8').click(function (event) {
             event.preventDefault();
             $('#reply8').toggleClass('invisible');
         });
-        $('.question9').click(function(event) {
+        $('.question9').click(function (event) {
             event.preventDefault();
             $('#reply9').toggleClass('invisible');
         });
-        $('.question10').click(function(event) {
+        $('.question10').click(function (event) {
             event.preventDefault();
             $('#reply10').toggleClass('invisible');
         });
+        $('dt').click(function () {
+            $(this).toggleClass('highlight')
+        });
+
+
+        $('#highlight-last').click(function () {
+            $('ul').children(".last-fact").toggleClass("highlight");
+        });
+
+        $('h3').click(function () {
+            $(this).next().children().css('font-weight','bold');
+        });
+
+        $('li').click(function () {
+            $(this).parent().children().first().css("color",'blue');
+        });
+
+        $('.switch-img').click(function () {
+            if ($(this) === $('.switch-img').first()){
+                var imgHolder = $('.pic-row').children().first().children('img').css().url;
+                $('.pic-row').children().first().children('img').css().url = $('.pic-row').children('div').next().children('img').css().url;
+                $('.pic-row').children().children().css().url = imgHolder;
+            }
+        });
+
     });
-
-
 
 
 </script>
