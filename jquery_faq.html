@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery FAQ</title>
+    <style>
+    .invisible{
+        visibility: hidden;
+    }
+
+    </style>
+</head>
+<body>
+<h1>10 Frequently Asked Questions about Yellowstone national park</h1>
+<dl>
+    <dt class="question1"><h2>How do I get there?</h2></dt>
+    <dd class="invisible" id="reply1">Three of the five entrances to Yellowstone National Park are located in Montana’s Yellowstone Country; they can
+        be accessed through West Yellowstone, Gardiner and Cooke City, MT.
+    </dd>
+
+    <dt class="question2"><h2>Is the park open year-round?</h2></dt>
+    <dd class="invisible" id="reply2">The park is open all year, but not all of the roads are open to motorized vehicles during the winter, which
+        makes it a magical time to visit. Snowcoach and snowmobile tours are offered, and the steaming hot pots and
+        geysers are even more dramatic against the cold wintry landscape. Fewer people visit in the winter, which gives
+        it a different feel—the quietness is uncanny.
+    </dd>
+
+    <dt class="question3"><h2>What animals can I expect to see?</h2></dt>
+    <dd class="invisible" id="reply3">While we can’t guarantee wildlife sightings, Yellowstone is home to the largest concentration of mammals in the
+        United States, so your chances of spotting some are pretty good. There are 67 species of mammals living in the
+        park, including black bears and grizzly bears. You will most likely see bison, elk, deer and possibly bears. For
+        those willing to get up early, you may be lucky enough to spot a wolf.
+    </dd>
+
+    <dt class="question4"><h2>Can you stay in the park?</h2></dt>
+    <dd class="invisible" id="reply4">Yes, and we highly recommend it! Immersing yourself in the essence of the park gives a whole different
+        perspective. Taking the time to experience the area over a few days is well worth it. There are nine lodging
+        options in the summer, ranging from the most famous Old Faithful Inn to rustic cabins, or one of the newly
+        renovated rooms in the elegant Lake Yellowstone Hotel.
+    </dd>
+
+    <dt class="question5"><h2>What can I do besides scenic driving?</h2></dt>
+    <dd class="invisible" id="reply5">Simply put, a lot. While scenic drives, photography and wildlife watching are the most popular activities in the
+        park, exploration is endless. Adventurers can hike, fish, bike, horseback ride and boat. For those who prefer a
+        more educational experience, sign up for a Ranger Program or seasonal talks. Yellowstone also offers a number of
+        youth programs and activities.
+    </dd>
+
+    <dt class="question6"><h2>Can I get food, gas and supplies inside the park?</h2></dt>
+    <dd class="invisible" id="reply6">Gas, snacks and restaurants are all available within the park, but there is not a full-service grocery store.
+        Gas pumps are available at Canyon, Fishing Bridge, Grant Village, Mammoth
+    </dd>
+
+    <dt class="question7"><h2>Does the park have cell service and internet connections?</h2></dt>
+    <dd class="invisible" id="reply7">Cell phone service is limited, but available at Old Faithful, Yellowstone Lake, Canyon, Grant and Mammoth Hot
+        Springs Villages. Wireless internet can be purchased at select locations within these area lodges.
+    </dd>
+
+    <dt class="question8"><h2>Can I bring pets?</h2></dt>
+    <dd class="invisible" id="reply8">Yes, you can bring your pet, and if you are staying in the park, the cabin accommodations allow for this.
+        However, there are restrictions to consider. Wildlife is dangerous and pets must be kept on a leash at all
+        times. Pets are not allowed on trails or boardwalks, in the backcountry or in thermal areas. You must not leave
+        your pet unattended or tied to an object. If you’re headed into the backcountry, a permit is also required for
+        your pet. We’re not saying don’t bring them, but it may not be as much fun for your furry loved ones as it is
+        for you.
+    </dd>
+
+    <dt class="question9"><h2>What kind of clothes should I bring?</h2></dt>
+    <dd class="invisible" id="reply9">Weather changes rapidly in the Rocky Mountains, so plan to bring a variety of layers. Spring and fall weather
+        can turn from warm sunshine to a small snowstorm in the same day. Summer days average 70 – 80 degrees, but
+        temperatures drop to 30 – 40 degrees at night. Afternoon thunderstorms are common. It may seem out of season,
+        but hats and gloves are good to have on hand.
+    </dd>
+
+    <dt class="question10"><h2>Do I need special licenses or permits?</h2></dt>
+    <dd class="invisible" id="reply10">In addition to entrance fees, certain activities do require a permit. Fishing, backcountry hiking and camping,
+        boating, research and commercial photography all need a permit. A special permit must also be obtained for large
+        gatherings such as weddings or other public assemblies.
+    </dd>
+</dl>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+        $('h1').click(function(event) {
+            event.preventDefault();
+            $('dd').toggleClass('invisible');
+        });
+        $('.question1').click(function(event) {
+            event.preventDefault();
+            $('#reply1').toggleClass('invisible');
+        });
+        $('.question2').click(function(event) {
+            event.preventDefault();
+            $('#reply2').toggleClass('invisible');
+        });
+        $('.question3').click(function(event) {
+            event.preventDefault();
+            $('#reply3').toggleClass('invisible');
+        });
+        $('.question4').click(function(event) {
+            event.preventDefault();
+            $('#reply4').toggleClass('invisible');
+        });
+        $('.question5').click(function(event) {
+            event.preventDefault();
+            $('#reply5').toggleClass('invisible');
+        });
+        $('.question6').click(function(event) {
+            event.preventDefault();
+            $('#reply6').toggleClass('invisible');
+        });
+        $('.question7').click(function(event) {
+            event.preventDefault();
+            $('#reply7').toggleClass('invisible');
+        });
+        $('.question8').click(function(event) {
+            event.preventDefault();
+            $('#reply8').toggleClass('invisible');
+        });
+        $('.question9').click(function(event) {
+            event.preventDefault();
+            $('#reply9').toggleClass('invisible');
+        });
+        $('.question10').click(function(event) {
+            event.preventDefault();
+            $('#reply10').toggleClass('invisible');
+        });
+    });
+
+
+
+
+</script>
+</body>
+</html>
