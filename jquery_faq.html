@@ -12,11 +12,12 @@
             background-color: yellow;
         }
 
-        .pictureSizes{
+        .pictureSizes {
             max-width: 300px;
             object-fit: contain;
         }
-        .pic-row{
+
+        .pic-row {
             box-sizing: border-box;
             display: flex;
             flex-direction: row;
@@ -24,19 +25,19 @@
             justify-content: center;
         }
 
-        .bgPic1{
+        .bgPic1 {
             background: url("img/dogsPics1.jpg");
             max-width: 300px;
             object-fit: contain;
         }
 
-        .bgPic2{
+        .bgPic2 {
             background: url("img/dogPic2.jpg");
             max-width: 300px;
             object-fit: contain;
         }
 
-        .bgPic3{
+        .bgPic3 {
             background: url("img/dogPic4.jpeg");
             max-width: 300px;
             object-fit: contain;
@@ -133,7 +134,9 @@
         <li>Prehistoric Native American paintings abound in the Amistad area. Visitors may view these 4,000 year-old
             pictographs by boat or on foot.
         </li>
-        <li class="last-fact">Group picnic shelters located at San Pedro and Rough Canyon and are available by reservation only.</li>
+        <li class="last-fact">Group picnic shelters located at San Pedro and Rough Canyon and are available by
+            reservation only.
+        </li>
     </ul>
 </div>
 <div>
@@ -156,7 +159,8 @@
             Vancouver National Historic Site in a different light -- at night, on foot, and by candle lantern!
         </li>
         <li>Mailing Address: 612 E Reserve St Vancouver , WA 98661</li>
-        <li class="last-fact">The McLoughlin House in Oregon City, a unit of Fort Vancouver National Historic Site, is the retirement home
+        <li class="last-fact">The McLoughlin House in Oregon City, a unit of Fort Vancouver National Historic Site, is
+            the retirement home
             of Dr. John McLoughlin, the chief factor of Fort Vancouver who provided much-needed assistance to Oregon
             Trail emigrants.
         </li>
@@ -173,11 +177,11 @@
     <div class="pic-container"><img class="pictureSizes" src="img/dogPic2.jpg"></div>
     <div class="pic-container"><img class="pictureSizes" src="img/dogPic4.jpeg"></div>
 </div>
-    <div class="pic-buttons pic-row">
-        <button class="switch-img">Move Image >></buttonclass>
-            <button class="switch-img"><< Move Image >></buttonclass>
-                <button class="switch-img"><< Move Image</buttonclass>
-    </div>
+<div class="pic-buttons pic-row">
+    <button class="switch-img">Move Image >></buttonclass>
+        <button class="switch-img"><< Move Image >></buttonclass>
+            <button class="switch-img"><< Move Image</buttonclass>
+</div>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
@@ -238,18 +242,19 @@
         });
 
         $('h3').click(function () {
-            $(this).next().children().css('font-weight','bold');
+            $(this).next().children().css('font-weight', 'bold');
         });
 
         $('li').click(function () {
-            $(this).parent().children().first().css("color",'blue');
+            $(this).parent().children().first().css("color", 'blue');
         });
 
         $('.switch-img').click(function () {
-            if ($(this) === $('.switch-img').first()){
-            //     var imgHolder = $('.pic-row').children().first().children('img').css().url;
-            //     $('.pic-row').children().first().children('img').css().url = $('.pic-row').children('div').next().children('img').css().url;
-            //     $('.pic-row').children().children().css().url = imgHolder;
+            if ($(this) === $('.switch-img').first()) {
+                    var imgHolder = $('.pic-row').children().first().children('img').css().url;
+                    $('.pic-row').children().first().children('img').css().url = $('.pic-row').children('div').next().children('img').css().url;
+                    $('.pic-row').children().children().css().url = imgHolder;
+
             }
         });
 
