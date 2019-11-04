@@ -358,6 +358,37 @@
     // 3.
     // I don't really get the question as I don't have any particular favorite or hated web applications
 
+    //november 4
+    function numberToSpelledString(val){
+        if (parseInt(val) === 1){
+            return "one";
+        }else if (parseInt(val) === 2){
+            return "two";
+        }else if (parseInt(val) === 3){
+            return "three";
+        }else if (parseInt(val) === 4){
+            return "four";
+        }else if (parseInt(val) === 5){
+            return "five";
+        }else if (parseInt(val) === 6){
+            return "six";
+        }else if (parseInt(val) === 7){
+            return "seven";
+        }else if (parseInt(val) === 8){
+            return "eight";
+        }else if (parseInt(val) === 9){
+            return "nine";
+        }else if (parseInt(val) === 10){
+            return "ten";
+        }else {
+            return "Not a whole number between 1-10";
+        }
+    }
+
+    console.log(numberToSpelledString("1"));
+    console.log(numberToSpelledString(4));
+    console.log(numberToSpelledString(11));
+
 </script>
 </body>
 </html>
