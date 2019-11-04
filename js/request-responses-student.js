@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
     "use strict";
     console.log("Intro to AJAX!");
 
@@ -37,7 +37,7 @@ $(document).ready(function(){
      */
     var newPerson = {
         type: "GET",
-        data:{
+        data: {
             first: "Bob",
             last: "Phillian",
             location: "unknown"
@@ -168,7 +168,6 @@ $(document).ready(function(){
     // });
 
 
-
     /*********************************************
      *              GET and POST SHORTHAND
      ******************************************** */
@@ -181,7 +180,6 @@ $(document).ready(function(){
      * syntax to use. (: At the end of the day, what we are doing is making
      * a request to a server!
      */
-
 
 
     /*
@@ -200,18 +198,20 @@ $(document).ready(function(){
      * titles to your html. You may need to create a div and assign a
      * class/id to target it.
      */
-
+function generateBook() {
     var requestBooks = $.ajax("./data/books.json");
 
     requestBooks.done(function (data) {
-        console.log(data);
-        $.each(data,function (index,book) {
-            console.log(book.title);
-            $(".main").append("<h2>"+book.title+"</h2>"+"<h4>"+book.author+"</h4>");
+        // console.log(data);
+        $.each(data, function (index, book) {
+            // console.log(book.title);
+            $(".main").append("<h2>" + book.title + "</h2>" + "<h4>" + book.author + "</h4>");
         })
     }).fail(function (data) {
         console.log("Error something went wrong.");
     });
+}
+    generateBook();
 
     /*
      * TO DO: Add your favorite book to the end of books.json.
@@ -221,5 +221,13 @@ $(document).ready(function(){
      * Bonus: Create a button the refreshes the contents of your html
      * without refreshing the page.
      */
+    $("#reload").click(function () {
+        $('.main').html("");
+        generateBook();
+        // $(this).load(generateBook(), function () {
+        //     console.log("reload commited");
+        // });
+    })
+
 
 });
