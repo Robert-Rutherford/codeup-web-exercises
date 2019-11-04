@@ -47,6 +47,12 @@
     </style>
 </head>
 <body>
+<div>
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span>x</span>
+</div>
+<h2>Do you want to register to this site?</h2>
+
 <h1>10 Frequently Asked Questions about Yellowstone national park</h1>
 <dl>
     <dt class="question1"><h2>How do I get there?</h2></dt>
@@ -257,6 +263,21 @@
 
             }
         });
+
+        $('div').first().children('span').click(function () {
+            $(this).parent().hide();
+        });
+
+        $('ul').hide();
+        $('h3').click(function () {
+            $(this).next('ul').slideToggle();
+        });
+
+        $('h2').first().hide();
+        setInterval(function () {
+            $('h2').first().fadeIn(2000);
+        }, 8000);
+
 
     });
 
