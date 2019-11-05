@@ -54,20 +54,18 @@
     <h2 id="locationText">San Antonio</h2>
     <div class="row no-gutters">
         <div class="col card text-center no-gutter">
-            <div class="card-header">
-                Today
-            </div>
+            <div id="todayDate" class="card-header"></div>
             <ul class="list-group list-group-flush">
-                <li id="todayTemp" class="list-group-item">A</li>
+                <li id="todayTemp" class="list-group-item"></li>
                 <li id="todayIcon" class="list-group-item">B</li>
-                <li id="todayWeather" class="list-group-item">C</li>
-                <li id="todayHumidity" class="list-group-item">D</li>
-                <li id="todayWind" class="list-group-item">E</li>
-                <li id="todayPressure" class="list-group-item">F</li>
+                <li id="todayWeather" class="list-group-item"></li>
+                <li id="todayHumidity" class="list-group-item"></li>
+                <li id="todayWind" class="list-group-item"></li>
+                <li id="todayPressure" class="list-group-item"></li>
             </ul>
         </div>
         <div class="col card text-center">
-            <div class="card-header">
+            <div id="tomorrowDate" class="card-header">
                 Tomorrow
             </div>
             <ul class="list-group list-group-flush">
@@ -81,7 +79,7 @@
         </div>
 
         <div class="col card text-center">
-            <div id="dayAfterTomorrow" class="card-header">
+            <div id="dayAfterTomorrowDate" class="card-header">
                 temp
             </div>
             <ul class="list-group list-group-flush">
@@ -114,35 +112,6 @@
 <script src="js/mapboc-geocoder-utils.js"></script>
 <!--API and JS-->
 <script src="js/jquery-2.2.4.js"></script>
-<script>
-    (function () {
-        "use strict";
-
-        mapboxgl.accessToken = weatherMapBoxToken;
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v9',
-            zoom: 10,
-            center: [-98.4916, 29.4252]
-        });
-
-
-
-
-
-        //    darksky call == https://api.darksky.net/forecast/b575ce0aefdb235e5e86f452fbca9e3d/37.8267,-122.4233
-        var darkSkyAPISanAntonio = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+darkSkyKey+"/29.4241,-98.4936");
-
-        darkSkyAPISanAntonio.done(function (data) {
-            console.log(data);
-
-
-
-        }).fail(function () {
-            alert("ERROR: Dark Sky API Failed.");
-        })
-
-    })();
-</script>
+<script src="js/weather_map.js"></script>
 </body>
 </html>
