@@ -198,19 +198,20 @@ $(document).ready(function () {
      * titles to your html. You may need to create a div and assign a
      * class/id to target it.
      */
-function generateBook() {
-    var requestBooks = $.ajax("./data/books.json");
+    function generateBook() {
+        var requestBooks = $.ajax("./data/books.json");
 
-    requestBooks.done(function (data) {
-        // console.log(data);
-        $.each(data, function (index, book) {
-            // console.log(book.title);
-            $(".main").append("<h2>" + book.title + "</h2>" + "<h4>" + book.author + "</h4>");
-        })
-    }).fail(function (data) {
-        console.log("Error something went wrong.");
-    });
-}
+        requestBooks.done(function (data) {
+            // console.log(data);
+            $.each(data, function (index, book) {
+                // console.log(book.title);
+                $(".main").append("<h2>" + book.title + "</h2>" + "<h4>" + book.author + "</h4>");
+            })
+        }).fail(function (data) {
+            console.log("Error something went wrong.");
+        });
+    }
+
     generateBook();
 
     /*
