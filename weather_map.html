@@ -15,6 +15,39 @@
     </style>
 </head>
 <body>
+<!-- Main Nav bar-->
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--    <a class="navbar-brand" href="#">Pizza World</a>-->
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"-->
+<!--            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+
+<!--    <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--        <ul class="navbar-nav mr-auto">-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Order online</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item active">-->
+<!--                <a class="nav-link disabled" href="#">Menu<span class="sr-only">(current)</span></a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Zip code">-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <button type="button" class="btn btn-outline-secondary">Search stores near you!</button>-->
+<!--            </li>-->
+
+
+<!--        </ul>-->
+<!--        <form class="form-inline my-2 my-lg-0">-->
+<!--            <a class="mr-sm-2 text-secondary"><i class="fa fa-user"></i> Sign Up</a>-->
+
+<!--            &lt;!&ndash;            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">&ndash;&gt;-->
+<!--            &lt;!&ndash;            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>&ndash;&gt;-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</nav>-->
 <div class="container">
     <h1>Weather Application</h1>
     <br>
@@ -38,12 +71,12 @@
                 Tomorrow
             </div>
             <ul class="list-group list-group-flush">
-                <li id="todayTemp" class="list-group-item">A</li>
-                <li id="todayIcon" class="list-group-item">B</li>
-                <li id="todayWeather" class="list-group-item">C</li>
-                <li id="todayHumidity" class="list-group-item">D</li>
-                <li id="todayWind" class="list-group-item">E</li>
-                <li id="todayPressure" class="list-group-item">F</li>
+                <li id="tomorrowTemp" class="list-group-item">A</li>
+                <li id="tomorrowIcon" class="list-group-item">B</li>
+                <li id="tomorrowWeather" class="list-group-item">C</li>
+                <li id="tomorrowHumidity" class="list-group-item">D</li>
+                <li id="tomorrowWind" class="list-group-item">E</li>
+                <li id="tomorrowPressure" class="list-group-item">F</li>
             </ul>
         </div>
 
@@ -52,16 +85,17 @@
                 temp
             </div>
             <ul class="list-group list-group-flush">
-                <li id="todayTemp" class="list-group-item">A</li>
-                <li id="todayIcon" class="list-group-item">B</li>
-                <li id="todayWeather" class="list-group-item">C</li>
-                <li id="todayHumidity" class="list-group-item">D</li>
-                <li id="todayWind" class="list-group-item">E</li>
-                <li id="todayPressure" class="list-group-item">F</li>
+                <li id="dayAfterTemp" class="list-group-item">A</li>
+                <li id="dayAfterIcon" class="list-group-item">B</li>
+                <li id="dayAfterWeather" class="list-group-item">C</li>
+                <li id="dayAfterHumidity" class="list-group-item">D</li>
+                <li id="dayAfterWind" class="list-group-item">E</li>
+                <li id="dayAfterPressure" class="list-group-item">F</li>
             </ul>
         </div>
     </div>
-    <div id="map" class="row mx-0 mt-4"></div>
+    <div id="map" class="row mx-0 my-4"></div>
+
 </div>
 
 <!--Bootstrap 4-->
@@ -97,10 +131,15 @@
 
 
         //    darksky call == https://api.darksky.net/forecast/b575ce0aefdb235e5e86f452fbca9e3d/37.8267,-122.4233
-        var darkSkyAPISanAntonio = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/b575ce0aefdb235e5e86f452fbca9e3d/29.4241,-98.4936");
+        var darkSkyAPISanAntonio = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/"+darkSkyKey+"/29.4241,-98.4936");
 
         darkSkyAPISanAntonio.done(function (data) {
             console.log(data);
+
+
+
+        }).fail(function () {
+            alert("ERROR: Dark Sky API Failed.");
         })
 
     })();
