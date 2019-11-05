@@ -25,13 +25,14 @@
 <script>
     (function () {
         "use strict";
+
         function generateBlogs() {
             var blogs = $.ajax("data/blog.json");
             console.log(blogs);
             blogs.done(function (blogs) {
-                $.each(blogs,function (index,blogItem) {
+                $.each(blogs, function (index, blogItem) {
                     var blogList = "";
-                    blogList += "<h1>"+ blogItem.title +"</h1>";
+                    blogList += "<h1>" + blogItem.title + "</h1>";
                     blogList += "<h3>" + blogItem.date + "</h3>";
                     blogList += "<p>" + blogItem.content + "</p>";
                     blogList += "<ul>";
@@ -49,6 +50,7 @@
                 console.log("Something went wrong...");
             });
         }
+
         generateBlogs();
     })();
 

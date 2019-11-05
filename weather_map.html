@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Weather Application</h1>
+    <br>
+    <h2 id="locationText">San Antonio</h2>
+    <div class="row">
+        <div class="col card text-center">
+            <div class="card-header">
+                Today
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="todayTemp" class="list-group-item">A</li>
+                <li id="todayIcon" class="list-group-item">B</li>
+                <li id="todayWeather" class="list-group-item">C</li>
+                <li id="todayHumidity" class="list-group-item">D</li>
+                <li id="todayWind" class="list-group-item">E</li>
+                <li id="todayPressure" class="list-group-item">F</li>
+            </ul>
+        </div>
+        <div class="col card text-center">
+            <div class="card-header">
+                Tomorrow
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="todayTemp" class="list-group-item">A</li>
+                <li id="todayIcon" class="list-group-item">B</li>
+                <li id="todayWeather" class="list-group-item">C</li>
+                <li id="todayHumidity" class="list-group-item">D</li>
+                <li id="todayWind" class="list-group-item">E</li>
+                <li id="todayPressure" class="list-group-item">F</li>
+            </ul>
+        </div>
+
+        <div class="col card text-center">
+            <div id="dayAfterTomorrow" class="card-header">
+                temp
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="todayTemp" class="list-group-item">A</li>
+                <li id="todayIcon" class="list-group-item">B</li>
+                <li id="todayWeather" class="list-group-item">C</li>
+                <li id="todayHumidity" class="list-group-item">D</li>
+                <li id="todayWind" class="list-group-item">E</li>
+                <li id="todayPressure" class="list-group-item">F</li>
+            </ul>
+        </div>
+    </div>
+    <div id="mapContainer" class="row"></div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    (function () {
+        "use strict";
+        //    darksky call == https://api.darksky.net/forecast/b575ce0aefdb235e5e86f452fbca9e3d/37.8267,-122.4233
+        var darkSkyAPISanAntonio = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/b575ce0aefdb235e5e86f452fbca9e3d/29.4241,-98.4936");
+
+        darkSkyAPISanAntonio.done(function (data) {
+            console.log(data);
+        })
+
+    })();
+</script>
+</body>
+</html>
