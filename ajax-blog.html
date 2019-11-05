@@ -23,11 +23,34 @@
 <script src="js/jquery-2.2.4.js"></script>
 
 <script>
+    (function () {
+        "use strict";
+        function generateBlogs() {
+            var blogs = $.ajax("data/blog.json");
+            console.log(blogs);
+            blogs.done(function (blogs) {
+                $.each(blogs,function (index,blogItem) {
+                    var blogList = "";
+                    blogList += "<h1>"+ blogItem.title +"</h1>";
+                    blogList += "<h3>" + blogItem.date + "</h3>";
+                    blogList += "<p>" + blogItem.content + "</p>";
+                    blogList += "<ul>";
+                    console.log(blogItem.categories);
+                    blogItem.categories.forEach(function (item) {
+                        blogList += "<li>" + item + "</li>";
+                    });
+                    console.log(blogItem.categories);
+                    console.log
+                    blogList += "</ul>";
 
-
-
-
-
+                    $("#posts").append(blogList);
+                });
+            }).fail(function () {
+                console.log("Something went wrong...");
+            });
+        }
+        generateBlogs();
+    })();
 
 </script>
 </body>
