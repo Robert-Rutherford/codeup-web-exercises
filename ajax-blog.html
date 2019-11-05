@@ -7,10 +7,14 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<div id="posts">
+<div class="container">
+    <div id="posts" class="card text-center">
 
+
+    </div>
 
 </div>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -32,17 +36,17 @@
             blogs.done(function (blogs) {
                 $.each(blogs, function (index, blogItem) {
                     var blogList = "";
-                    blogList += "<h1>" + blogItem.title + "</h1>";
-                    blogList += "<h3>" + blogItem.date + "</h3>";
-                    blogList += "<p>" + blogItem.content + "</p>";
-                    blogList += "<ul>";
+                    blogList += "<div class='card-header'><h1>" + blogItem.title + "</h1></div>";
+                    blogList += "<ul class=\"list-group list-group-flush\"><li class=\"list-group-item\"><h3>" + blogItem.date + "</h3></li>";
+                    blogList += "<li class=\"list-group-item\"><p>" + blogItem.content + "</p></li>";
+                    blogList += "<li class=\"list-group-item\"><ul>";
                     console.log(blogItem.categories);
                     blogItem.categories.forEach(function (item) {
                         blogList += "<li>" + item + "</li>";
                     });
                     console.log(blogItem.categories);
-                    console.log
-                    blogList += "</ul>";
+                    // console.log
+                    blogList += "</ul></li></ul>";
 
                     $("#posts").append(blogList);
                 });
