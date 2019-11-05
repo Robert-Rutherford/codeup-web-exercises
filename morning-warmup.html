@@ -389,7 +389,22 @@
     // console.log(numberToSpelledString(4));
     // console.log(numberToSpelledString(11));
 
+    //November 5
+    function returnWelcome(object) {
+        if (object.gratitude === 'Thank you'){
+            return "You're welcome";
+        }else return "Fine then, be that way.";
+    }
+    var thanksObject = {
+        gratitude: 'Thank you'
+    };
 
+    var noYOu = {
+        gratitude: "No you"
+    };
+
+    console.log(returnWelcome(thanksObject));
+    console.log(returnWelcome(noYOu));
 
 </script>
 </body>
