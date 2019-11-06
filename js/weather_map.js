@@ -62,26 +62,39 @@
 
     function generateIcon(weatherTag) {
         if (weatherTag === 'clear-day'){
+
             return weatherIcons.clearDay;
         }else if (weatherTag === 'clear-night'){
+
             return weatherIcons.clearNight;
         }else if (weatherTag === 'rain'){
+
             return weatherIcons.rain;
         }else if (weatherTag === 'snow'){
+
             return weatherIcons.snow;
         }else if (weatherTag === 'sleet'){
+
             return weatherIcons.sleet;
         }else if (weatherTag === 'wind'){
+
             return weatherIcons.wind;
         }else if (weatherTag === 'fog'){
+
             return weatherIcons.fog;
         }else if (weatherTag === 'cloudy'){
+            // $('body').css("background-image", "url(\"./img/cloudy_bg.jpg\")");
             return weatherIcons.cloudy
         }else if (weatherTag === 'partly-cloudy-day'){
+
             return weatherIcons.partlyCloudyDay;
         }else if (weatherTag === 'partly-cloudy-night'){
+
             return weatherIcons.partlyCloudyNight;
-        }else return weatherIcons.failToIdentify;
+        }else {
+
+            return weatherIcons.failToIdentify;
+        }
     }
 
     function removeDashFromString(str) {
@@ -102,6 +115,60 @@
     function simplifyTime(inDate) {
 
 
+    }
+
+    function clearBoxes() {
+        //Today
+        $('#todayDate').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#todayTemp').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#todayIcon').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#todayWeather').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#todayHumidity').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#todayWind').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#todayPressure').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+    //    tomorrow
+        $('#tomorrowDate').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#tomorrowTemp').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#tomorrowIcon').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#tomorrowWeather').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#tomorrowHumidity').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#tomorrowWind').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#tomorrowPressure').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+    //    Day After Tomorrow
+        $('#dayAfterTomorrowDate').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#dayAfterTemp').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#dayAfterIcon').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#dayAfterWeather').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#dayAfterHumidity').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#dayAfterWind').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+        $('#dayAfterPressure').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
+    }
+
+    function failLoad() {
+        //Today
+        $('#todayDate').html("<div class='redX'>X</div>");
+        $('#todayTemp').html("<div class='redX'>X</div>");
+        $('#todayIcon').html("<div class='redX'>X</div>");
+        $('#todayWeather').html("<div class='redX'>X</div>");
+        $('#todayHumidity').html("<div class='redX'>X</div>");
+        $('#todayWind').html("<div class='redX'>X</div>");
+        $('#todayPressure').html("<div class='redX'>X</div>");
+        //    tomorrow
+        $('#tomorrowDate').html("<div class='redX'>X</div>");
+        $('#tomorrowTemp').html("<div class='redX'>X</div>");
+        $('#tomorrowIcon').html("<div class='redX'>X</div>");
+        $('#tomorrowWeather').html("<div class='redX'>X</div>");
+        $('#tomorrowHumidity').html("<div class='redX'>X</div>");
+        $('#tomorrowWind').html("<div class='redX'>X</div>");
+        $('#tomorrowPressure').html("<div class='redX'>X</div>");
+        //    Day After Tomorrow
+        $('#dayAfterTomorrowDate').html("<div class='redX'>X</div>");
+        $('#dayAfterTemp').html("<div class='redX'>X</div>");
+        $('#dayAfterIcon').html("<div class='redX'>X</div>");
+        $('#dayAfterWeather').html("<div class='redX'>X</div>");
+        $('#dayAfterHumidity').html("<div class='redX'>X</div>");
+        $('#dayAfterWind').html("<div class='redX'>X</div>");
+        $('#dayAfterPressure').html("<div class='redX'>X</div>");
     }
 
 
@@ -223,6 +290,7 @@
 
             console.log("success");
         }).fail(function () {
+            failLoad();
             alert("ERROR: Dark Sky API Failed.");
         });
     }
@@ -242,6 +310,7 @@
     function onDragEnd() {
         var lngLat = marker.getLngLat();
         console.log(lngLat);
+        clearBoxes();
         getWeather(latLngToString(lngLat),lngLat);
         // console.log("done");
         map.flyTo({
@@ -254,6 +323,7 @@
     $('#searchAddress').click(function () {
         var address = $('#addressInput').val();
         // console.log(address);
+        clearBoxes();
         geocode(address,weatherMapBoxToken).then(function (result) {
             console.log(result);
             marker.setLngLat(result);

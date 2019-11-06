@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Map</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+<!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="icons/weather-icons-master/css/weather-icons.min.css">
     <style>
@@ -22,85 +23,129 @@
         #dayAfterIcon{
             font-size: 40px;
         }
+        nav{
+            background-color: #5bc0de;
+        }
+        #footer{
+            background-color: #5bc0de;
+            height: 5vh;
+            width: 100%;
+        }
+        #headerTop{
+            /*background-color: #00b3ee;*/
+        }
+        body{
+            background: url("img/Weather-Background1.jpeg");
+            object-fit: cover;
+            /*color: white;*/
+        }
+        .container{
+            background-color: white;
+        }
+        .redX{
+            font-size: 40px;
+            color: red;
+        }
     </style>
 </head>
 <body>
 <!-- Main Nav bar-->
-<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-<!--    <a class="navbar-brand" href="#">Pizza World</a>-->
-<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"-->
-<!--            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--        <span class="navbar-toggler-icon"></span>-->
-<!--    </button>-->
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" href="#"><b>Weather Search</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-<!--    <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-<!--        <ul class="navbar-nav mr-auto">-->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Order online</a>-->
-<!--            </li>-->
-<!--            <li class="nav-item active">-->
-<!--                <a class="nav-link disabled" href="#">Menu<span class="sr-only">(current)</span></a>-->
-<!--            </li>-->
-<!--            <li class="nav-item">-->
-<!--                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Zip code">-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <button type="button" class="btn btn-outline-secondary">Search stores near you!</button>-->
-<!--            </li>-->
-
-
-<!--        </ul>-->
-<!--        <form class="form-inline my-2 my-lg-0">-->
-<!--            <a class="mr-sm-2 text-secondary"><i class="fa fa-user"></i> Sign Up</a>-->
-
-<!--            &lt;!&ndash;            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">&ndash;&gt;-->
-<!--            &lt;!&ndash;            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>&ndash;&gt;-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</nav>-->
+    <div class="collapse navbar-collapse" id="navbarTop">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div class="container">
-    <h1>Weather Application</h1>
+    <h1 id="headerTop">Weather Map</h1>
     <br>
     <h2 id="locationText">San Antonio, Texas 78205, United States</h2>
     <div class="row no-gutters">
         <div class="col card text-center no-gutter">
             <div id="todayDate" class="card-header">
                 <div class="spinner-border" role="status">
-                    Loading...<span class="sr-only">Loading...</span>
+                    <span class="sr-only">Loading...</span>
                 </div>
             </div>
             <ul class="list-group list-group-flush">
                 <li id="todayTemp" class="list-group-item"><div class="spinner-border" role="status">
                     <span class="sr-only">Loading...</span>
                 </div></li>
-                <li id="todayIcon" class="list-group-item"></li>
-                <li id="todayWeather" class="list-group-item"></li>
-                <li id="todayHumidity" class="list-group-item"></li>
-                <li id="todayWind" class="list-group-item"></li>
-                <li id="todayPressure" class="list-group-item"></li>
+                <li id="todayIcon" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="todayWeather" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="todayHumidity" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="todayWind" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="todayPressure" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
             </ul>
         </div>
         <div class="col card text-center">
-            <div id="tomorrowDate" class="card-header"></div>
+            <div id="tomorrowDate" class="card-header"><div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div></div>
             <ul class="list-group list-group-flush">
-                <li id="tomorrowTemp" class="list-group-item"></li>
-                <li id="tomorrowIcon" class="list-group-item"></li>
-                <li id="tomorrowWeather" class="list-group-item"></li>
-                <li id="tomorrowHumidity" class="list-group-item"></li>
-                <li id="tomorrowWind" class="list-group-item"></li>
-                <li id="tomorrowPressure" class="list-group-item"></li>
+                <li id="tomorrowTemp" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="tomorrowIcon" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="tomorrowWeather" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="tomorrowHumidity" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="tomorrowWind" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="tomorrowPressure" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
             </ul>
         </div>
 
         <div class="col card text-center">
-            <div id="dayAfterTomorrowDate" class="card-header"></div>
+            <div id="dayAfterTomorrowDate" class="card-header"><div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div></div>
             <ul class="list-group list-group-flush">
-                <li id="dayAfterTemp" class="list-group-item"></li>
-                <li id="dayAfterIcon" class="list-group-item"></li>
-                <li id="dayAfterWeather" class="list-group-item"></li>
-                <li id="dayAfterHumidity" class="list-group-item"></li>
-                <li id="dayAfterWind" class="list-group-item"></li>
-                <li id="dayAfterPressure" class="list-group-item"></li>
+                <li id="dayAfterTemp" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="dayAfterIcon" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="dayAfterWeather" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="dayAfterHumidity" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="dayAfterWind" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
+                <li id="dayAfterPressure" class="list-group-item"><div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div></li>
             </ul>
         </div>
     </div>
@@ -114,9 +159,9 @@
         </div>
     </div>
     <div id="map" class="row mx-0 my-4"></div>
-
+    <div class="row"></div>
 </div>
-
+<div id="footer"></div>
 <!--Bootstrap 4-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
