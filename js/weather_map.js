@@ -9,6 +9,33 @@
         center: [-98.4916, 29.4252]
     });
 
+    //geocode is a method to search for coordinates based on a physical address and return
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function (res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function (data) {
+                return data.features[0].center;
+            });
+    }
+
+    // reverseGeocode is a method to search for a physical address based on inputted coordinates
+    function reverseGeocode(coordinates, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
+            .then(function (res) {
+                return res.json();
+            })
+            // to get all the data from the request, comment out the following three lines...
+            .then(function (data) {
+                return data.features[0].place_name;
+            });
+    };
+
     //clear-day, clear-night, rain, snow, sleet, wind, fog, cloudy, partly-cloudy-day, partly-cloudy-night
     var weatherIcons = {
         clearDay: "<i class=\"wi wi-day-sunny\"></i>",
@@ -25,7 +52,32 @@
     };
 
     function generateIcon(weatherTag) {
-        weatherIcons
+        if (weatherTag === 'clear-day'){
+            return weatherIcons.clearDay;
+        }else if (weatherTag === 'clear-night'){
+            return weatherIcons.clearNight;
+        }else if (weatherTag === 'rain'){
+            return weatherIcons.rain;
+        }else if (weatherTag === 'snow'){
+            return weatherIcons.snow;
+        }else if (weatherTag === 'sleet'){
+            return weatherIcons.sleet;
+        }else if (weatherTag === 'wind'){
+            return weatherIcons.wind;
+        }else if (weatherTag === 'fog'){
+            return weatherIcons.fog;
+        }else if (weatherTag === 'cloudy'){
+            return weatherIcons.cloudy
+        }else if (weatherTag === 'partly-cloudy-day'){
+            return weatherIcons.partlyCloudyDay;
+        }else if (weatherTag === 'partly-cloudy-night'){
+            return weatherIcons.partlyCloudyNight;
+        }else return weatherIcons.failToIdentify;
+    };
+
+    function removeDashFromString(str) {
+        var newString = str.replace(/-/g," ");
+        return newString;
     }
 
 
@@ -34,7 +86,7 @@
 
         darkSkyAPISanAntonio.done(function (data) {
             console.log(data);
-            //today
+            //today *****************************************************************/
             var todayDate = new Date(data.currently.time * 1000);
             $('#todayDate').html("<b>" + todayDate + "</b>");
             // console.log(todayDate);
@@ -45,8 +97,9 @@
             // console.log(todayTemp);
             $('#todayTemp').html(todayHigh + "<span>&deg;</span> / " + todayLow + "<span>&deg;</span>");
             //    icon
-
-            var todayweatherTag = "empty";
+            var todayIcon = generateIcon(data.currently.icon);
+            $('#todayIcon').html(todayIcon);
+            var todayweatherTag = removeDashFromString(data.currently.icon);
             //    weather
             var todayWeather = data.currently.summary;
             // console.log(todayWeather);
@@ -65,7 +118,8 @@
             $('#todayPressure').html('<b>Pressure: </b>' + todayPressure);
 
 
-            //    tomorrow
+
+            //    tomorrow **************************************************************/
             var tomorrowDate = new Date(data.daily.data[1].time * 1000);
             // console.log(tomorrowDate);
             $('#tomorrowDate').html("<b>" + tomorrowDate + "</b>");
@@ -76,8 +130,9 @@
             $('#tomorrowTemp').html(tomorrowHigh + "<span>&deg;</span> / " + tomorrowLow + "<span>&deg;</span>");
 
             //    icon
-
-            var tomWeatherTag = 'also empty';
+            var tomorrowIcon = generateIcon(data.daily.data[1].icon);
+            $('#tomorrowIcon').html(tomorrowIcon);
+            var tomWeatherTag = removeDashFromString(data.daily.data[1].icon);
             //    weather
             var tomorrowWeather = data.daily.data[1].summary;
             $('#tomorrowWeather').html("<b>" + tomWeatherTag + ": </b>" + tomorrowWeather);
@@ -95,7 +150,9 @@
             // console.log(tomorrowPressure);
             $('#tomorrowPressure').html('<b>Pressure: </b>' + tomorrowPressure);
 
-            //    day after tomorrow
+
+
+            //    day after tomorrow *******************************************************************/
             var dayAfterDate = new Date(data.daily.data[2].time * 1000);
             // console.log(dayAfterDate);
             $('#dayAfterTomorrowDate').html("<b>" + dayAfterDate + "</b>");
@@ -106,8 +163,9 @@
             $('#dayAfterTemp').html(dayAfterHigh + "<span>&deg;</span> / " + dayAfterLow + "<span>&deg;</span>");
 
             //    icon
-
-            var dayAfterTag = 'also empty';
+            var dayAfterIcon = generateIcon(data.daily.data[2].icon);
+            $('#dayAfterIcon').html(dayAfterIcon);
+            var dayAfterTag = removeDashFromString(data.daily.data[2].icon);
             //    weather
             var dayAfterWeather = data.daily.data[2].summary;
             $('#dayAfterWeather').html("<b>" + dayAfterTag + ": </b>" + dayAfterWeather);
@@ -130,7 +188,6 @@
             alert("ERROR: Dark Sky API Failed.");
         });
     }
-
     getWeather();
 
 })();
