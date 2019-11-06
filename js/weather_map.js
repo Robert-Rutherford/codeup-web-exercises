@@ -43,13 +43,13 @@
             $('#todayWind').html("<b>Wind: </b>"+ todayWind);
         //    pressure
             var todayPressure = data.currently.pressure;
-            console.log(todayPressure);
+            // console.log(todayPressure);
             $('#todayPressure').html('<b>Pressure: </b>'+ todayPressure);
 
 
         //    tomorrow
             var tomorrowDate = new Date(data.daily.data[1].time * 1000);
-            console.log(tomorrowDate);
+            // console.log(tomorrowDate);
             $('#tomorrowDate').html("<b>"+tomorrowDate+"</b>");
 
         //    Temperature
@@ -74,13 +74,43 @@
 
             //    pressure
             var tomorrowPressure = data.daily.data[1].pressure;
-            console.log(tomorrowPressure);
+            // console.log(tomorrowPressure);
             $('#tomorrowPressure').html('<b>Pressure: </b>'+ tomorrowPressure);
+
+        //    day after tomorrow
+            var dayAfterDate = new Date(data.daily.data[2].time * 1000);
+            // console.log(dayAfterDate);
+            $('#dayAfterTomorrowDate').html("<b>"+dayAfterDate+"</b>");
+
+            //    Temperature
+            var dayAfterHigh = data.daily.data[2].temperatureHigh;
+            var dayAfterLow = data.daily.data[2].temperatureLow;
+            $('#dayAfterTemp').html(dayAfterHigh+"<span>&deg;</span> / "+dayAfterLow+"<span>&deg;</span>");
+
+            //    icon
+
+            var dayAfterTag = 'also empty';
+            //    weather
+            var dayAfterWeather = data.daily.data[2].summary;
+            $('#dayAfterWeather').html("<b>"+dayAfterTag+": </b>"+dayAfterWeather);
+
+            //    humidity
+            var dayAfterHumidity = Math.floor(data.daily.data[2].humidity * 100);
+            $('#dayAfterHumidity').html("<b>Humidity: </b>"+dayAfterHumidity);
+
+            //    wind
+            var dayAfterWind = data.daily.data[2].windSpeed;
+            $('#dayAfterWind').html("<b>Wind: </b>"+ dayAfterWind);
+
+            //    pressure
+            var dayAfterPressure = data.daily.data[2].pressure;
+            // console.log(dayAfterPressure);
+            $('#dayAfterPressure').html('<b>Pressure: </b>'+ dayAfterPressure);
 
 
         }).fail(function () {
             alert("ERROR: Dark Sky API Failed.");
-        })
+        });
     }
     getWeather();
 
