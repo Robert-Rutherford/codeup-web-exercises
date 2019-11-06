@@ -105,7 +105,7 @@
         var darkSkyAPISanAntonio = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/"+locationlngLat);
 
         reverseGeocode(latLngCord,weatherMapBoxToken).then(function (results) {
-            console.log(results);
+            // console.log(results);
             // console.log(sliceAddress(results));
             $('#locationText').html(sliceAddress(results));
         });
@@ -232,7 +232,7 @@
     function onDragEnd() {
         var lngLat = marker.getLngLat();
         getWeather(latLngToString(lngLat),lngLat);
-
+        // map.flyTo(lngLat);
         // console.log(lngLat);
     }
     marker.on('dragend', onDragEnd);
