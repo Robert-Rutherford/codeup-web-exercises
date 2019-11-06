@@ -99,6 +99,11 @@
         return returnAdd;
     }
 
+    function simplifyTime(inDate) {
+
+
+    }
+
 
     //
     function getWeather(locationlngLat, latLngCord) {
@@ -116,7 +121,12 @@
 
             //today *****************************************************************/
             var todayDate = new Date(data.currently.time * 1000);
-            $('#todayDate').html("<b>" + todayDate + "</b>");
+            // todayDate.length = 5;
+            console.log(todayDate.toDateString());
+            console.log(todayDate.toTimeString());
+            // simplifyTime(todayDate, 5);
+
+            $('#todayDate').html("<b>" + todayDate.toDateString() + "</b>");
             // console.log(todayDate);
             //    temperature
             var todayHigh = data.daily.data[0].temperatureHigh;
@@ -150,7 +160,7 @@
             //    tomorrow **************************************************************/
             var tomorrowDate = new Date(data.daily.data[1].time * 1000);
             // console.log(tomorrowDate);
-            $('#tomorrowDate').html("<b>" + tomorrowDate + "</b>");
+            $('#tomorrowDate').html("<b>" + tomorrowDate.toDateString()  + "</b>");
 
             //    Temperature
             var tomorrowHigh = data.daily.data[1].temperatureHigh;
@@ -183,7 +193,7 @@
             //    day after tomorrow *******************************************************************/
             var dayAfterDate = new Date(data.daily.data[2].time * 1000);
             // console.log(dayAfterDate);
-            $('#dayAfterTomorrowDate').html("<b>" + dayAfterDate + "</b>");
+            $('#dayAfterTomorrowDate').html("<b>" + dayAfterDate.toDateString()  + "</b>");
 
             //    Temperature
             var dayAfterHigh = data.daily.data[2].temperatureHigh;
@@ -243,7 +253,7 @@
 
     $('#searchAddress').click(function () {
         var address = $('#addressInput').val();
-        console.log(address);
+        // console.log(address);
         geocode(address,weatherMapBoxToken).then(function (result) {
             console.log(result);
             marker.setLngLat(result);
@@ -251,7 +261,7 @@
                 center:[result[0],result[1]]
             });
             var addLocation = result[0]+","+result[1];
-            console.log(result[0]+"0,"+result[1]);
+            // console.log(result[0]+"0,"+result[1]);
             var lngLat = {
                 lat: result[1],
                 lng: result[0]
