@@ -1,12 +1,21 @@
 (function () {
     "use strict";
+
+
+    var long = 29.4241;
+    var lat = -98.4936;
+    var longLat ="29.4241,-98.4936";
+    var latLngObject = {
+        lng: long,
+        lat: lat
+    };
     //MapBox API
     mapboxgl.accessToken = weatherMapBoxToken;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 10,
-        center: [-98.4916, 29.4252]
+        center: [lat, long]
     });
 
     //geocode is a method to search for coordinates based on a physical address and return
@@ -73,19 +82,38 @@
         }else if (weatherTag === 'partly-cloudy-night'){
             return weatherIcons.partlyCloudyNight;
         }else return weatherIcons.failToIdentify;
-    };
+    }
 
     function removeDashFromString(str) {
         var newString = str.replace(/-/g," ");
         return newString;
     }
 
+    function latLngToString(lngLatObj) {
+        return lngLatObj.lat + ","+lngLatObj.lng;
+    }
 
-    function getWeather() {
-        var darkSkyAPISanAntonio = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/29.4241,-98.4936");
+    function sliceAddress(address) {
+        var sliceLocation = address.search(",");
+        var returnAdd = address.slice(sliceLocation+1,address.length);
+        return returnAdd;
+    }
+
+
+    //
+    function getWeather(locationlngLat, latLngCord) {
+        var darkSkyAPISanAntonio = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/"+locationlngLat);
+
+        reverseGeocode(latLngCord,weatherMapBoxToken).then(function (results) {
+            console.log(results);
+            // console.log(sliceAddress(results));
+            $('#locationText').html(sliceAddress(results));
+        });
+
 
         darkSkyAPISanAntonio.done(function (data) {
             console.log(data);
+
             //today *****************************************************************/
             var todayDate = new Date(data.currently.time * 1000);
             $('#todayDate').html("<b>" + todayDate + "</b>");
@@ -188,6 +216,30 @@
             alert("ERROR: Dark Sky API Failed.");
         });
     }
-    getWeather();
+    getWeather(longLat,latLngObject);
+
+
+    var markerOptions = {
+        color: "#ff0000",
+        draggable: true
+    };
+
+    var marker = new mapboxgl.Marker(markerOptions)
+        .setLngLat([lat, long])
+        .addTo(map);
+
+
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        getWeather(latLngToString(lngLat),lngLat);
+
+        // console.log(lngLat);
+    }
+    marker.on('dragend', onDragEnd);
+
+
+
+
+
 
 })();
