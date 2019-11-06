@@ -211,7 +211,7 @@
             // console.log(dayAfterPressure);
             $('#dayAfterPressure').html('<b>Pressure: </b>' + dayAfterPressure);
 
-
+            console.log("success");
         }).fail(function () {
             alert("ERROR: Dark Sky API Failed.");
         });
@@ -231,6 +231,7 @@
 
     function onDragEnd() {
         var lngLat = marker.getLngLat();
+        console.log(lngLat);
         getWeather(latLngToString(lngLat),lngLat);
         // console.log("done");
         map.flyTo({
@@ -249,8 +250,13 @@
             map.flyTo({
                 center:[result[0],result[1]]
             });
-            console.log(result[0]+","+result[1]);
-            getWeather(result[0]+","+result[1],result);
+            var addLocation = result[0]+","+result[1];
+            console.log(result[0]+"0,"+result[1]);
+            var lngLat = {
+                lat: result[1],
+                lng: result[0]
+            };
+            getWeather(latLngToString(lngLat),lngLat);
             // console.log("done");
         });
     })
