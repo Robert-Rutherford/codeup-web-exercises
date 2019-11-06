@@ -112,7 +112,7 @@
 
 
         darkSkyAPISanAntonio.done(function (data) {
-            console.log(data);
+            // console.log(data);
 
             //today *****************************************************************/
             var todayDate = new Date(data.currently.time * 1000);
@@ -232,12 +232,28 @@
     function onDragEnd() {
         var lngLat = marker.getLngLat();
         getWeather(latLngToString(lngLat),lngLat);
-        // map.flyTo(lngLat);
-        // console.log(lngLat);
+        // console.log("done");
+        map.flyTo({
+            center: [lngLat.lng,lngLat.lat]
+        });
+
     }
     marker.on('dragend', onDragEnd);
 
-
+    $('#searchAddress').click(function () {
+        var address = $('#addressInput').val();
+        console.log(address);
+        geocode(address,weatherMapBoxToken).then(function (result) {
+            console.log(result);
+            marker.setLngLat(result);
+            map.flyTo({
+                center:[result[0],result[1]]
+            });
+            console.log(result[0]+","+result[1]);
+            getWeather(result[0]+","+result[1],result);
+            // console.log("done");
+        });
+    })
 
 
 
