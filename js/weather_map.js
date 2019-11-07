@@ -95,7 +95,7 @@
                 "-o-transition": "background-image 1500ms ease-out 2s",
                 "transition": "background-image 1500ms ease-out 2s"});
         }else if (weatherTag === 'clear-night'){
-            $('body').css({"background-image":"url('./img/night_bg.jpg')",
+            $('body').css({"background-image":"url('./img/night_bg2.jpg')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
@@ -152,7 +152,7 @@
                 "-o-transition": "background-image 1500ms ease-out 2s",
                 "transition": "background-image 1500ms ease-out 2s"});
         }else if (weatherTag === 'partly-cloudy-night'){
-            $('body').css({"background-image":"url('./img/cloudyNight_bg.jpeg')",
+            $('body').css({"background-image":"url('./img/cloudyNight_bg2.jpg')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
@@ -184,10 +184,6 @@
         return returnAdd;
     }
 
-    function simplifyTime(inDate) {
-
-
-    }
 
     function clearBoxes() {
         //Today
