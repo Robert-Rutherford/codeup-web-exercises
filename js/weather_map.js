@@ -4,7 +4,7 @@
 
     var long = 29.4241;
     var lat = -98.4936;
-    var longLat ="29.4241,-98.4936";
+    var longLat = "29.4241,-98.4936";
     var latLngObject = {
         lng: long,
         lat: lat
@@ -61,126 +61,149 @@
     };
 
     function generateIcon(weatherTag) {
-        if (weatherTag === 'clear-day'){
+        if (weatherTag === 'clear-day') {
             return weatherIcons.clearDay;
-        }else if (weatherTag === 'clear-night'){
+        } else if (weatherTag === 'clear-night') {
             return weatherIcons.clearNight;
-        }else if (weatherTag === 'rain'){
+        } else if (weatherTag === 'rain') {
             return weatherIcons.rain;
-        }else if (weatherTag === 'snow'){
+        } else if (weatherTag === 'snow') {
             return weatherIcons.snow;
-        }else if (weatherTag === 'sleet'){
+        } else if (weatherTag === 'sleet') {
             return weatherIcons.sleet;
-        }else if (weatherTag === 'wind'){
+        } else if (weatherTag === 'wind') {
             return weatherIcons.wind;
-        }else if (weatherTag === 'fog'){
+        } else if (weatherTag === 'fog') {
             return weatherIcons.fog;
-        }else if (weatherTag === 'cloudy'){
+        } else if (weatherTag === 'cloudy') {
             return weatherIcons.cloudy
-        }else if (weatherTag === 'partly-cloudy-day'){
+        } else if (weatherTag === 'partly-cloudy-day') {
             return weatherIcons.partlyCloudyDay;
-        }else if (weatherTag === 'partly-cloudy-night'){
+        } else if (weatherTag === 'partly-cloudy-night') {
             return weatherIcons.partlyCloudyNight;
-        }else {
+        } else {
             return weatherIcons.failToIdentify;
         }
     }
 
     function generateBG(weatherTag) {
-        if (weatherTag === 'clear-day'){
-            $('body').css({"background-image":"url('./img/day_bg.jpg')",
+        if (weatherTag === 'clear-day') {
+            $('body').css({
+                "background-image": "url('./img/day_bg.jpg')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
                 "-o-transition": "background-image 1500ms ease-out 2s",
-                "transition": "background-image 1500ms ease-out 2s"});
-        }else if (weatherTag === 'clear-night'){
-            $('body').css({"background-image":"url('./img/night_bg2.jpg')",
+                "transition": "background-image 1500ms ease-out 2s"
+            });
+        } else if (weatherTag === 'clear-night') {
+            $('body').css({
+                "background-image": "url('./img/night_bg2.jpg')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
                 "-o-transition": "background-image 1500ms ease-out 2s",
-                "transition": "background-image 1500ms ease-out 2s"});
-        }else if (weatherTag === 'rain'){
-            $('body').css({"background-image":"url('./img/rainy_bg.jpeg')",
+                "transition": "background-image 1500ms ease-out 2s"
+            });
+        } else if (weatherTag === 'rain') {
+            $('body').css({
+                "background-image": "url('./img/rainy_bg.jpeg')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
                 "-o-transition": "background-image 1500ms ease-out 2s",
-                "transition": "background-image 1500ms ease-out 2s"});
-        }else if (weatherTag === 'snow'){
-            $('body').css({"background-image":"url('./img/snow_bg.jpg')",
+                "transition": "background-image 1500ms ease-out 2s"
+            });
+        } else if (weatherTag === 'snow') {
+            $('body').css({
+                "background-image": "url('./img/snow_bg.jpg')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
                 "-o-transition": "background-image 1500ms ease-out 2s",
-                "transition": "background-image 1500ms ease-out 2s"});
-        }else if (weatherTag === 'sleet'){
-            $('body').css({"background-image":"url('./img/sleet_bg.jpg')",
+                "transition": "background-image 1500ms ease-out 2s"
+            });
+        } else if (weatherTag === 'sleet') {
+            $('body').css({
+                "background-image": "url('./img/sleet_bg.jpg')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
                 "-o-transition": "background-image 1500ms ease-out 2s",
-                "transition": "background-image 1500ms ease-out 2s"});
-        }else if (weatherTag === 'wind'){
-            $('body').css({"background-image":"url('./img/wind_bg.jpeg')",
+                "transition": "background-image 1500ms ease-out 2s"
+            });
+        } else if (weatherTag === 'wind') {
+            $('body').css({
+                "background-image": "url('./img/wind_bg.jpeg')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
                 "-o-transition": "background-image 1500ms ease-out 2s",
-                "transition": "background-image 1500ms ease-out 2s"});
-        }else if (weatherTag === 'fog'){
-            $('body').css({"background-image":"url('./img/fog_bg.png')",
+                "transition": "background-image 1500ms ease-out 2s"
+            });
+        } else if (weatherTag === 'fog') {
+            $('body').css({
+                "background-image": "url('./img/fog_bg.png')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
                 "-o-transition": "background-image 1500ms ease-out 2s",
-                "transition": "background-image 1500ms ease-out 2s"});
-        }else if (weatherTag === 'cloudy'){
+                "transition": "background-image 1500ms ease-out 2s"
+            });
+        } else if (weatherTag === 'cloudy') {
             // $('body').css("background-image", "url(\"./img/cloudy_bg.jpg\")");
-            $('body').css({"background-image":"url('./img/cloudy_bg.jpg')",
+            $('body').css({
+                "background-image": "url('./img/cloudy_bg.jpg')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
                 "-o-transition": "background-image 1500ms ease-out 2s",
-                "transition": "background-image 1500ms ease-out 2s"});
-        }else if (weatherTag === 'partly-cloudy-day'){
-            $('body').css({"background-image":"url('./img/cloudyDay_bg.jpg')",
+                "transition": "background-image 1500ms ease-out 2s"
+            });
+        } else if (weatherTag === 'partly-cloudy-day') {
+            $('body').css({
+                "background-image": "url('./img/cloudyDay_bg.jpg')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
                 "-o-transition": "background-image 1500ms ease-out 2s",
-                "transition": "background-image 1500ms ease-out 2s"});
-        }else if (weatherTag === 'partly-cloudy-night'){
-            $('body').css({"background-image":"url('./img/cloudyNight_bg2.jpg')",
+                "transition": "background-image 1500ms ease-out 2s"
+            });
+        } else if (weatherTag === 'partly-cloudy-night') {
+            $('body').css({
+                "background-image": "url('./img/cloudyNight_bg2.jpg')",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1500ms ease-out 2s",
                 "-moz-transition": "background-image 1500ms ease-out 2s",
                 "-o-transition": "background-image 1500ms ease-out 2s",
-                "transition": "background-image 1500ms ease-out 2s"});
-        }else {
-            $('body').css({"background-image":"url(\"img/Weather-Background1.jpeg\")",
+                "transition": "background-image 1500ms ease-out 2s"
+            });
+        } else {
+            $('body').css({
+                "background-image": "url(\"img/Weather-Background1.jpeg\")",
                 "background-size": "cover",
                 "-webkit-transition": "background-image 1000ms ease-out 2s",
                 "-moz-transition": "background-image 1000ms ease-out 2s",
                 "-o-transition": "background-image 1000ms ease-out 2s",
-                "transition": "background-image 1000ms ease-out 2s"});
+                "transition": "background-image 1000ms ease-out 2s"
+            });
         }
     }
+
     // generateBG('partly-cloudy-night');
 
     function removeDashFromString(str) {
-        var newString = str.replace(/-/g," ");
+        var newString = str.replace(/-/g, " ");
         return newString;
     }
 
     function latLngToString(lngLatObj) {
-        return lngLatObj.lat + ","+lngLatObj.lng;
+        return lngLatObj.lat + "," + lngLatObj.lng;
     }
 
     function sliceAddress(address) {
         var sliceLocation = address.search(",");
-        var returnAdd = address.slice(sliceLocation+1,address.length);
+        var returnAdd = address.slice(sliceLocation + 1, address.length);
         return returnAdd;
     }
 
@@ -194,7 +217,7 @@
         $('#todayHumidity').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
         $('#todayWind').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
         $('#todayPressure').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
-    //    tomorrow
+        //    tomorrow
         $('#tomorrowDate').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
         $('#tomorrowTemp').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
         $('#tomorrowIcon').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
@@ -202,7 +225,7 @@
         $('#tomorrowHumidity').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
         $('#tomorrowWind').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
         $('#tomorrowPressure').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
-    //    Day After Tomorrow
+        //    Day After Tomorrow
         $('#dayAfterTomorrowDate').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
         $('#dayAfterTemp').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
         $('#dayAfterIcon').html("<div class=\"spinner-border\" role=\"status\"><span class=\"sr-only\">Loading...</span></div>");
@@ -242,9 +265,9 @@
 
     //
     function getWeather(locationlngLat, latLngCord) {
-        var darkSkyAPISanAntonio = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/"+locationlngLat);
+        var darkSkyAPISanAntonio = $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + locationlngLat);
 
-        reverseGeocode(latLngCord,weatherMapBoxToken).then(function (results) {
+        reverseGeocode(latLngCord, weatherMapBoxToken).then(function (results) {
             // console.log(results);
             // console.log(sliceAddress(results));
             $('#locationText').html(sliceAddress(results));
@@ -292,11 +315,10 @@
             $('#todayPressure').html('<b>Pressure: </b>' + todayPressure);
 
 
-
             //    tomorrow **************************************************************/
             var tomorrowDate = new Date(data.daily.data[1].time * 1000);
             // console.log(tomorrowDate);
-            $('#tomorrowDate').html("<b>" + tomorrowDate.toDateString()  + "</b>");
+            $('#tomorrowDate').html("<b>" + tomorrowDate.toDateString() + "</b>");
 
             //    Temperature
             var tomorrowHigh = data.daily.data[1].temperatureHigh;
@@ -325,11 +347,10 @@
             $('#tomorrowPressure').html('<b>Pressure: </b>' + tomorrowPressure);
 
 
-
             //    day after tomorrow *******************************************************************/
             var dayAfterDate = new Date(data.daily.data[2].time * 1000);
             // console.log(dayAfterDate);
-            $('#dayAfterTomorrowDate').html("<b>" + dayAfterDate.toDateString()  + "</b>");
+            $('#dayAfterTomorrowDate').html("<b>" + dayAfterDate.toDateString() + "</b>");
 
             //    Temperature
             var dayAfterHigh = data.daily.data[2].temperatureHigh;
@@ -363,7 +384,8 @@
             alert("ERROR: Dark Sky API Failed.");
         });
     }
-    getWeather(longLat,latLngObject);
+
+    getWeather(longLat, latLngObject);
 
 
     var markerOptions = {
@@ -380,37 +402,36 @@
         var lngLat = marker.getLngLat();
         console.log(lngLat);
         clearBoxes();
-        getWeather(latLngToString(lngLat),lngLat);
+        getWeather(latLngToString(lngLat), lngLat);
         // console.log("done");
         map.flyTo({
-            center: [lngLat.lng,lngLat.lat]
+            center: [lngLat.lng, lngLat.lat]
         });
 
     }
+
     marker.on('dragend', onDragEnd);
 
     $('#searchAddress').click(function () {
         var address = $('#addressInput').val();
         // console.log(address);
         clearBoxes();
-        geocode(address,weatherMapBoxToken).then(function (result) {
+        geocode(address, weatherMapBoxToken).then(function (result) {
             // console.log(result);
             marker.setLngLat(result);
             map.flyTo({
-                center:[result[0],result[1]]
+                center: [result[0], result[1]]
             });
-            var addLocation = result[0]+","+result[1];
+            var addLocation = result[0] + "," + result[1];
             // console.log(result[0]+"0,"+result[1]);
             var lngLat = {
                 lat: result[1],
                 lng: result[0]
             };
-            getWeather(latLngToString(lngLat),lngLat);
+            getWeather(latLngToString(lngLat), lngLat);
             // console.log("done");
         });
     })
-
-
 
 
 })();
