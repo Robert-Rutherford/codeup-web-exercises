@@ -70,6 +70,12 @@ const instructors = [
     'Fer',
 ];
 
+//Array deconstruction ****
+const [a,b,c,d] = instructors;
+const europaInstructors = [a,b];
+const deimosInstructors = [c,d];
+// **************************
+
 // for (let instructor of instructors){
 //     if (instructor === 'Sophie' || instructor === 'David'){
 //         console.log(instructor);
@@ -156,9 +162,12 @@ const myCar = {
     color
 };
 
-const carInfo = (car) => {
-    var make = car.make;
-    var model = car.model;
+// console.log(myCar.make);
+
+const carInfo = ({make,model}) => {
+    // let make = car.make;
+    // let model = car.model;
+    console.log(make,model);
 };
 
 carInfo(myCar);
