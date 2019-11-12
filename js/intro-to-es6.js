@@ -9,9 +9,11 @@
 
 
 // var x = Math.pow(4,5);
+let x =  4 ** 5;
 // console.log(x);
 //
 // let random = Math.floor(Math.random() * (Math.pow(2,3)));
+// const random = Math.floor(Math.random() * (2 ** 3));
 // console.log(random);
 
 
@@ -29,7 +31,7 @@
 // TO DO TOGETHER: change the var keyword to const. What do you see in
 // the console? Now change it to let and try again.
 
-// var sayHello = "Hello World!";
+// let sayHello = "Hello World!";
 //
 // sayHello = "Hello Deimos!";
 //
@@ -52,6 +54,10 @@
     // the array.
 const myArray = ["it", "is", "really", "cold", "outside"];
 
+for (let element of myArray){
+    console.log(element);
+}
+
 //TO DO: using a for ... of loop, iterate over the array of instructors. If
 // the instructor is Sophie or David, console log the name.
 
@@ -63,6 +69,12 @@ const instructors = [
     'Justin',
     'Fer',
 ];
+
+for (let element of instructors){
+    if (element === 'Sophie' || element === 'David'){
+        console.log(element);
+    }
+}
 
 
 
