@@ -87,3 +87,8 @@ for (let developer of developers){
 }
 
 list += '</ul>';
+
+// console.log(developers);
+// console.log(list);
+// document.getElementsByClassName("body").innerHTML = list;
+document.getElementsByClassName('list-box').innerHTML = list;
