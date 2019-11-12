@@ -9,7 +9,7 @@
 
 
 // var x = Math.pow(4,5);
-let x =  4 ** 5;
+let x = 4 ** 5;
 // console.log(x);
 //
 // let random = Math.floor(Math.random() * (Math.pow(2,3)));
@@ -71,9 +71,9 @@ const instructors = [
 ];
 
 //Array deconstruction ****
-const [a,b,c,d] = instructors;
-const europaInstructors = [a,b];
-const deimosInstructors = [c,d];
+const [a, b, c, d] = instructors;
+const europaInstructors = [a, b];
+const deimosInstructors = [c, d];
 // **************************
 
 // for (let instructor of instructors){
@@ -82,7 +82,7 @@ const deimosInstructors = [c,d];
 //     }
 // }
 
-var numbers = [1,2,3,4,5,6,7,8];
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
 // function evenNumbers(arr){
 //     let newArray = [];
@@ -106,12 +106,12 @@ var numbers = [1,2,3,4,5,6,7,8];
 // function add(a,b){
 //     return a + b;
 // }
-const add = (a,b) => a+b;
+const add = (a, b) => a + b;
 
 const evenNumbers = (arr) => {
     let newArray = [];
-    for (let num of arr){
-        if (num % 2 === 0){
+    for (let num of arr) {
+        if (num % 2 === 0) {
             newArray.push(num);
         }
     }
@@ -125,7 +125,7 @@ const evenNumbers = (arr) => {
 //
 //      Check your work.
 
-const myGreeting = (greeting = 'Good Morning',name = 'Deimos') => {
+const myGreeting = (greeting = 'Good Morning', name = 'Deimos') => {
     return `${greeting},${name}`;
 };
 //
@@ -149,11 +149,10 @@ const pals = {
 };
 
 
-
 // TO DO TOGETHER: Use Object Destructuring to refactor
 
 const make = 'nissan';
-const model= 'rogue';
+const model = 'rogue';
 const color = 'white';
 
 const myCar = {
@@ -164,10 +163,10 @@ const myCar = {
 
 // console.log(myCar.make);
 
-const carInfo = ({make,model}) => {
+const carInfo = ({make, model}) => {
     // let make = car.make;
     // let model = car.model;
-    console.log(make,model);
+    console.log(make, model);
 };
 
 carInfo(myCar);

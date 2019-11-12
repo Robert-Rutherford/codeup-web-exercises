@@ -48,17 +48,17 @@ var emails = users.map(function (user) {
 
 console.log(emails);
 
-var sumOfExperience = users.reduce((total,user) =>{
+var sumOfExperience = users.reduce((total, user) => {
     return total + user.yearsOfExperience;
 }, 0);
 
 console.log(sumOfExperience);
 
-var averageYears = sumOfExperience/users.length;
+var averageYears = sumOfExperience / users.length;
 
 console.log(averageYears);
 
-var longestEmail = users.reduce((longest,user) =>{
+var longestEmail = users.reduce((longest, user) => {
     // return longest < user.email.length;
 
 });

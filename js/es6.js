@@ -35,7 +35,7 @@ const users = [
 // declared as `const`
 const name = 'Robert Rutherford';
 const email = 'robertl.rutherford2@gmial.com';
-const languages = ['javascript','java','c','c#'];
+const languages = ['javascript', 'java', 'c', 'c#'];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
@@ -62,14 +62,14 @@ users.forEach((user) => names.push(user.name));
 
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
-users.forEach(function(user) {
+users.forEach(function (user) {
     // TODO: rewrite the code below to use object destructuring assignment
     //       note that you can also use destructuring assignment in the function
     //       parameter definition
     // const name = user.name;
     // const email = user.email;
     // const languages = user.languages;
-    const {name,email,languages} = user;
+    const {name, email, languages} = user;
 
     // TODO: rewrite the assignment below to use template strings
     // developers.push(name + '\'s email is ' + email + name + ' knows ' + languages.join(', '));
@@ -81,7 +81,7 @@ let list = '<ul>';
 
 // TODO: rewrite the following loop to use a for..of loop
 // developers.forEach(function (developer) {
-for (let developer of developers){
+for (let developer of developers) {
     // TODO: rewrite the assignment below to use template strings
     list += `<li> ${developer} </li>`;
 }
