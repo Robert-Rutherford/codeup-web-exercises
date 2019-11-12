@@ -62,7 +62,7 @@ console.log(averageYears);
 var longestEmail = users.reduce((longest, user) => {
     // return longest < user.email.length;
 
-});
+},0);
 
 console.log(longestEmail);
     
