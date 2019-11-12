@@ -54,9 +54,9 @@ let x =  4 ** 5;
     // the array.
 const myArray = ["it", "is", "really", "cold", "outside"];
 
-for (let element of myArray){
-    console.log(element);
-}
+// for (let element of myArray){
+//     console.log(element);
+// }
 
 //TO DO: using a for ... of loop, iterate over the array of instructors. If
 // the instructor is Sophie or David, console log the name.
@@ -70,13 +70,25 @@ const instructors = [
     'Fer',
 ];
 
-for (let element of instructors){
-    if (element === 'Sophie' || element === 'David'){
-        console.log(element);
-    }
-}
+// for (let instructor of instructors){
+//     if (instructor === 'Sophie' || instructor === 'David'){
+//         console.log(instructor);
+//     }
+// }
 
+var numbers = [1,2,3,4,5,6,7,8];
 
+// function evenNumbers(arr){
+//     let newArray = [];
+//     for (let num of arr){
+//         if (num % 2 === 0){
+//             newArray.push(num);
+//         }
+//     }
+//     return newArray;
+// }
+//
+// console.log(evenNumbers(numbers));
 
 /*********************************************
  *              Arrow Functions
@@ -88,18 +100,31 @@ for (let element of instructors){
 // function add(a,b){
 //     return a + b;
 // }
+const add = (a,b) => a+b;
+
+const evenNumbers = (arr) => {
+    let newArray = [];
+    for (let num of arr){
+        if (num % 2 === 0){
+            newArray.push(num);
+        }
+    }
+    return newArray;
+};
+
+// console.log(evenNumbers(numbers));
 
 // TO DO TOGETHER: refactor the following so that variable 'greeting' has a
 // default value of 'Good Morning' and 'name' has the value of 'Deimos.
 //
 //      Check your work.
 
-// const myGreeting = (greeting,name) => {
-//     return `${greeting},${name}`;
-// };
+const myGreeting = (greeting = 'Good Morning',name = 'Deimos') => {
+    return `${greeting},${name}`;
+};
 //
-// console.log(myGreeting());
-// console.log(myGreeting("Hello", "Sophie"));
+console.log(myGreeting());
+console.log(myGreeting("Hello", "Sophie"));
 
 /*********************************************
  *              Objects
@@ -107,33 +132,35 @@ for (let element of instructors){
 
 // TO DO: Refactor the Object below to use shorthand property assignment
 
-// const mydog = "Spike";
-// const cat = "Tom";
-// const mouse = "Jerry";
-//
-// const pals = {
-//     dog: mydog,
-//     cat: cat,
-//     mouse: mouse
-// };
+const mydog = "Spike";
+const cat = "Tom";
+const mouse = "Jerry";
+
+const pals = {
+    dog: mydog,
+    cat,
+    mouse
+};
+
+
 
 // TO DO TOGETHER: Use Object Destructuring to refactor
 
 const make = 'nissan';
 const model= 'rogue';
 const color = 'white';
-//
-// const myCar = {
-//     make,
-//     model,
-//     color
-// };
 
-// const carInfo = (car) => {
-//     var make = car.make;
-//     var model = car.model;
-// };
+const myCar = {
+    make,
+    model,
+    color
+};
 
-// carInfo(myCar);
+const carInfo = (car) => {
+    var make = car.make;
+    var model = car.model;
+};
+
+carInfo(myCar);
 
 //BONUS: Array Destructuring.
