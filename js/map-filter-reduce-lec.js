@@ -120,21 +120,28 @@ console.log(totalApples);
 // TO DO TOGETHER: let's use .reduce to return an object that has properties
 // representing total values for each fruit.
 
-// const colors = ['red','orange','red','blue','blue','green','red'];
-
-
+const colors = ['red','orange','red','blue','blue','green','red'];
 // TO DO: Count the number of times a color appears in this Array. Hint:
 // your initial value should be an empty object.
+const colorCount = colors.reduce((colorCount, color) =>{
+    if (typeof colorCount[color] === "undefined"){
+        colorCount[color] = 1;
+    }else {
+        colorCount[color] += 1;
+    }
+    return colorCount;
+},{});
+console.log(colorCount);
+
+
 
 const lyrics = ['we','all','live','in','a','yellow','submarine'];
 
-const numOfColors = lyrics.reduce((colors,lyric) => {
-
-},0);
-
 //TO DO TOGETHER: Using reduce, let's turn this into a string.
-// const oneLine =
-// console.log(oneLine);
+const oneLine = lyrics.reduce((currentString,word) =>{
+    return `${currentString} ${word}`;
+},"");
+console.log(oneLine);
 
 
 // Bonus: Create an Array of all the unique fur colors!
