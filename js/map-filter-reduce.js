@@ -37,34 +37,63 @@ const users = [
     }
 ];
 
-var moreThan3Languages = users.filter(function (user) {
+//*************************
+let moreThan3Languages = users.filter(function (user) {
     return user.languages.length >= 3;
 });
 
 console.log(moreThan3Languages);
-
-var emails = users.map(function (user) {
+//************************
+let emails = users.map(function (user) {
     return user.email;
 });
 
 console.log(emails);
 
-var sumOfExperience = users.reduce((total, user) => {
+//***************************
+let sumOfExperience = users.reduce((total, user) => {
     return total + user.yearsOfExperience;
 }, 0);
 
 console.log(sumOfExperience);
 
-var averageYears = sumOfExperience / users.length;
+let averageYears = sumOfExperience / users.length;
 
 console.log(averageYears);
 
-var longestEmail = users.reduce((longest, user) => {
+//****************************
+let longestEmail = users.reduce((longestemail, user) => {
     // return longest < user.email.length;
-
-},0);
+    if (longestemail.length < user.email.length){
+        longestemail = user.email;
+    }
+    return longestemail;
+},"");
 
 console.log(longestEmail);
+
+//****************************
+var instructorsString = users.reduce((string,user) => {
+    return `${string}, ${user.name}`;
+},"Your instructors are")+ ".";
+
+console.log(instructorsString);
+
+//Bonus
+let userLanguages = users.map(user => user.languages);
+
+console.log(userLanguages);
+
+let combinedLanguageArray = userLanguages.reduce((langArray,Array)=>{
+    for (let lang of Array){
+        langArray.push(lang);
+    }
+    return langArray;
+},[]);
+
+console.log(combinedLanguageArray);
+
+
     
 
 
