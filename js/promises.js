@@ -28,11 +28,12 @@ getGithubUsernames().then((usernames) => {
     usernames.forEach((username) => {
         // do something with each username
         console.log(username);
-        fetch()
-
-
-
-
+        // let events = fetch('https://api.github.com/users/'+username+'/events/public', { method: 'get'})
+        //     .then(publicevents =>{
+        //         return publicevents.json();
+        //         // console.log(publicevents);
+        //     }).then(events => events.map(event => event.));
+        // console.log(events);
 
 
     });
