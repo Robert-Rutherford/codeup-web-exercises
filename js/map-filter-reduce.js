@@ -79,7 +79,7 @@ var instructorsString = users.reduce((string,user) => {
 
 console.log(instructorsString);
 
-//Bonus
+//Bonus ******************************
 let userLanguages = users.map(user => user.languages);
 
 console.log(userLanguages);
@@ -92,9 +92,22 @@ let combinedLanguageArray = userLanguages.reduce((langArray,Array)=>{
 },[]);
 
 console.log(combinedLanguageArray);
+//
+// let uniqueLang = combinedLanguageArray.reduce((unique,lang)=>{
+//     if ()
+// },[]);
 
 
-    
+
+
+//answer 1
+let listOfLanguages = Array.from(users.reduce((accumulator, user)=>{
+    user.languages.forEach(language => accumulator.add(language));
+    return accumulator;
+},new Set()));
+
+console.log(listOfLanguages);
+
 
 
 
