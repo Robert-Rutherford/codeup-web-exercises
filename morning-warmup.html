@@ -432,7 +432,7 @@
     // console.log(returnEvenArray(nov12Array));
 
 //    November 14
-    function aPromise(number) {
+    function evenPromise(number) {
         return new Promise(((resolve, reject) => {
             if (number % 2 === 0){
                 resolve(true);
@@ -442,10 +442,10 @@
         }));
     }
 
-    console.log(aPromise(2));
-    console.log(aPromise("2"));
-    console.log(aPromise(5));
-    console.log(aPromise("word"));
+    console.log(evenPromise(2));
+    console.log(evenPromise("2"));
+    console.log(evenPromise(5));
+    console.log(evenPromise("word"));
 
 
 </script>
