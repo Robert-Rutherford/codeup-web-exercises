@@ -435,18 +435,21 @@
     function evenPromise(number) {
         return new Promise(((resolve, reject) => {
             if (number % 2 === 0){
-                resolve(true);
+                resolve("Is an Even number");
             }else {
-                reject(false);
+                reject("Is not an even number");
             }
         }));
     }
 
-    console.log(evenPromise(2));
-    console.log(evenPromise("2"));
-    console.log(evenPromise(5));
-    console.log(evenPromise("word"));
-
+    // console.log(evenPromise(2));
+    evenPromise(2).then(message => console.log(message)).catch(message => console.log(message));
+    // console.log(evenPromise("2"));
+    evenPromise("2").then(message => console.log(message)).catch(message => console.log(message));
+    // console.log(evenPromise(5));
+    evenPromise(5).then(message => console.log(message)).catch(message => console.log(message));
+    // console.log(evenPromise("word"));
+    evenPromise("word").then(message => console.log(message)).catch(message => console.log(message));
 
 </script>
 </body>
