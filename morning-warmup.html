@@ -429,7 +429,24 @@
         return evenArray;
     }
 
-    console.log(returnEvenArray(nov12Array));
+    // console.log(returnEvenArray(nov12Array));
+
+//    November 14
+    function aPromise(number) {
+        return new Promise(((resolve, reject) => {
+            if (number % 2 === 0){
+                resolve(true);
+            }else {
+                reject(false);
+            }
+        }));
+    }
+
+    console.log(aPromise(2));
+    console.log(aPromise("2"));
+    console.log(aPromise(5));
+    console.log(aPromise("word"));
+
 
 </script>
 </body>
