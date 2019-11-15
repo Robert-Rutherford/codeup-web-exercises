@@ -452,14 +452,14 @@
     // evenPromise("word").then(message => console.log(message)).catch(message => console.log(message));
 
 //    November 15
-    function htmlHello() {
+    function helloPromise() {
         return new Promise(resolve => {
             resolve("Hello");
         });
     }
 
-    htmlHello().then(helloString => $('body').html(`<h1>${helloString}</h1>`));
-
+    helloPromise().then(message => $('body').html(`<h1>${message}</h1>`));
+    // { document.getElementsByName('body')[0].innerHTML += `<h1>${message}</h1>`}
 </script>
 </body>
 </html>
