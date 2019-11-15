@@ -7,7 +7,7 @@
 <body>
 <h1>Deimos</h1>
 <p>This is my morning warm-up</p>
-
+<script src="js/jquery-2.2.4.js"></script>
 <script>
     // September 18
     var num1 = 5;
@@ -443,13 +443,22 @@
     }
 
     // console.log(evenPromise(2));
-    evenPromise(2).then(message => console.log(message)).catch(message => console.log(message));
-    // console.log(evenPromise("2"));
-    evenPromise("2").then(message => console.log(message)).catch(message => console.log(message));
-    // console.log(evenPromise(5));
-    evenPromise(5).then(message => console.log(message)).catch(message => console.log(message));
-    // console.log(evenPromise("word"));
-    evenPromise("word").then(message => console.log(message)).catch(message => console.log(message));
+    // evenPromise(2).then(message => console.log(message)).catch(message => console.log(message));
+    // // console.log(evenPromise("2"));
+    // evenPromise("2").then(message => console.log(message)).catch(message => console.log(message));
+    // // console.log(evenPromise(5));
+    // evenPromise(5).then(message => console.log(message)).catch(message => console.log(message));
+    // // console.log(evenPromise("word"));
+    // evenPromise("word").then(message => console.log(message)).catch(message => console.log(message));
+
+//    November 15
+    function htmlHello() {
+        return new Promise(resolve => {
+            resolve("Hello");
+        });
+    }
+
+    htmlHello().then(helloString => $('body').html(`<h1>${helloString}</h1>`));
 
 </script>
 </body>
