@@ -9,7 +9,10 @@
         /*#addModal{*/
         /*    width: 80%; !important;*/
         /*}*/
-
+        #testBox{
+            /*background-color: #2b542c;*/
+            /*width: 15px; !important;*/
+        }
 
     </style>
 
@@ -18,11 +21,15 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addMovieModal">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addMovieModal" data-backdrop="static" data-keyboard="false">
     Launch demo modal
 </button>
+<br>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editMovieModal" data-backdrop="static" data-keyboard="false">
+    edit demo modal
+</button>
 
-<!-- Modal -->
+<!-- add Modal -->
 <div class="modal fade" id="addMovieModal" tabindex="-1" role="dialog"
      aria-labelledby="addMovieModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document" id="addModal">
@@ -50,9 +57,37 @@
                     <div class="form-group row">
                         <label for="genreMultiSelect" class="col-sm-2 col-form-label">Genre</label>
                         <div class="col-sm-10">
-                            <select class="form-control" id="genreMultiSelect">
-                                <option>Default select</option>
-                            </select>
+                            <div class="input-group">
+                                <select class="custom-select" id="genreMultiSelect">
+                                    <option selected>Action</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button">Add Genre</button>
+                                </div>
+                            </div>
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+<!--                            <div class="row" id="genreDivAdd">-->
+<!--&lt;!&ndash;                                <div class="col" id="testBox">test</div>&ndash;&gt;-->
+<!--                                <ul class="list-group list-group-flush">-->
+<!--                                    <li class="list-group-item">Cras justo odio</li>-->
+<!--                                    <li class="list-group-item">Dapibus ac facilisis in</li>-->
+<!--                                    <li class="list-group-item">Morbi leo risus</li>-->
+<!--                                    <li class="list-group-item">Porta ac consectetur ac</li>-->
+<!--                                    <li class="list-group-item">Vestibulum at eros</li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                            <select class="form-control" id="genreMultiSelect">-->
+<!--                                <option>Default select</option>-->
+<!--                            </select>-->
                         </div>
                     </div>
                     <fieldset class="form-group">
@@ -113,6 +148,98 @@
         </div>
     </div>
 </div>
+<!-- edit Modal-->
+<div class="modal fade" id="editMovieModal" tabindex="-1" role="dialog"
+     aria-labelledby="addMovieModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document" id="editModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editMovieModalTitle">Edit Movie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="editFormModal">
+                <form>
+                    <div class="form-group row">
+                        <label for="movieEditInput" class="col-sm-2 col-form-label">*Title </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="movieEditInput" placeholder="Movie" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="movieEditDate" class="col-sm-2 col-form-label">Date</label>
+                        <div class="col-sm-10">
+                            <input type="time" class="form-control" id="movieEditDate" placeholder="Release Date">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="genreMultiSelectEdit" class="col-sm-2 col-form-label">Genre</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="genreMultiSelectEdit">
+                                <option>Default select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <fieldset class="form-group">
+                        <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">*Rating</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="ratingRadios1e"
+                                           value="1star" required>
+                                    <label class="form-check-label" for="ratingRadios1e">1 star</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="ratingRadios2e"
+                                           value="2star" required>
+                                    <label class="form-check-label" for="ratingRadios2e">2 star</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="ratingRadios3e"
+                                           value="3star" required>
+                                    <label class="form-check-label" for="ratingRadios3e">3 star</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="ratingRadios4e"
+                                           value="4star" required>
+                                    <label class="form-check-label" for="ratingRadios4e">4 star</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="ratingRadios5e"
+                                           value="5star" required>
+                                    <label class="form-check-label" for="ratingRadios5e">5 star</label>
+                                    <div class="invalid-feedback">More example invalid feedback text</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group row">
+                        <label for="movieDescriptionInputEdit" class="col-sm-2 col-form-label">Description</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" id="movieDescriptionInputEdit" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="movieImageEdit">
+                        <label class="custom-file-label" for="movieImageEdit">Load image</label>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id="editMovieClick">Save changes</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
