@@ -9,7 +9,7 @@
         /*#addModal{*/
         /*    width: 80%; !important;*/
         /*}*/
-        #testBox{
+        #testBox {
             /*background-color: #2b542c;*/
             /*width: 15px; !important;*/
         }
@@ -21,11 +21,13 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addMovieModal" data-backdrop="static" data-keyboard="false">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addMovieModal" data-backdrop="static"
+        data-keyboard="false">
     Launch demo modal
 </button>
 <br>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editMovieModal" data-backdrop="static" data-keyboard="false">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editMovieModal" data-backdrop="static"
+        data-keyboard="false">
     edit demo modal
 </button>
 
@@ -68,26 +70,22 @@
                                     <button class="btn btn-outline-secondary" type="button">Add Genre</button>
                                 </div>
                             </div>
-                            <ul class="list-group list-group-horizontal">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                <li class="list-group-item">Morbi leo risus</li>
-                                <li class="list-group-item">Porta ac consectetur ac</li>
-                                <li class="list-group-item">Vestibulum at eros</li>
+                            <ul class="list-group flex-md-row" id="genreListAdd">
+
                             </ul>
-<!--                            <div class="row" id="genreDivAdd">-->
-<!--&lt;!&ndash;                                <div class="col" id="testBox">test</div>&ndash;&gt;-->
-<!--                                <ul class="list-group list-group-flush">-->
-<!--                                    <li class="list-group-item">Cras justo odio</li>-->
-<!--                                    <li class="list-group-item">Dapibus ac facilisis in</li>-->
-<!--                                    <li class="list-group-item">Morbi leo risus</li>-->
-<!--                                    <li class="list-group-item">Porta ac consectetur ac</li>-->
-<!--                                    <li class="list-group-item">Vestibulum at eros</li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                            <select class="form-control" id="genreMultiSelect">-->
-<!--                                <option>Default select</option>-->
-<!--                            </select>-->
+                            <!--                            <div class="row" id="genreDivAdd">-->
+                            <!--&lt;!&ndash;                                <div class="col" id="testBox">test</div>&ndash;&gt;-->
+                            <!--                                <ul class="list-group list-group-flush">-->
+                            <!--                                    <li class="list-group-item">Cras justo odio</li>-->
+                            <!--                                    <li class="list-group-item">Dapibus ac facilisis in</li>-->
+                            <!--                                    <li class="list-group-item">Morbi leo risus</li>-->
+                            <!--                                    <li class="list-group-item">Porta ac consectetur ac</li>-->
+                            <!--                                    <li class="list-group-item">Vestibulum at eros</li>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
+                            <!--                            <select class="form-control" id="genreMultiSelect">-->
+                            <!--                                <option>Default select</option>-->
+                            <!--                            </select>-->
                         </div>
                     </div>
                     <fieldset class="form-group">
@@ -239,7 +237,6 @@
         </div>
     </div>
 </div>
-
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

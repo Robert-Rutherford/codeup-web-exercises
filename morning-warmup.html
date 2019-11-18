@@ -431,12 +431,12 @@
 
     // console.log(returnEvenArray(nov12Array));
 
-//    November 14
+    //    November 14
     function evenPromise(number) {
         return new Promise(((resolve, reject) => {
-            if (number % 2 === 0){
+            if (number % 2 === 0) {
                 resolve("Is an Even number");
-            }else {
+            } else {
                 reject("Is not an even number");
             }
         }));
@@ -451,15 +451,23 @@
     // // console.log(evenPromise("word"));
     // evenPromise("word").then(message => console.log(message)).catch(message => console.log(message));
 
-//    November 15
+    //    November 15
     function helloPromise() {
         return new Promise(resolve => {
             resolve("Hello");
         });
     }
 
-    helloPromise().then(message => $('body').html(`<h1>${message}</h1>`));
+    // helloPromise().then(message => $('body').html(`<h1>${message}</h1>`));
     // { document.getElementsByName('body')[0].innerHTML += `<h1>${message}</h1>`}
+
+//    November 18
+    function returnPI() {
+        return Math.PI.toFixed(6);
+    }
+
+    console.log(returnPI());
+
 </script>
 </body>
 </html>

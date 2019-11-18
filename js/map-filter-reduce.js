@@ -64,18 +64,18 @@ console.log(averageYears);
 //****************************
 let longestEmail = users.reduce((longestemail, user) => {
     // return longest < user.email.length;
-    if (longestemail.length < user.email.length){
+    if (longestemail.length < user.email.length) {
         longestemail = user.email;
     }
     return longestemail;
-},"");
+}, "");
 
 console.log(longestEmail);
 
 //****************************
-var instructorsString = users.reduce((string,user) => {
+var instructorsString = users.reduce((string, user) => {
     return `${string}, ${user.name}`;
-},"Your instructors are")+ ".";
+}, "Your instructors are") + ".";
 
 console.log(instructorsString);
 
@@ -84,12 +84,12 @@ let userLanguages = users.map(user => user.languages);
 
 console.log(userLanguages);
 
-let combinedLanguageArray = userLanguages.reduce((langArray,Array)=>{
-    for (let lang of Array){
+let combinedLanguageArray = userLanguages.reduce((langArray, Array) => {
+    for (let lang of Array) {
         langArray.push(lang);
     }
     return langArray;
-},[]);
+}, []);
 
 console.log(combinedLanguageArray);
 //
@@ -98,13 +98,11 @@ console.log(combinedLanguageArray);
 // },[]);
 
 
-
-
 //answer 1
-let listOfLanguages = Array.from(users.reduce((accumulator, user)=>{
+let listOfLanguages = Array.from(users.reduce((accumulator, user) => {
     user.languages.forEach(language => accumulator.add(language));
     return accumulator;
-},new Set()));
+}, new Set()));
 
 console.log(listOfLanguages);
 

@@ -2,9 +2,9 @@
 
 function wait(time) {
     const promise = new Promise((resolve, reject) => {
-        setTimeout(()=>{
+        setTimeout(() => {
             resolve();
-        },time);
+        }, time);
     });
     return promise;
 }
@@ -12,9 +12,9 @@ function wait(time) {
 // wait(1000).then(() => console.log('You\'ll see this after 1 second'));
 // wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 
-const lastCommit = (username) =>{
+const lastCommit = (username) => {
     fetch(`https://api.github.com/users/${username}/events`,
-        {headers: {'Authorization': 'token '+ githubToken}})
+        {headers: {'Authorization': 'token ' + githubToken}})
         .then(resp => resp.json()).then(data => {
         console.log(data);
         let latestcommit = data.find(event => event.type === "PushEvent");
