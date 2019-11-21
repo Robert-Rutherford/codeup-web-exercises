@@ -67,12 +67,14 @@
                                     <option value="3">Three</option>
                                 </select>
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button">Add Genre</button>
+                                    <button class="btn btn-outline-secondary addGenreButton" type="button">Add Genre</button>
                                 </div>
                             </div>
+<!--                            **********************************************-->
                             <ul class="list-group flex-md-row" id="genreListAdd">
 
                             </ul>
+<!--                            **********************************************-->
                             <!--                            <div class="row" id="genreDivAdd">-->
                             <!--&lt;!&ndash;                                <div class="col" id="testBox">test</div>&ndash;&gt;-->
                             <!--                                <ul class="list-group list-group-flush">-->
@@ -248,5 +250,56 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+<script>
+
+    //****************************
+    // postMovie({
+    //     title: document.getElementById('movieAddInput').value,
+    //     rating: document.getElementsByName('gridRadios').value,
+    //     id: 5, // need to get the number of movies
+    //     genre: [] //function for getting array List of genres
+    //     description: document.getElementById('movieDescriptionInput').value,
+    //     image: document.getElementById('movieImageAdd').value
+    // }).then(getMovies).then(movie =>{
+    //     console.log('all movies:');
+    //     movie.forEach(({title, rating, id}) =>{
+    //         console.log(`ID: ${id}, Title: ${title}, Rating: ${rating}`);
+    //     });
+    // }).catch((error) =>{
+    //     alert('Oh no! Something went wrong.\nCheck the console for details.');
+    //     console.log(error);
+    // });
+    //
+    // function createGenreTag(genre){
+    //     // global genre array
+    //     var globalGenreArray = [];
+    //     globalGenreArray.push(genre);
+    //     $('#genreListAdd').append(`<li class ="list-group-item" value="${genre}"> ${genre} <a class="removeGenre">X</a></li>`);
+    // }
+    //
+    // $('.removeGenre').click(function () {
+    //     var globalGenreArray = [];
+    //
+    //
+    //     $(this).parent('li').remove();
+    // });
+
+
+
+    //*******************************
+
+
+    // postMovie: (movie) =>{
+    //     return fetch(`/api/movies`,{
+    //         method: 'POST',
+    //         headers:{
+    //             'Content-Type':'application/json',
+    //         },
+    //         body: JSON.stringify(movie),
+    //     })
+    // }
+
+
+</script>
 </body>
 </html>
